@@ -40,13 +40,13 @@ Next the list of interfaces will be listed, both wired and the recognized wirele
 
 Password for root account? (will not echo)
 
-Start sshd(8) by default [yes]?
+Start sshd(8) by default [yes]?  
 sshd will likely be a necessary function
 
-Do you want the X Window System to be started by xdm(1)? [no]
-for the functions listed previously, X Windows and xdm(1) are unnecessary.
+Do you want the X Window System to be started by xdm(1)? [no]  
+For the functions listed previously, X Windows and xdm(1) are unnecessary.
 
-Setup a user? (enter a lower-case loginname, or 'no') [no]
+Setup a user? (enter a lower-case loginname, or 'no') [no]  
 A non-privileged user is an important step in running a secure system.
 
 Allow root ssh login? (yes, no, prohibit-password) [no]
@@ -63,7 +63,6 @@ In this case, standard output noted that the CF card is located on sd2. An incor
 Which disk is the root disk? ('?' for details) [sd0] ?
 
 Select ? to verify the correct disk.
-
 
 
 
