@@ -12,9 +12,9 @@ In terms of formatting with this piece:
 
 * __bold__ indicates user input
 
-* indented and shadowed indicates standard output displayed
+* indented and shadowed text indicates standard output displayed
 
-* a number after a command, such as sshd(8) indicates an OpenBSD manual page
+* a number after a command, such as sshd(8), indicates an OpenBSD manual page
 
 * and { } represents custom user input, such as a user name
 
