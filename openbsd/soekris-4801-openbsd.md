@@ -68,7 +68,7 @@ Select ? to verify the correct disk.
 
 	Which disk is the root disk? ('?' for details) [sd0] ?
 
-The default install will cease booting with this line unless console access is enabled.
+The default install will cease booting at this line unless console access is enabled.
 
 	entry point at 0x200120
 
@@ -89,7 +89,7 @@ Create /etc/boot.conf, and add the following line:
 
 Setup the non-privileged user with doas(1) permissions in /etc/doas.conf(5):
 
-	permit nopass keepenv $user as root
+	permit nopass keepenv {user} as root
 
 Create /etc/rc.conf.local for minimizing unnecessary daemons, such as sndiod(1) and smtpd(8):
 
@@ -102,4 +102,20 @@ Install the CF card into the Soekris, plug in an ethernet cable to the first por
 
 Setup the bootstrap computer with the serial console cable and some terminal emulation application.
 
-By default, the Soekris 4801 used 19200 as the console speed, yet we set the speed to 9600 in the /etc/boot.conf and /etc/ttys files. Therefore, set the Soekris console speed to 9600 in the BIOS.
+By default, the Soekris 4801 used 19200 as the console speed, yet we set the speed to 9600 in the /etc/boot.conf and /etc/ttys files. Therefore, set the Soekris console speed to 9600 in the BIOS by hitting control-p during the Soekris' initial boot stage.
+
+To show the current BIOS settings:
+
+	comBIOS monitor.   Press ? for help.
+
+	> show
+
+Set the console speed to 9600.
+
+	> set conspeed=9600
+
+Begin booting OpenBSD with the new settings.
+
+	> boot
+
+All done!

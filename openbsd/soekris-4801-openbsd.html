@@ -82,7 +82,7 @@ What timezone are you in? ('?' for list) [(local timezone guess)]
 <pre><code>Which disk is the root disk? ('?' for details) [sd0] ?
 </code></pre>
 
-<p>The default install will cease booting with this line unless console access is enabled.</p>
+<p>The default install will cease booting at this line unless console access is enabled.</p>
 
 <pre><code>entry point at 0x200120
 </code></pre>
@@ -106,7 +106,7 @@ What timezone are you in? ('?' for list) [(local timezone guess)]
 
 <p>Setup the non-privileged user with doas(1) permissions in /etc/doas.conf(5):</p>
 
-<pre><code>permit nopass keepenv $user as root
+<pre><code>permit nopass keepenv {user} as root
 </code></pre>
 
 <p>Create /etc/rc.conf.local for minimizing unnecessary daemons, such as sndiod(1) and smtpd(8):</p>
@@ -121,7 +121,26 @@ smtpd_flags=NO
 
 <p>Setup the bootstrap computer with the serial console cable and some terminal emulation application.</p>
 
-<p>By default, the Soekris 4801 used 19200 as the console speed, yet we set the speed to 9600 in the /etc/boot.conf and /etc/ttys files. Therefore, set the Soekris console speed to 9600 in the BIOS.</p>
+<p>By default, the Soekris 4801 used 19200 as the console speed, yet we set the speed to 9600 in the /etc/boot.conf and /etc/ttys files. Therefore, set the Soekris console speed to 9600 in the BIOS by hitting control-p during the Soekris&#8217; initial boot stage.</p>
+
+<p>To show the current BIOS settings:</p>
+
+<pre><code>comBIOS monitor.   Press ? for help.
+
+&gt; show
+</code></pre>
+
+<p>Set the console speed to 9600.</p>
+
+<pre><code>&gt; set conspeed=9600
+</code></pre>
+
+<p>Begin booting OpenBSD with the new settings.</p>
+
+<pre><code>&gt; boot
+</code></pre>
+
+<p>All done!</p>
 
 </body>
 </html>
