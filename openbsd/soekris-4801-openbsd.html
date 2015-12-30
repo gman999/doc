@@ -11,8 +11,7 @@
 <p>Needs:</p>
 
 <ul>
-<li><p>bootable media with OpenBSD/i386 stable version on a USB stick
-(using snapshots is not ideal in this scenario)</p></li>
+<li><p>bootable media with OpenBSD/i386 stable version on a <a href="http://www.openbsd.org/faq/faq4.html#Flash">USB stick</a>. Using snapshots is not ideal in this scenario.</p></li>
 <li><p>compact flash (CF) card with adapter</p></li>
 <li><p>bootstrap i386/amd64 computer with any operating system</p></li>
 <li><p>a serial console cable with a null modem</p></li>
@@ -20,10 +19,10 @@
 
 <p>With the bootable media attached via USB, launch the bootstrap computer and enter the OpenBSD installation program.</p>
 
-<p>Type i to enter the install system.</p>
+<p>Type <strong>i</strong> to enter the install system.</p>
 
 <pre><code>Welcome to the OpenBSD/i386 5.8 installation program.
-(I)nstall, (U)pgrade, (A)utoinstall or (S)hell?
+(I)nstall, (U)pgrade, (A)utoinstall or (S)hell? i
 </code></pre>
 
 <p>Plug in the CF card adapter and note the device listed to standard output, normally sd(4) with a respective number, such as sd2.</p>
@@ -47,19 +46,19 @@
 
 <p>sshd(8) will likely be necessary.</p>
 
-<pre><code>Start sshd(8) by default [yes]?  
+<pre><code>Start sshd(8) by default [yes]? yes
 </code></pre>
 
 <p>For the functions listed previously, X Windows and xdm(1) are unnecessary.</p>
 
-<pre><code>Do you want the X Window System to be started by xdm(1)? [no]  
+<pre><code>Do you want the X Window System to be started by xdm(1)? [no] no
 </code></pre>
 
 <p>A non-privileged user is an important step in running a secure system.</p>
 
 <pre><code>Setup a user? (enter a lower-case loginname, or 'no') [no]  
 
-Allow root ssh login? (yes, no, prohibit-password) [no]
+Allow root ssh login? (yes, no, prohibit-password) [no] no
 
 What timezone are you in? ('?' for list) [(local timezone guess)]
 </code></pre>
@@ -71,7 +70,7 @@ What timezone are you in? ('?' for list) [(local timezone guess)]
 
 <p>In this case, standard output noted that the CF card is located on sd2. An incorrect choice here, such as selecting the bootstrap computer&#8217;s disk, will mean overwriting the wrong disk.</p>
 
-<p>Select ? to verify the correct disk.</p>
+<p>Select <strong>?</strong> to verify the correct disk.</p>
 
 <pre><code>Which disk is the root disk? ('?' for details) [sd0] ?
 </code></pre>
@@ -80,26 +79,26 @@ What timezone are you in? ('?' for list) [(local timezone guess)]
 
 <p>Next the fdisk(8) utility runs displaying the slice breakdown of the disk.</p>
 
-<p>Choose w to utilize the entire disk.</p>
+<p>Choose <strong>w</strong> to utilize the entire disk.</p>
 
-<pre><code>Use (W)hole disk, use the (O)penBSD area, or (E)dit the MBR? [OpenBSD]
+<pre><code>Use (W)hole disk, use the (O)penBSD area, or (E)dit the MBR? [OpenBSD] w
 </code></pre>
 
-<p>Next the autoconfigured partition layout will be displayed. Unless there are particular needs, choose a for auto.</p>
+<p>Next the autoconfigured partition layout will be displayed. Unless there are particular needs, choose <strong>a</strong> for auto.</p>
 
-<pre><code>Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout [a]?
+<pre><code>Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout [a]? a
 </code></pre>
 
-<p>At this point, the installer will ask for the next disk to configure. Type done as our disk setup is complete.</p>
+<p>At this point, the installer will ask for the next disk to configure. Type <strong>done</strong> as our disk setup is complete.</p>
 
 <pre><code>Which disk do you wish to initialize? (or 'done') [done]
 </code></pre>
 
-<p>Then the install sets need to be accessed, either on a local disk or via HTTP. HTTP is our choice, as the install media didn&#8217;t contain the files.</p>
+<p>Then the install sets need to be accessed, either on a local disk or via HTTP. <strong>http</strong> is our choice, as the install media didn&#8217;t contain the files.</p>
 
 <pre><code>Let's install the sets!
 
-Location of sets? (disk http or 'done') [http]
+Location of sets? (disk http or 'done') [http] http
 </code></pre>
 
 <p>If you&#8217;re using a proxy, enter it here.</p>
@@ -107,12 +106,12 @@ Location of sets? (disk http or 'done') [http]
 <pre><code>HTTP proxy URL? (e.g. 'http://proxy:8080', or 'none') [none]
 </code></pre>
 
-<p>Now enter an OpenBSD mirror. Typing ? will display a list of the current mirrors.</p>
+<p>Now enter an OpenBSD mirror. Typing <strong>?</strong> will display a list of the current mirrors.</p>
 
 <pre><code>HTTP Server? (hostname, list#, 'done' or '?')
 </code></pre>
 
-<p>The OpenBSD project insists on maintaining identically directory hierarchies on their mirrors. The next prompt should illustrate why, since you just need to hit enter.</p>
+<p>The OpenBSD project insists on maintaining identically directory hierarchies on their mirrors. The next prompt should illustrate why, since you just need to hit &#8220;enter.&#8221;</p>
 
 <pre><code>Server directory? [pub/OpenBSD/5.8/i386]
 </code></pre>
@@ -140,7 +139,7 @@ Location of sets? (disk http or 'done') [http]
 <pre><code>Location of sets? (disk http or 'done') [http] done
 </code></pre>
 
-<p>We are quite sure the bsd.mp kernel is unnecessary, so type yes.</p>
+<p>We are quite sure the bsd.mp kernel is unnecessary, so type <strong>yes</strong>.</p>
 
 <pre><code>Are you *SURE* your install is complete without 'bsd.mp'? [no] yes
 </code></pre>
@@ -221,4 +220,19 @@ smtpd_flags=NO
 <pre><code>&gt; boot
 </code></pre>
 
-<p>All done!</p>
+<p>Finally, it&#8217;s necessary to configure the sis(4) network interface as directed by hostname.if(5).</p>
+
+<pre><code>vi /etc/hostname.sis0
+</code></pre>
+
+<p>Either set a static address with:</p>
+
+<pre><code>inet {IP} netmask {netmask}
+</code></pre>
+
+<p>Or set to dhcp:</p>
+
+<pre><code>dhcp
+</code></pre>
+
+<p>Reboot and the Soekris is ready for the particular function you&#8217;ve chosen.</p>

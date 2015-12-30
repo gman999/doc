@@ -10,8 +10,7 @@ Such a device could be a serial console server, a recursive/caching DNS, a light
 
 Needs:
 
-* bootable media with OpenBSD/i386 stable version on a USB stick
-(using snapshots is not ideal in this scenario)
+* bootable media with OpenBSD/i386 stable version on a [USB stick](http://www.openbsd.org/faq/faq4.html#Flash). Using snapshots is not ideal in this scenario.
 
 * compact flash (CF) card with adapter
 
@@ -21,10 +20,10 @@ Needs:
 
 With the bootable media attached via USB, launch the bootstrap computer and enter the OpenBSD installation program.
 
-Type i to enter the install system.
+Type __i__ to enter the install system.
 
 	Welcome to the OpenBSD/i386 5.8 installation program.
-	(I)nstall, (U)pgrade, (A)utoinstall or (S)hell?
+	(I)nstall, (U)pgrade, (A)utoinstall or (S)hell? i
 
 Plug in the CF card adapter and note the device listed to standard output, normally sd(4) with a respective number, such as sd2.
 
@@ -44,17 +43,17 @@ Next the list of interfaces will be listed, both wired and the recognized wirele
 
 sshd(8) will likely be necessary.
 
-	Start sshd(8) by default [yes]?  
+	Start sshd(8) by default [yes]? yes
 
 For the functions listed previously, X Windows and xdm(1) are unnecessary.
 
-	Do you want the X Window System to be started by xdm(1)? [no]  
+	Do you want the X Window System to be started by xdm(1)? [no] no
 
 A non-privileged user is an important step in running a secure system.
 
 	Setup a user? (enter a lower-case loginname, or 'no') [no]  
 
-	Allow root ssh login? (yes, no, prohibit-password) [no]
+	Allow root ssh login? (yes, no, prohibit-password) [no] no
 
 	What timezone are you in? ('?' for list) [(local timezone guess)]
 
@@ -64,7 +63,7 @@ Next is determining the install disk.
 
 In this case, standard output noted that the CF card is located on sd2. An incorrect choice here, such as selecting the bootstrap computer's disk, will mean overwriting the wrong disk.
 
-Select ? to verify the correct disk.
+Select __?__ to verify the correct disk.
 
 	Which disk is the root disk? ('?' for details) [sd0] ?
 
@@ -72,33 +71,33 @@ Enter the appropriate disk, in this case it's sd2
 
 Next the fdisk(8) utility runs displaying the slice breakdown of the disk.
 
-Choose w to utilize the entire disk.
+Choose __w__ to utilize the entire disk.
 
-	Use (W)hole disk, use the (O)penBSD area, or (E)dit the MBR? [OpenBSD]
+	Use (W)hole disk, use the (O)penBSD area, or (E)dit the MBR? [OpenBSD] w
 
-Next the autoconfigured partition layout will be displayed. Unless there are particular needs, choose a for auto.
+Next the autoconfigured partition layout will be displayed. Unless there are particular needs, choose __a__ for auto.
 
-	Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout [a]?
+	Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout [a]? a
 
-At this point, the installer will ask for the next disk to configure. Type done as our disk setup is complete.
+At this point, the installer will ask for the next disk to configure. Type __done__ as our disk setup is complete.
 
 	Which disk do you wish to initialize? (or 'done') [done]
 
-Then the install sets need to be accessed, either on a local disk or via HTTP. HTTP is our choice, as the install media didn't contain the files.
+Then the install sets need to be accessed, either on a local disk or via HTTP. __http__ is our choice, as the install media didn't contain the files.
 
 	Let's install the sets!
 
-	Location of sets? (disk http or 'done') [http]
+	Location of sets? (disk http or 'done') [http] http
 
 If you're using a proxy, enter it here.
 
 	HTTP proxy URL? (e.g. 'http://proxy:8080', or 'none') [none]
 
-Now enter an OpenBSD mirror. Typing ? will display a list of the current mirrors.
+Now enter an OpenBSD mirror. Typing __?__ will display a list of the current mirrors.
 
 	HTTP Server? (hostname, list#, 'done' or '?')
 
-The OpenBSD project insists on maintaining identically directory hierarchies on their mirrors. The next prompt should illustrate why, since you just need to hit enter.
+The OpenBSD project insists on maintaining identically directory hierarchies on their mirrors. The next prompt should illustrate why, since you just need to hit "enter."
 
 	Server directory? [pub/OpenBSD/5.8/i386]
 
@@ -122,7 +121,7 @@ At this point there should only be three install sets remaining: bsd, bsd.rd and
 
 	Location of sets? (disk http or 'done') [http] done
 
-We are quite sure the bsd.mp kernel is unnecessary, so type yes.
+We are quite sure the bsd.mp kernel is unnecessary, so type __yes__.
 
 	Are you *SURE* your install is complete without 'bsd.mp'? [no] yes
 
@@ -191,4 +190,16 @@ Begin booting OpenBSD with the new settings.
 
 	> boot
 
-All done!
+Finally, it's necessary to configure the sis(4) network interface as directed by hostname.if(5).
+
+	vi /etc/hostname.sis0
+
+Either set a static address with:
+
+	inet {IP} netmask {netmask}
+
+Or set to dhcp:
+
+	dhcp
+
+Reboot and the Soekris is ready for the particular function you've chosen.
