@@ -206,6 +206,8 @@ Either set a static address with:
 
 	inet {IP} netmask {netmask}
 
+And also the appropriate gateway in /etc/mygate and DNS in /etc/resolv.conf.
+
 Or set to dhcp:
 
 	dhcp
