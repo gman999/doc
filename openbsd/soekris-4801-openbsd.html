@@ -26,20 +26,25 @@
 
 <p>With the bootable media attached via USB, launch the bootstrap computer and enter the OpenBSD installation program.</p>
 
-<p>Welcome to the OpenBSD/i386 5.8 installation program.
-(I)nstall, (U)pgrade, (A)utoinstall or (S)hell?</p>
+<pre><code>Welcome to the OpenBSD/i386 5.8 installation program.
+(I)nstall, (U)pgrade, (A)utoinstall or (S)hell?
 
-<p>Type I to enter the install screen.</p>
+Type I to enter the install screen.
+</code></pre>
 
 <p>Plug in the CF card adapter and note the device listed to standard output, normally sd(4) with a respective number, such as sd2.</p>
 
 <p>The OpenBSD installation program is graphics-free, yet clear and simple to follow.</p>
 
-<p>Choose your keyboard layout (&#8216;?&#8217; or &#8216;L&#8217; for list) [default]
-hit &#8220;enter&#8221;</p>
+<pre><code>Choose your keyboard layout ('?' or 'L' for list) [default]
+</code></pre>
 
-<p>System hostname? (short form, e.g. &#8216;foo&#8217;)
-choose a hostname</p>
+<p>hit &#8220;enter&#8221;</p>
+
+<pre><code>System hostname? (short form, e.g. 'foo')
+</code></pre>
+
+<p>choose a hostname</p>
 
 <p>Next the list of interfaces will be listed, both wired and the recognized wireless devices. This can be configured for DHCP, as it will only be used to pull the relevant install sets from an OpenBSD mirror. Note that the interfaces only apply temporarily to the bootstrap computer, and will need to be adjusted manually on the actual Soekris device which uses sis(4) for the network interfaces.</p>
 
@@ -101,7 +106,13 @@ sshd(8) access should only be done with non-privileged users, and not the root u
 smtpd_flags=NO
 </code></pre>
 
+<p>Install the CF card into the Soekris, plug in an ethernet cable to the first port on the right and plug in the serial console cable.</p>
+
 <h3 id="bootingup">Booting Up</h3>
+
+<p>Setup the bootstrap computer with the serial console cable and some terminal emulation application.</p>
+
+<p>By default, the Soekris 4801 used 19200 as the console speed, yet we set the speed to 9600 in the /etc/boot.conf and /etc/ttys files. Therefore, set the Soekris console speed to 9600 in the BIOS.</p>
 
 </body>
 </html>

@@ -21,19 +21,21 @@ Needs:
 
 With the bootable media attached via USB, launch the bootstrap computer and enter the OpenBSD installation program.
 
-Welcome to the OpenBSD/i386 5.8 installation program.
-(I)nstall, (U)pgrade, (A)utoinstall or (S)hell?
+	Welcome to the OpenBSD/i386 5.8 installation program.
+	(I)nstall, (U)pgrade, (A)utoinstall or (S)hell?
 
-Type I to enter the install screen.
+	Type I to enter the install screen.
 
 Plug in the CF card adapter and note the device listed to standard output, normally sd(4) with a respective number, such as sd2.
 
 The OpenBSD installation program is graphics-free, yet clear and simple to follow.
 
-Choose your keyboard layout ('?' or 'L' for list) [default]
+	Choose your keyboard layout ('?' or 'L' for list) [default]
+
 hit "enter"
 
-System hostname? (short form, e.g. 'foo')
+	System hostname? (short form, e.g. 'foo')
+
 choose a hostname
 
 Next the list of interfaces will be listed, both wired and the recognized wireless devices. This can be configured for DHCP, as it will only be used to pull the relevant install sets from an OpenBSD mirror. Note that the interfaces only apply temporarily to the bootstrap computer, and will need to be adjusted manually on the actual Soekris device which uses sis(4) for the network interfaces.
@@ -94,6 +96,10 @@ Create /etc/rc.conf.local for minimizing unnecessary daemons, such as sndiod(1) 
 	sndiod_flags=NO
 	smtpd_flags=NO
 
+Install the CF card into the Soekris, plug in an ethernet cable to the first port on the right and plug in the serial console cable.
+
 ###Booting Up###
 
+Setup the bootstrap computer with the serial console cable and some terminal emulation application.
 
+By default, the Soekris 4801 used 19200 as the console speed, yet we set the speed to 9600 in the /etc/boot.conf and /etc/ttys files. Therefore, set the Soekris console speed to 9600 in the BIOS.
