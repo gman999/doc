@@ -212,7 +212,7 @@ Finally, it's necessary to configure the sis(4) network interface as directed by
 
 Either set a static address with:
 
-	inet {IP} netmask {netmask}
+	inet {IP} {netmask}
 
 And also the appropriate gateway in /etc/mygate and DNS in /etc/resolv.conf.
 
