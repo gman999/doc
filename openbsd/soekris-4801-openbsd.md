@@ -20,14 +20,14 @@ Needs:
 
 With the bootable media attached via USB, launch the bootstrap computer and enter the OpenBSD installation program.
 
+The OpenBSD installer is graphics-free, yet clear and simple to navigate.
+
 Type __i__ to enter the install system.
 
 	Welcome to the OpenBSD/i386 5.8 installation program.
 	(I)nstall, (U)pgrade, (A)utoinstall or (S)hell? i
 
 Plug in the CF card adapter and note the device listed to standard output, normally sd(4) with a respective number, such as sd2.
-
-The OpenBSD installation program is graphics-free, yet clear and simple to follow.
 
 Hit "enter" for [default]
 
@@ -37,7 +37,7 @@ Designate the system's hostname
 
 	System hostname? (short form, e.g. 'foo')
 
-Next the list of interfaces will be listed, both wired and the recognized wireless devices. This can be configured for DHCP, as it will only be used to pull the relevant install sets from an OpenBSD mirror. Note that the interfaces only apply temporarily to the bootstrap computer, and will need to be adjusted manually on the actual Soekris device which uses sis(4) for the network interfaces.
+Next the list of interfaces is displayed, both wired and wireless devices. This can be configured for DHCP if available, as it will only be used to pull the relevant install sets from a remote OpenBSD mirror. Note that the interfaces only apply temporarily to the bootstrap computer, and will need to be adjusted manually on the actual Soekris device which uses sis(4) for the network interfaces.
 
 	Password for root account? (will not echo)
 
@@ -49,7 +49,7 @@ For the functions listed previously, X Windows and xdm(1) are unnecessary.
 
 	Do you want the X Window System to be started by xdm(1)? [no] no
 
-A non-privileged user is an important step in running a secure system.
+Configuring a non-privileged user is an important step in running a secure system.
 
 	Setup a user? (enter a lower-case loginname, or 'no') [no] user-name
 
@@ -59,7 +59,7 @@ And set the password.
 
 	What timezone are you in? ('?' for list) [(local timezone guess)]
 
-Next is determining the install disk.
+Next determine the disk to which OpenBSD is installed.
 
 	Available disks are: sd0 sd1 sd2.
 
@@ -69,9 +69,9 @@ Type __?__ to verify the correct disk.
 
 	Which disk is the root disk? ('?' for details) [sd0] ?
 
-Enter the appropriate disk, in this case it's sd2
+Enter the appropriate disk, in this case it's sd2.
 
-Next the fdisk(8) utility runs displaying the slice breakdown of the disk.
+Next the fdisk(8) utility runs displaying the disk's slices.
 
 Choose __w__ to utilize the entire disk.
 
@@ -83,9 +83,9 @@ Next the autoconfigured partition layout will be displayed. Unless there are par
 
 At this point, the installer will ask for the next disk to configure. Type __done__ as our disk setup is complete.
 
-	Which disk do you wish to initialize? (or 'done') [done]
+	Which disk do you wish to initialize? (or 'done') [done] done
 
-Then the install sets need to be accessed, either on a local disk or via HTTP. __http__ is our choice, as the install media didn't contain the files.
+The install sets now need to be accessed, either on a local disk or via HTTP. __http__ is our choice, as the install media didn't contain the files, and the install sets need to be pulled from a remote OpenBSD mirror.
 
 	Let's install the sets!
 
@@ -97,9 +97,9 @@ If you're using a proxy, enter it here.
 
 Now enter an OpenBSD mirror. Typing __?__ will display a list of the current mirrors.
 
-	HTTP Server? (hostname, list#, 'done' or '?')
+	HTTP Server? (hostname, list#, 'done' or '?') your-mirror-selection
 
-The OpenBSD project insists on maintaining identically directory hierarchies on their mirrors. The next prompt should illustrate why, since you just need to hit "enter."
+The OpenBSD project insists on maintaining identical directory hierarchies on their mirrors. The next prompt should illustrate why, since you just need to hit "enter."
 
 	Server directory? [pub/OpenBSD/5.8/i386]
 
@@ -107,7 +107,7 @@ Now the full list of sets is displayed. In our case, the Soekris install should 
 
 	Set name(s)? (or 'abort' or 'done') [done]
 
-To remove install sets, type - before the ones you want to remove, including the SMP kernel, since Soekris has an ancient CPU.
+To remove install sets, type __-__ before the ones you want to remove, including the SMP kernel, since Soekris has an ancient CPU. Useless uses of __*__ are acceptable.
 
 	-bsd.mp
 
@@ -119,7 +119,7 @@ To remove install sets, type - before the ones you want to remove, including the
 
 	-x*
 
-At this point there should only be three install sets remaining: bsd, bsd.rd and base58.tgz.
+At this point there should only be three install components remaining: the kernel bsd, the RAM kernel bsd.rd and the vital base58.tgz.
 
 	Location of sets? (disk http or 'done') [http] done
 
@@ -131,7 +131,7 @@ The install process will complete and return to a prompt, from which we'll reboo
 
 	# reboot
 
-As the system reboots remove the USB disk with the install media and the CF card adapter.
+As the system reboots remove both the USB disk with the install media and the CF card adapter.
 
 Ideally, the bootstrap computer will boot normally, and you didn't do a fresh OpenBSD install to the wrong disk. Measure twice, cut once!
 
@@ -170,17 +170,25 @@ Create /etc/rc.conf.local for minimizing unnecessary daemons, such as sndiod(1) 
 	sndiod_flags=NO
 	smtpd_flags=NO
 
-Install the CF card into the Soekris, plug in an ethernet cable to the first port on the right and plug in the serial console cable.
+Install the CF card into the Soekris, plug in an ethernet cable to the first port on the right (sis0) and plug in the serial console cable.
 
 ###Booting Up###
 
 Setup the bootstrap computer with the serial console cable and some terminal emulation application.
 
-By default, the Soekris 4801 used 19200 as the console speed, yet we set the speed to 9600 in the /etc/boot.conf and /etc/ttys files. Therefore, set the Soekris console speed to 9600 in the BIOS by hitting control-p during the Soekris' initial boot stage.
+By default, the Soekris 4801 uses 19200 as the console speed, yet we set the speed to 9600 in the /etc/boot.conf and /etc/ttys files. In this case, we'll set the Soekris console speed to 9600 in the BIOS.
 
+From an OpenBSD shell and the serial console cable connected, use cu(1) to access the Soekris system.
+
+	cu -l /dev/ttyU0 -s 19200
+
+<<<<<<< HEAD
 I recommend setting every system to 9600 since it's the default for programs such as cu(1), it's unnecessary to have speeds exceeding 9600 for any console access. Don't confuse console speed with broadband connectivity.
 
 To show the current BIOS settings:
+=======
+Plug in the Soekris power, and hit control-p when prompted, and display the current BIOS settings.
+>>>>>>> afa4da533e188b4b580d6e265f8e53433c7fc72f
 
 	comBIOS monitor.   Press ? for help.
 
@@ -190,7 +198,11 @@ Set the console speed to 9600.
 
 	> set conspeed=9600
 
-Begin booting OpenBSD with the new settings.
+Type __show__ to confirm the new setting.
+
+	> show
+
+Begin booting OpenBSD.
 
 	> boot
 
@@ -201,6 +213,8 @@ Finally, it's necessary to configure the sis(4) network interface as directed by
 Either set a static address with:
 
 	inet {IP} netmask {netmask}
+
+And also the appropriate gateway in /etc/mygate and DNS in /etc/resolv.conf.
 
 Or set to dhcp:
 
