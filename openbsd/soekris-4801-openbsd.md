@@ -51,7 +51,9 @@ For the functions listed previously, X Windows and xdm(1) are unnecessary.
 
 A non-privileged user is an important step in running a secure system.
 
-	Setup a user? (enter a lower-case loginname, or 'no') [no]  
+	Setup a user? (enter a lower-case loginname, or 'no') [no] user-name
+
+And set the password.
 
 	Allow root ssh login? (yes, no, prohibit-password) [no] no
 
@@ -63,7 +65,7 @@ Next is determining the install disk.
 
 In this case, standard output noted that the CF card is located on sd2. An incorrect choice here, such as selecting the bootstrap computer's disk, will mean overwriting the wrong disk.
 
-Select __?__ to verify the correct disk.
+Type __?__ to verify the correct disk.
 
 	Which disk is the root disk? ('?' for details) [sd0] ?
 
@@ -175,6 +177,8 @@ Install the CF card into the Soekris, plug in an ethernet cable to the first por
 Setup the bootstrap computer with the serial console cable and some terminal emulation application.
 
 By default, the Soekris 4801 used 19200 as the console speed, yet we set the speed to 9600 in the /etc/boot.conf and /etc/ttys files. Therefore, set the Soekris console speed to 9600 in the BIOS by hitting control-p during the Soekris' initial boot stage.
+
+I recommend setting every system to 9600 since it's the default for programs such as cu(1), it's unnecessary to have speeds exceeding 9600 for any console access. Don't confuse console speed with broadband connectivity.
 
 To show the current BIOS settings:
 

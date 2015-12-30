@@ -56,9 +56,12 @@
 
 <p>A non-privileged user is an important step in running a secure system.</p>
 
-<pre><code>Setup a user? (enter a lower-case loginname, or 'no') [no]  
+<pre><code>Setup a user? (enter a lower-case loginname, or 'no') [no] user-name
+</code></pre>
 
-Allow root ssh login? (yes, no, prohibit-password) [no] no
+<p>And set the password.</p>
+
+<pre><code>Allow root ssh login? (yes, no, prohibit-password) [no] no
 
 What timezone are you in? ('?' for list) [(local timezone guess)]
 </code></pre>
@@ -70,7 +73,7 @@ What timezone are you in? ('?' for list) [(local timezone guess)]
 
 <p>In this case, standard output noted that the CF card is located on sd2. An incorrect choice here, such as selecting the bootstrap computer&#8217;s disk, will mean overwriting the wrong disk.</p>
 
-<p>Select <strong>?</strong> to verify the correct disk.</p>
+<p>Type <strong>?</strong> to verify the correct disk.</p>
 
 <pre><code>Which disk is the root disk? ('?' for details) [sd0] ?
 </code></pre>
@@ -202,6 +205,8 @@ smtpd_flags=NO
 <p>Setup the bootstrap computer with the serial console cable and some terminal emulation application.</p>
 
 <p>By default, the Soekris 4801 used 19200 as the console speed, yet we set the speed to 9600 in the /etc/boot.conf and /etc/ttys files. Therefore, set the Soekris console speed to 9600 in the BIOS by hitting control-p during the Soekris&#8217; initial boot stage.</p>
+
+<p>I recommend setting every system to 9600 since it&#8217;s the default for programs such as cu(1), it&#8217;s unnecessary to have speeds exceeding 9600 for any console access. Don&#8217;t confuse console speed with broadband connectivity.</p>
 
 <p>To show the current BIOS settings:</p>
 
