@@ -184,13 +184,9 @@ From an OpenBSD shell and the serial console cable connected, use cu(1) to acces
 
 	cu -l /dev/ttyU0 -s 19200
 
-<<<<<<< HEAD
 I recommend setting every system to 9600 since it's the default for programs such as cu(1), it's unnecessary to have speeds exceeding 9600 for any console access. Don't confuse console speed with broadband connectivity.
 
-To show the current BIOS settings:
-=======
 Plug in the Soekris power, and hit control-p when prompted, and display the current BIOS settings.
->>>>>>> afa4da533e188b4b580d6e265f8e53433c7fc72f
 
 	comBIOS monitor.   Press ? for help.
 
