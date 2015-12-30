@@ -132,6 +132,8 @@ The install process will complete and return to a prompt, from which we'll reboo
 
 As the system reboots remove the USB disk with the install media and the CF card adapter.
 
+Ideally, the bootstrap computer will boot normally, and you didn't do a fresh OpenBSD install to the wrong disk. Measure twice, cut once!
+
 ###Pre-First Boot Configuration###
 
 There is an important set of changes to make to successfully boot the Soekris board with OpenBSD as there is no VGA output, and the default output is to console.
