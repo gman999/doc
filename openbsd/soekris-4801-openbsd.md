@@ -4,7 +4,7 @@ The venerable [Soekris 4801](https://soekris.com) with its 128 megabytes of RAM 
 
 OpenBSD is an ideal candidate operating system for the Soekris, since it's built lean by default, yet an array of functions are available in the base system.
 
-One might also consider custom OpenBSD systems such as [flashrd](http://www.nmedia.net/flashrd) or its derivation [resflash](http://stable.rcesoftware.com/resflash/), although flashrd hasn't been updated since OpenBSD 5.7 and resflash is in its early stages of development.
+One might also consider custom OpenBSD systems such as [flashrd](http://www.nmedia.net/flashrd) or its derivation [resflash](http://stable.rcesoftware.com/resflash/). Both are aimed at small systems, and minimize disk writes which is ideal for flash media-based systems. However, flashrd hasn't been updated since OpenBSD 5.7 and resflash is in its early stages of development.
 
 A Soekris box running OpenBSD is more than adequate for use as a serial console server, a recursive/caching DNS, a lightweight monitoring server, etc., without installing any third-party software.
 
@@ -12,7 +12,7 @@ A Soekris box running OpenBSD is more than adequate for use as a serial console 
 
 Needs:
 
-* bootable media with OpenBSD/i386 stable version on a [USB stick](http://www.openbsd.org/faq/faq4.html#Flash). Using snapshots is not ideal in this scenario.
+* bootable media with OpenBSD/i386 stable version on a [USB stick](http://www.openbsd.org/faq/faq4.html#Flash). Using snapshots is not ideal in this scenario, as we're looking for a low-maintenance system.
 
 * compact flash (CF) card with adapter
 
@@ -223,3 +223,7 @@ Or set to dhcp:
 	dhcp
 
 Reboot and the Soekris is ready for the particular function you've chosen.
+
+###Also Consider###
+
+There are other configuration enhancements to consider when building OpenBSD for Soekris and similar hardware, such as mount_tmpfs(8).
