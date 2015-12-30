@@ -4,7 +4,9 @@ The venerable [Soekris 4801](https://soekris.com) with its 128 megabytes of RAM 
 
 OpenBSD is an ideal candidate operating system for the Soekris, since it's built lean by default, yet an array of functions are available in the base system.
 
-Such a device could be a serial console server, a recursive/caching DNS, a lightweight monitoring server, etc., without installing any third-party software.
+One might also consider custom OpenBSD systems such as [flashrd](http://www.nmedia.net/flashrd) or its derivation [resflash](http://stable.rcesoftware.com/resflash/), although flashrd hasn't been updated since OpenBSD 5.7 and resflash is in its early stages of development.
+
+A Soekris box running OpenBSD is more than adequate for use as a serial console server, a recursive/caching DNS, a lightweight monitoring server, etc., without installing any third-party software.
 
 ###The Install###
 
