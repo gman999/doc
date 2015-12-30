@@ -20,14 +20,14 @@ Needs:
 
 With the bootable media attached via USB, launch the bootstrap computer and enter the OpenBSD installation program.
 
+The OpenBSD installer is graphics-free, yet clear and simple to navigate.
+
 Type __i__ to enter the install system.
 
 	Welcome to the OpenBSD/i386 5.8 installation program.
 	(I)nstall, (U)pgrade, (A)utoinstall or (S)hell? i
 
 Plug in the CF card adapter and note the device listed to standard output, normally sd(4) with a respective number, such as sd2.
-
-The OpenBSD installation program is graphics-free, yet clear and simple to follow.
 
 Hit "enter" for [default]
 
@@ -37,7 +37,7 @@ Designate the system's hostname
 
 	System hostname? (short form, e.g. 'foo')
 
-Next the list of interfaces will be listed, both wired and the recognized wireless devices. This can be configured for DHCP, as it will only be used to pull the relevant install sets from an OpenBSD mirror. Note that the interfaces only apply temporarily to the bootstrap computer, and will need to be adjusted manually on the actual Soekris device which uses sis(4) for the network interfaces.
+Next the list of interfaces is displayed, both wired and wireless devices. This can be configured for DHCP if available, as it will only be used to pull the relevant install sets from a remote OpenBSD mirror. Note that the interfaces only apply temporarily to the bootstrap computer, and will need to be adjusted manually on the actual Soekris device which uses sis(4) for the network interfaces.
 
 	Password for root account? (will not echo)
 
