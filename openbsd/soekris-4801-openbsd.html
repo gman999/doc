@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<p>The venerable <a href="https://soekris.com">Soekris 4801</a> with its 128 megabyte of RAM and slow 233 MHz processor can still maintain a useful role. Thousands reside quietly in drawers and closets around the globe, imagined to be far past their expiration date.</p>
+<p>The venerable <a href="https://soekris.com">Soekris 4801</a> with its 128 megabytes of RAM and slow 233 MHz processor can still maintain a useful role. Thousands reside quietly in drawers and closets around the globe, imagined to be far past their expiration date.</p>
 
 <p>OpenBSD is an ideal candidate operating system for the Soekris, since it&#8217;s built lean by default, yet an array of functions are available in the base system.</p>
 
@@ -82,9 +82,20 @@ What timezone are you in? ('?' for list) [(local timezone guess)]
 <pre><code>Which disk is the root disk? ('?' for details) [sd0] ?
 </code></pre>
 
+<p>&#8230;.</p>
+
+<h3 id="pre-firstbootconfiguration">Pre-First Boot Configuration</h3>
+
+<p>There is an important set of changes to make to successfully boot the Soekris board with OpenBSD as there is no VGA output, and the default output is to console.</p>
+
 <p>The default install will cease booting at this line unless console access is enabled.</p>
 
 <pre><code>entry point at 0x200120
+</code></pre>
+
+<p>The easiest way to make these changes is to mount(8) the CF card on an OpenBSD computer and manually make the changes.</p>
+
+<pre><code>mount /dev/sd2a /mnt
 </code></pre>
 
 <p>In /etc/ttys, change this line:</p>
