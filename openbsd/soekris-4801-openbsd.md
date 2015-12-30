@@ -67,11 +67,19 @@ In this case, standard output noted that the CF card is located on sd2. An incor
 Select ? to verify the correct disk.
 
 	Which disk is the root disk? ('?' for details) [sd0] ?
+....
+
+###Pre-First Boot Configuration###
+
+There is an important set of changes to make to successfully boot the Soekris board with OpenBSD as there is no VGA output, and the default output is to console.
 
 The default install will cease booting at this line unless console access is enabled.
 
 	entry point at 0x200120
 
+The easiest way to make these changes is to mount(8) the CF card on an OpenBSD computer and manually make the changes.
+
+	mount /dev/sd2a /mnt
 
 In /etc/ttys, change this line:
 
