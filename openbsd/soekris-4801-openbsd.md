@@ -8,6 +8,16 @@ One might also consider custom OpenBSD systems such as [flashrd](http://www.nmed
 
 A Soekris box running OpenBSD is more than adequate for use as a serial console server, a recursive/caching DNS, a lightweight monitoring server, etc., without installing any third-party software.
 
+In terms of formatting with this piece:
+
+* __bold__ indicates user input
+
+* indented and shadowed indicates standard output displayed
+
+* a number after a command, such as sshd(8) indicates an OpenBSD manual page
+
+* and { } represents custom user input, such as a user name
+
 ###The Install###
 
 Needs:
@@ -27,7 +37,7 @@ The OpenBSD installer is graphics-free, yet clear and simple to navigate.
 Type __i__ to enter the install system.
 
 	Welcome to the OpenBSD/i386 5.8 installation program.
-	(I)nstall, (U)pgrade, (A)utoinstall or (S)hell? i
+	(I)nstall, (U)pgrade, (A)utoinstall or (S)hell? __i__
 
 Plug in the CF card adapter and note the device listed to standard output, normally sd(4) with a respective number, such as sd2.
 
@@ -37,7 +47,7 @@ Hit "enter" for [default]
 
 Designate the system's hostname
 
-	System hostname? (short form, e.g. 'foo')
+	System hostname? (short form, e.g. 'foo') {hostname}
 
 Next the list of interfaces is displayed, both wired and wireless devices. This can be configured for DHCP if available, as it will only be used to pull the relevant install sets from a remote OpenBSD mirror. Note that the interfaces only apply temporarily to the bootstrap computer, and will need to be adjusted manually on the actual Soekris device which uses sis(4) for the network interfaces.
 
@@ -45,19 +55,19 @@ Next the list of interfaces is displayed, both wired and wireless devices. This 
 
 sshd(8) will likely be necessary.
 
-	Start sshd(8) by default [yes]? yes
+	Start sshd(8) by default [yes]? __yes__
 
 For the functions listed previously, X Windows and xdm(1) are unnecessary.
 
-	Do you want the X Window System to be started by xdm(1)? [no] no
+	Do you want the X Window System to be started by xdm(1)? [no] __no__
 
 Configuring a non-privileged user is an important step in running a secure system.
 
-	Setup a user? (enter a lower-case loginname, or 'no') [no] user-name
+	Setup a user? (enter a lower-case loginname, or 'no') [no] {user name}
 
 And set the password.
 
-	Allow root ssh login? (yes, no, prohibit-password) [no] no
+	Allow root ssh login? (yes, no, prohibit-password) [no] __no__
 
 	What timezone are you in? ('?' for list) [(local timezone guess)]
 
@@ -69,7 +79,7 @@ In this case, standard output noted that the CF card is located on sd2. An incor
 
 Type __?__ to verify the correct disk.
 
-	Which disk is the root disk? ('?' for details) [sd0] ?
+	Which disk is the root disk? ('?' for details) [sd0] __?__
 
 Enter the appropriate disk, in this case it's sd2.
 
@@ -77,21 +87,21 @@ Next the fdisk(8) utility runs displaying the disk's slices.
 
 Choose __w__ to utilize the entire disk.
 
-	Use (W)hole disk, use the (O)penBSD area, or (E)dit the MBR? [OpenBSD] w
+	Use (W)hole disk, use the (O)penBSD area, or (E)dit the MBR? [OpenBSD] __w__
 
 Next the autoconfigured partition layout will be displayed. Unless there are particular needs, choose __a__ for auto.
 
-	Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout [a]? a
+	Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout [a]? __a__
 
 At this point, the installer will ask for the next disk to configure. Type __done__ as our disk setup is complete.
 
-	Which disk do you wish to initialize? (or 'done') [done] done
+	Which disk do you wish to initialize? (or 'done') [done] __done__
 
 The install sets now need to be accessed, either on a local disk or via HTTP. __http__ is our choice, as the install media didn't contain the files, and the install sets need to be pulled from a remote OpenBSD mirror.
 
 	Let's install the sets!
 
-	Location of sets? (disk http or 'done') [http] http
+	Location of sets? (disk http or 'done') [http] __http__
 
 If you're using a proxy, enter it here.
 
@@ -99,7 +109,7 @@ If you're using a proxy, enter it here.
 
 Now enter an OpenBSD mirror. Typing __?__ will display a list of the current mirrors.
 
-	HTTP Server? (hostname, list#, 'done' or '?') your-mirror-selection
+	HTTP Server? (hostname, list#, 'done' or '?') {your-mirror-selection}
 
 The OpenBSD project insists on maintaining identical directory hierarchies on their mirrors. The next prompt should illustrate why, since you just need to hit "enter."
 
@@ -123,11 +133,11 @@ To remove install sets, type __-__ before the ones you want to remove, including
 
 At this point there should only be three install components remaining: the kernel bsd, the RAM kernel bsd.rd and the vital base58.tgz.
 
-	Location of sets? (disk http or 'done') [http] done
+	Location of sets? (disk http or 'done') [http] {done}
 
 We are quite sure the bsd.mp kernel is unnecessary, so type __yes__.
 
-	Are you *SURE* your install is complete without 'bsd.mp'? [no] yes
+	Are you *SURE* your install is complete without 'bsd.mp'? [no] __yes__
 
 The install process will complete and return to a prompt, from which we'll reboot.
 
@@ -165,7 +175,7 @@ Create /etc/boot.conf, and add the following line:
 
 Setup the non-privileged user with doas(1) permissions in /etc/doas.conf(5):
 
-	permit nopass keepenv {user} as root
+	permit nopass keepenv {user name} as root
 
 Create /etc/rc.conf.local for minimizing unnecessary daemons, such as sndiod(1) and smtpd(8):
 
@@ -203,6 +213,10 @@ Type __show__ to confirm the new setting.
 Begin booting OpenBSD.
 
 	> boot
+
+At this point, close the current cu(1) session and reconnnect with:
+
+	cu -l /dev/ttyU0
 
 Finally, it's necessary to configure the sis(4) network interface as directed by hostname.if(5).
 

@@ -8,6 +8,15 @@
 
 <p>A Soekris box running OpenBSD is more than adequate for use as a serial console server, a recursive/caching DNS, a lightweight monitoring server, etc., without installing any third-party software.</p>
 
+<p>In terms of formatting with this piece:</p>
+
+<ul>
+<li><p><strong>bold</strong> indicates user input</p></li>
+<li><p>indented and shadowed indicates standard output displayed</p></li>
+<li><p>a number after a command, such as sshd(8) indicates an OpenBSD manual page</p></li>
+<li><p>and { } represents custom user input, such as a user name</p></li>
+</ul>
+
 <h3 id="theinstall">The Install</h3>
 
 <p>Needs:</p>
@@ -26,7 +35,7 @@
 <p>Type <strong>i</strong> to enter the install system.</p>
 
 <pre><code>Welcome to the OpenBSD/i386 5.8 installation program.
-(I)nstall, (U)pgrade, (A)utoinstall or (S)hell? i
+(I)nstall, (U)pgrade, (A)utoinstall or (S)hell? __i__
 </code></pre>
 
 <p>Plug in the CF card adapter and note the device listed to standard output, normally sd(4) with a respective number, such as sd2.</p>
@@ -38,7 +47,7 @@
 
 <p>Designate the system&#8217;s hostname</p>
 
-<pre><code>System hostname? (short form, e.g. 'foo')
+<pre><code>System hostname? (short form, e.g. 'foo') {hostname}
 </code></pre>
 
 <p>Next the list of interfaces is displayed, both wired and wireless devices. This can be configured for DHCP if available, as it will only be used to pull the relevant install sets from a remote OpenBSD mirror. Note that the interfaces only apply temporarily to the bootstrap computer, and will need to be adjusted manually on the actual Soekris device which uses sis(4) for the network interfaces.</p>
@@ -48,22 +57,22 @@
 
 <p>sshd(8) will likely be necessary.</p>
 
-<pre><code>Start sshd(8) by default [yes]? yes
+<pre><code>Start sshd(8) by default [yes]? __yes__
 </code></pre>
 
 <p>For the functions listed previously, X Windows and xdm(1) are unnecessary.</p>
 
-<pre><code>Do you want the X Window System to be started by xdm(1)? [no] no
+<pre><code>Do you want the X Window System to be started by xdm(1)? [no] __no__
 </code></pre>
 
 <p>Configuring a non-privileged user is an important step in running a secure system.</p>
 
-<pre><code>Setup a user? (enter a lower-case loginname, or 'no') [no] user-name
+<pre><code>Setup a user? (enter a lower-case loginname, or 'no') [no] {user name}
 </code></pre>
 
 <p>And set the password.</p>
 
-<pre><code>Allow root ssh login? (yes, no, prohibit-password) [no] no
+<pre><code>Allow root ssh login? (yes, no, prohibit-password) [no] __no__
 
 What timezone are you in? ('?' for list) [(local timezone guess)]
 </code></pre>
@@ -77,7 +86,7 @@ What timezone are you in? ('?' for list) [(local timezone guess)]
 
 <p>Type <strong>?</strong> to verify the correct disk.</p>
 
-<pre><code>Which disk is the root disk? ('?' for details) [sd0] ?
+<pre><code>Which disk is the root disk? ('?' for details) [sd0] __?__
 </code></pre>
 
 <p>Enter the appropriate disk, in this case it&#8217;s sd2.</p>
@@ -86,24 +95,24 @@ What timezone are you in? ('?' for list) [(local timezone guess)]
 
 <p>Choose <strong>w</strong> to utilize the entire disk.</p>
 
-<pre><code>Use (W)hole disk, use the (O)penBSD area, or (E)dit the MBR? [OpenBSD] w
+<pre><code>Use (W)hole disk, use the (O)penBSD area, or (E)dit the MBR? [OpenBSD] __w__
 </code></pre>
 
 <p>Next the autoconfigured partition layout will be displayed. Unless there are particular needs, choose <strong>a</strong> for auto.</p>
 
-<pre><code>Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout [a]? a
+<pre><code>Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout [a]? __a__
 </code></pre>
 
 <p>At this point, the installer will ask for the next disk to configure. Type <strong>done</strong> as our disk setup is complete.</p>
 
-<pre><code>Which disk do you wish to initialize? (or 'done') [done] done
+<pre><code>Which disk do you wish to initialize? (or 'done') [done] __done__
 </code></pre>
 
 <p>The install sets now need to be accessed, either on a local disk or via HTTP. <strong>http</strong> is our choice, as the install media didn&#8217;t contain the files, and the install sets need to be pulled from a remote OpenBSD mirror.</p>
 
 <pre><code>Let's install the sets!
 
-Location of sets? (disk http or 'done') [http] http
+Location of sets? (disk http or 'done') [http] __http__
 </code></pre>
 
 <p>If you&#8217;re using a proxy, enter it here.</p>
@@ -113,7 +122,7 @@ Location of sets? (disk http or 'done') [http] http
 
 <p>Now enter an OpenBSD mirror. Typing <strong>?</strong> will display a list of the current mirrors.</p>
 
-<pre><code>HTTP Server? (hostname, list#, 'done' or '?') your-mirror-selection
+<pre><code>HTTP Server? (hostname, list#, 'done' or '?') {your-mirror-selection}
 </code></pre>
 
 <p>The OpenBSD project insists on maintaining identical directory hierarchies on their mirrors. The next prompt should illustrate why, since you just need to hit &#8220;enter.&#8221;</p>
@@ -141,12 +150,12 @@ Location of sets? (disk http or 'done') [http] http
 
 <p>At this point there should only be three install components remaining: the kernel bsd, the RAM kernel bsd.rd and the vital base58.tgz.</p>
 
-<pre><code>Location of sets? (disk http or 'done') [http] done
+<pre><code>Location of sets? (disk http or 'done') [http] {done}
 </code></pre>
 
 <p>We are quite sure the bsd.mp kernel is unnecessary, so type <strong>yes</strong>.</p>
 
-<pre><code>Are you *SURE* your install is complete without 'bsd.mp'? [no] yes
+<pre><code>Are you *SURE* your install is complete without 'bsd.mp'? [no] __yes__
 </code></pre>
 
 <p>The install process will complete and return to a prompt, from which we&#8217;ll reboot.</p>
@@ -191,7 +200,7 @@ Location of sets? (disk http or 'done') [http] http
 
 <p>Setup the non-privileged user with doas(1) permissions in /etc/doas.conf(5):</p>
 
-<pre><code>permit nopass keepenv {user} as root
+<pre><code>permit nopass keepenv {user name} as root
 </code></pre>
 
 <p>Create /etc/rc.conf.local for minimizing unnecessary daemons, such as sndiod(1) and smtpd(8):</p>
@@ -235,6 +244,11 @@ smtpd_flags=NO
 <p>Begin booting OpenBSD.</p>
 
 <pre><code>&gt; boot
+</code></pre>
+
+<p>At this point, close the current cu(1) session and reconnnect with:</p>
+
+<pre><code>cu -l /dev/ttyU0
 </code></pre>
 
 <p>Finally, it&#8217;s necessary to configure the sis(4) network interface as directed by hostname.if(5).</p>
