@@ -54,7 +54,7 @@
 <pre><code>Do you want the X Window System to be started by xdm(1)? [no] no
 </code></pre>
 
-<p>A non-privileged user is an important step in running a secure system.</p>
+<p>Configuring a non-privileged user is an important step in running a secure system.</p>
 
 <pre><code>Setup a user? (enter a lower-case loginname, or 'no') [no]  
 
@@ -63,7 +63,7 @@ Allow root ssh login? (yes, no, prohibit-password) [no] no
 What timezone are you in? ('?' for list) [(local timezone guess)]
 </code></pre>
 
-<p>Next is determining the install disk.</p>
+<p>Next determine the disk to which OpenBSD is installed.</p>
 
 <pre><code>Available disks are: sd0 sd1 sd2.
 </code></pre>
@@ -75,9 +75,9 @@ What timezone are you in? ('?' for list) [(local timezone guess)]
 <pre><code>Which disk is the root disk? ('?' for details) [sd0] ?
 </code></pre>
 
-<p>Enter the appropriate disk, in this case it&#8217;s sd2</p>
+<p>Enter the appropriate disk, in this case it&#8217;s sd2.</p>
 
-<p>Next the fdisk(8) utility runs displaying the slice breakdown of the disk.</p>
+<p>Next the fdisk(8) utility runs displaying the disk&#8217;s slices.</p>
 
 <p>Choose <strong>w</strong> to utilize the entire disk.</p>
 
@@ -91,10 +91,10 @@ What timezone are you in? ('?' for list) [(local timezone guess)]
 
 <p>At this point, the installer will ask for the next disk to configure. Type <strong>done</strong> as our disk setup is complete.</p>
 
-<pre><code>Which disk do you wish to initialize? (or 'done') [done]
+<pre><code>Which disk do you wish to initialize? (or 'done') [done] done
 </code></pre>
 
-<p>Then the install sets need to be accessed, either on a local disk or via HTTP. <strong>http</strong> is our choice, as the install media didn&#8217;t contain the files.</p>
+<p>The install sets now need to be accessed, either on a local disk or via HTTP. <strong>http</strong> is our choice, as the install media didn&#8217;t contain the files, and the install sets need to be pulled from a remote OpenBSD mirror.</p>
 
 <pre><code>Let's install the sets!
 
@@ -108,10 +108,10 @@ Location of sets? (disk http or 'done') [http] http
 
 <p>Now enter an OpenBSD mirror. Typing <strong>?</strong> will display a list of the current mirrors.</p>
 
-<pre><code>HTTP Server? (hostname, list#, 'done' or '?')
+<pre><code>HTTP Server? (hostname, list#, 'done' or '?') your-mirror-selection
 </code></pre>
 
-<p>The OpenBSD project insists on maintaining identically directory hierarchies on their mirrors. The next prompt should illustrate why, since you just need to hit &#8220;enter.&#8221;</p>
+<p>The OpenBSD project insists on maintaining identical directory hierarchies on their mirrors. The next prompt should illustrate why, since you just need to hit &#8220;enter.&#8221;</p>
 
 <pre><code>Server directory? [pub/OpenBSD/5.8/i386]
 </code></pre>
@@ -121,7 +121,7 @@ Location of sets? (disk http or 'done') [http] http
 <pre><code>Set name(s)? (or 'abort' or 'done') [done]
 </code></pre>
 
-<p>To remove install sets, type - before the ones you want to remove, including the SMP kernel, since Soekris has an ancient CPU.</p>
+<p>To remove install sets, type <strong>-</strong> before the ones you want to remove, including the SMP kernel, since Soekris has an ancient CPU. Useless uses of <strong>*</strong> are acceptable.</p>
 
 <pre><code>-bsd.mp
 
@@ -134,7 +134,7 @@ Location of sets? (disk http or 'done') [http] http
 -x*
 </code></pre>
 
-<p>At this point there should only be three install sets remaining: bsd, bsd.rd and base58.tgz.</p>
+<p>At this point there should only be three install components remaining: the kernel bsd, the RAM kernel bsd.rd and the vital base58.tgz.</p>
 
 <pre><code>Location of sets? (disk http or 'done') [http] done
 </code></pre>
@@ -149,7 +149,7 @@ Location of sets? (disk http or 'done') [http] http
 <pre><code># reboot
 </code></pre>
 
-<p>As the system reboots remove the USB disk with the install media and the CF card adapter.</p>
+<p>As the system reboots remove both the USB disk with the install media and the CF card adapter.</p>
 
 <p>Ideally, the bootstrap computer will boot normally, and you didn&#8217;t do a fresh OpenBSD install to the wrong disk. Measure twice, cut once!</p>
 
@@ -195,15 +195,20 @@ Location of sets? (disk http or 'done') [http] http
 smtpd_flags=NO
 </code></pre>
 
-<p>Install the CF card into the Soekris, plug in an ethernet cable to the first port on the right and plug in the serial console cable.</p>
+<p>Install the CF card into the Soekris, plug in an ethernet cable to the first port on the right (sis0) and plug in the serial console cable.</p>
 
 <h3 id="bootingup">Booting Up</h3>
 
 <p>Setup the bootstrap computer with the serial console cable and some terminal emulation application.</p>
 
-<p>By default, the Soekris 4801 used 19200 as the console speed, yet we set the speed to 9600 in the /etc/boot.conf and /etc/ttys files. Therefore, set the Soekris console speed to 9600 in the BIOS by hitting control-p during the Soekris&#8217; initial boot stage.</p>
+<p>By default, the Soekris 4801 uses 19200 as the console speed, yet we set the speed to 9600 in the /etc/boot.conf and /etc/ttys files. In this case, we&#8217;ll set the Soekris console speed to 9600 in the BIOS.</p>
 
-<p>To show the current BIOS settings:</p>
+<p>From an OpenBSD shell and the serial console cable connected, use cu(1) to access the Soekris system.</p>
+
+<pre><code>cu -l /dev/ttyU0 -s 19200
+</code></pre>
+
+<p>Plug in the Soekris power, and hit control-p when prompted, and display the current BIOS settings.</p>
 
 <pre><code>comBIOS monitor.   Press ? for help.
 
@@ -215,7 +220,12 @@ smtpd_flags=NO
 <pre><code>&gt; set conspeed=9600
 </code></pre>
 
-<p>Begin booting OpenBSD with the new settings.</p>
+<p>Type <strong>show</strong> to confirm the new setting.</p>
+
+<pre><code>&gt; show
+</code></pre>
+
+<p>Begin booting OpenBSD.</p>
 
 <pre><code>&gt; boot
 </code></pre>
