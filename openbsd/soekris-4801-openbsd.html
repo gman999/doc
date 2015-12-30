@@ -36,43 +36,49 @@ Type I to enter the install screen.
 
 <p>The OpenBSD installation program is graphics-free, yet clear and simple to follow.</p>
 
-<pre><code>Choose your keyboard layout ('?' or 'L' for list) [default]
+<pre><code>Hit &quot;enter&quot; for [default]
+
+Choose your keyboard layout ('?' or 'L' for list) [default]
+
+Designate the system's hostname
+
+System hostname? (short form, e.g. 'foo')
 </code></pre>
-
-<p>hit &#8220;enter&#8221;</p>
-
-<pre><code>System hostname? (short form, e.g. 'foo')
-</code></pre>
-
-<p>choose a hostname</p>
 
 <p>Next the list of interfaces will be listed, both wired and the recognized wireless devices. This can be configured for DHCP, as it will only be used to pull the relevant install sets from an OpenBSD mirror. Note that the interfaces only apply temporarily to the bootstrap computer, and will need to be adjusted manually on the actual Soekris device which uses sis(4) for the network interfaces.</p>
 
-<p>Password for root account? (will not echo)</p>
+<pre><code>Password for root account? (will not echo)
 
-<p>Start sshd(8) by default [yes]?<br/>
-sshd will likely be a necessary function</p>
+sshd will likely be necessary
 
-<p>Do you want the X Window System to be started by xdm(1)? [no]<br/>
-For the functions listed previously, X Windows and xdm(1) are unnecessary.</p>
+Start sshd(8) by default [yes]?  
 
-<p>Setup a user? (enter a lower-case loginname, or &#8216;no&#8217;) [no]<br/>
-A non-privileged user is an important step in running a secure system.</p>
+For the functions listed previously, X Windows and xdm(1) are unnecessary.
 
-<p>Allow root ssh login? (yes, no, prohibit-password) [no]
-sshd(8) access should only be done with non-privileged users, and not the root user.</p>
+Do you want the X Window System to be started by xdm(1)? [no]  
 
-<p>What timezone are you in? (&#8216;?&#8217; for list) [(local timezone guess)]</p>
+A non-privileged user is an important step in running a secure system.
+
+Setup a user? (enter a lower-case loginname, or 'no') [no]  
+
+sshd(8) access should only be available to non-privileged users, and not the root user.
+
+Allow root ssh login? (yes, no, prohibit-password) [no]
+
+What timezone are you in? ('?' for list) [(local timezone guess)]
+</code></pre>
 
 <p>Next is determining the install disk.</p>
 
-<p>Available disks are: sd0 sd1 sd2.</p>
+<pre><code>Available disks are: sd0 sd1 sd2.
+</code></pre>
 
 <p>In this case, standard output noted that the CF card is located on sd2. An incorrect choice here, such as selecting the bootstrap computer&#8217;s disk, will mean overwriting the wrong disk.</p>
 
-<p>Which disk is the root disk? (&#8216;?&#8217; for details) [sd0] ?</p>
+<pre><code>Which disk is the root disk? ('?' for details) [sd0] ?
 
-<p>Select ? to verify the correct disk.</p>
+Select ? to verify the correct disk.
+</code></pre>
 
 <p>The default install will cease booting with this line unless console access is enabled.</p>
 
