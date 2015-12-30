@@ -45,7 +45,7 @@
 <pre><code>Password for root account? (will not echo)
 </code></pre>
 
-<p>sshd(8) will likely be necessary</p>
+<p>sshd(8) will likely be necessary.</p>
 
 <pre><code>Start sshd(8) by default [yes]?  
 </code></pre>
@@ -76,7 +76,81 @@ What timezone are you in? ('?' for list) [(local timezone guess)]
 <pre><code>Which disk is the root disk? ('?' for details) [sd0] ?
 </code></pre>
 
-<p>&#8230;.</p>
+<p>Enter the appropriate disk, in this case it&#8217;s sd2</p>
+
+<p>Next the fdisk(8) utility runs displaying the slice breakdown of the disk.</p>
+
+<p>Choose w to utilize the entire disk.</p>
+
+<pre><code>Use (W)hole disk, use the (O)penBSD area, or (E)dit the MBR? [OpenBSD]
+</code></pre>
+
+<p>Next the autoconfigured partition layout will be displayed. Unless there are particular needs, choose a for auto.</p>
+
+<pre><code>Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout [a]?
+</code></pre>
+
+<p>At this point, the installer will ask for the next disk to configure. Type done as our disk setup is complete.</p>
+
+<pre><code>Which disk do you wish to initialize? (or 'done') [done]
+</code></pre>
+
+<p>Then the install sets need to be accessed, either on a local disk or via HTTP. HTTP is our choice, as the install media didn&#8217;t contain the files.</p>
+
+<pre><code>Let's install the sets!
+
+Location of sets? (disk http or 'done') [http]
+</code></pre>
+
+<p>If you&#8217;re using a proxy, enter it here.</p>
+
+<pre><code>HTTP proxy URL? (e.g. 'http://proxy:8080', or 'none') [none]
+</code></pre>
+
+<p>Now enter an OpenBSD mirror. Typing ? will display a list of the current mirrors.</p>
+
+<pre><code>HTTP Server? (hostname, list#, 'done' or '?')
+</code></pre>
+
+<p>The OpenBSD project insists on maintaining identically directory hierarchies on their mirrors. The next prompt should illustrate why, since you just need to hit enter.</p>
+
+<pre><code>Server directory? [pub/OpenBSD/5.8/i386]
+</code></pre>
+
+<p>Now the full list of sets is displayed. In our case, the Soekris install should be painfully small, and not contain any unnecessary parts of the base system.</p>
+
+<pre><code>Set name(s)? (or 'abort' or 'done') [done]
+</code></pre>
+
+<p>To remove install sets, type - before the ones you want to remove, including the SMP kernel, since Soekris has an ancient CPU.</p>
+
+<pre><code>-bsd.mp
+
+-comp*
+
+-man*
+
+-game*
+
+-x*
+</code></pre>
+
+<p>At this point there should only be three install sets remaining: bsd, bsd.rd and base58.tgz.</p>
+
+<pre><code>Location of sets? (disk http or 'done') [http] done
+</code></pre>
+
+<p>We are quite sure the bsd.mp kernel is unnecessary, so type yes.</p>
+
+<pre><code>Are you *SURE* your install is complete without 'bsd.mp'? [no] yes
+</code></pre>
+
+<p>The install process will complete and return to a prompt, from which we&#8217;ll reboot.</p>
+
+<pre><code># reboot
+</code></pre>
+
+<p>As the system reboots remove the USB disk with the install media and the CF card adapter.</p>
 
 <h3 id="pre-firstbootconfiguration">Pre-First Boot Configuration</h3>
 
