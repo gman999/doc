@@ -37,7 +37,7 @@ The OpenBSD installer is graphics-free, yet clear and simple to navigate.
 Type __i__ to enter the install system.
 
 	Welcome to the OpenBSD/i386 5.8 installation program.
-	(I)nstall, (U)pgrade, (A)utoinstall or (S)hell? __i__
+	(I)nstall, (U)pgrade, (A)utoinstall or (S)hell? i
 
 Plug in the CF card adapter and note the device listed to standard output, normally sd(4) with a respective number, such as sd2.
 
@@ -55,11 +55,11 @@ Next the list of interfaces is displayed, both wired and wireless devices. This 
 
 sshd(8) will likely be necessary.
 
-	Start sshd(8) by default [yes]? __yes__
+	Start sshd(8) by default [yes]? yes
 
 For the functions listed previously, X Windows and xdm(1) are unnecessary.
 
-	Do you want the X Window System to be started by xdm(1)? [no] __no__
+	Do you want the X Window System to be started by xdm(1)? [no] no
 
 Configuring a non-privileged user is an important step in running a secure system.
 
@@ -67,7 +67,7 @@ Configuring a non-privileged user is an important step in running a secure syste
 
 And set the password.
 
-	Allow root ssh login? (yes, no, prohibit-password) [no] __no__
+	Allow root ssh login? (yes, no, prohibit-password) [no] no
 
 	What timezone are you in? ('?' for list) [(local timezone guess)]
 
@@ -79,7 +79,7 @@ In this case, standard output noted that the CF card is located on sd2. An incor
 
 Type __?__ to verify the correct disk.
 
-	Which disk is the root disk? ('?' for details) [sd0] __?__
+	Which disk is the root disk? ('?' for details) [sd0] ?
 
 Enter the appropriate disk, in this case it's sd2.
 
@@ -87,21 +87,21 @@ Next the fdisk(8) utility runs displaying the disk's slices.
 
 Choose __w__ to utilize the entire disk.
 
-	Use (W)hole disk, use the (O)penBSD area, or (E)dit the MBR? [OpenBSD] __w__
+	Use (W)hole disk, use the (O)penBSD area, or (E)dit the MBR? [OpenBSD] w
 
 Next the autoconfigured partition layout will be displayed. Unless there are particular needs, choose __a__ for auto.
 
-	Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout [a]? __a__
+	Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout [a]? a
 
 At this point, the installer will ask for the next disk to configure. Type __done__ as our disk setup is complete.
 
-	Which disk do you wish to initialize? (or 'done') [done] __done__
+	Which disk do you wish to initialize? (or 'done') [done] done
 
 The install sets now need to be accessed, either on a local disk or via HTTP. __http__ is our choice, as the install media didn't contain the files, and the install sets need to be pulled from a remote OpenBSD mirror.
 
 	Let's install the sets!
 
-	Location of sets? (disk http or 'done') [http] __http__
+	Location of sets? (disk http or 'done') [http] http
 
 If you're using a proxy, enter it here.
 
@@ -137,7 +137,7 @@ At this point there should only be three install components remaining: the kerne
 
 We are quite sure the bsd.mp kernel is unnecessary, so type __yes__.
 
-	Are you *SURE* your install is complete without 'bsd.mp'? [no] __yes__
+	Are you *SURE* your install is complete without 'bsd.mp'? [no] yes
 
 The install process will complete and return to a prompt, from which we'll reboot.
 
