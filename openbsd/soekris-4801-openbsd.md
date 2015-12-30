@@ -1,6 +1,6 @@
 Soekris 4801: Continuing Relevance After All These Years
 
-The venerable [Soekris 4801](https://soekris.com) with its 128 megabyte of RAM and slow 233 MHz processor can still be of utility. Thousands reside quietly in drawers and closets around the globe, imagined to be far past their expiration date.
+The venerable [Soekris 4801](https://soekris.com) with its 128 megabyte of RAM and slow 233 MHz processor can still maintain a useful role. Thousands reside quietly in drawers and closets around the globe, imagined to be far past their expiration date.
 
 OpenBSD is an ideal candidate operating system for the Soekris, since it's built lean by default, yet an array of functions are available in the base system.
 
@@ -21,20 +21,20 @@ Needs:
 
 With the bootable media attached via USB, launch the bootstrap computer and enter the OpenBSD installation program.
 
+Type i to enter the install system.
+
 	Welcome to the OpenBSD/i386 5.8 installation program.
 	(I)nstall, (U)pgrade, (A)utoinstall or (S)hell?
-
-	Type I to enter the install screen.
 
 Plug in the CF card adapter and note the device listed to standard output, normally sd(4) with a respective number, such as sd2.
 
 The OpenBSD installation program is graphics-free, yet clear and simple to follow.
 
-	Hit "enter" for [default]
+Hit "enter" for [default]
 
 	Choose your keyboard layout ('?' or 'L' for list) [default]
 
-	Designate the system's hostname
+Designate the system's hostname
 
 	System hostname? (short form, e.g. 'foo')
 
@@ -42,19 +42,17 @@ Next the list of interfaces will be listed, both wired and the recognized wirele
 
 	Password for root account? (will not echo)
 
-	sshd will likely be necessary
+sshd(8) will likely be necessary
 
 	Start sshd(8) by default [yes]?  
 
-	For the functions listed previously, X Windows and xdm(1) are unnecessary.
+For the functions listed previously, X Windows and xdm(1) are unnecessary.
 
 	Do you want the X Window System to be started by xdm(1)? [no]  
 
-	A non-privileged user is an important step in running a secure system.
+A non-privileged user is an important step in running a secure system.
 
 	Setup a user? (enter a lower-case loginname, or 'no') [no]  
-
-	sshd(8) access should only be available to non-privileged users, and not the root user.
 
 	Allow root ssh login? (yes, no, prohibit-password) [no]
 
@@ -66,15 +64,13 @@ Next is determining the install disk.
 
 In this case, standard output noted that the CF card is located on sd2. An incorrect choice here, such as selecting the bootstrap computer's disk, will mean overwriting the wrong disk.
 
+Select ? to verify the correct disk.
+
 	Which disk is the root disk? ('?' for details) [sd0] ?
-
-	Select ? to verify the correct disk.
-
-
 
 The default install will cease booting with this line unless console access is enabled.
 
-entry point at 0x200120
+	entry point at 0x200120
 
 
 In /etc/ttys, change this line:

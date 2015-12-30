@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<p>The venerable <a href="https://soekris.com">Soekris 4801</a> with its 128 megabyte of RAM and slow 233 MHz processor can still be of utility. Thousands reside quietly in drawers and closets around the globe, imagined to be far past their expiration date.</p>
+<p>The venerable <a href="https://soekris.com">Soekris 4801</a> with its 128 megabyte of RAM and slow 233 MHz processor can still maintain a useful role. Thousands reside quietly in drawers and closets around the globe, imagined to be far past their expiration date.</p>
 
 <p>OpenBSD is an ideal candidate operating system for the Soekris, since it&#8217;s built lean by default, yet an array of functions are available in the base system.</p>
 
@@ -26,42 +26,44 @@
 
 <p>With the bootable media attached via USB, launch the bootstrap computer and enter the OpenBSD installation program.</p>
 
+<p>Type i to enter the install system.</p>
+
 <pre><code>Welcome to the OpenBSD/i386 5.8 installation program.
 (I)nstall, (U)pgrade, (A)utoinstall or (S)hell?
-
-Type I to enter the install screen.
 </code></pre>
 
 <p>Plug in the CF card adapter and note the device listed to standard output, normally sd(4) with a respective number, such as sd2.</p>
 
 <p>The OpenBSD installation program is graphics-free, yet clear and simple to follow.</p>
 
-<pre><code>Hit &quot;enter&quot; for [default]
+<p>Hit &#8220;enter&#8221; for [default]</p>
 
-Choose your keyboard layout ('?' or 'L' for list) [default]
+<pre><code>Choose your keyboard layout ('?' or 'L' for list) [default]
+</code></pre>
 
-Designate the system's hostname
+<p>Designate the system&#8217;s hostname</p>
 
-System hostname? (short form, e.g. 'foo')
+<pre><code>System hostname? (short form, e.g. 'foo')
 </code></pre>
 
 <p>Next the list of interfaces will be listed, both wired and the recognized wireless devices. This can be configured for DHCP, as it will only be used to pull the relevant install sets from an OpenBSD mirror. Note that the interfaces only apply temporarily to the bootstrap computer, and will need to be adjusted manually on the actual Soekris device which uses sis(4) for the network interfaces.</p>
 
 <pre><code>Password for root account? (will not echo)
+</code></pre>
 
-sshd will likely be necessary
+<p>sshd(8) will likely be necessary</p>
 
-Start sshd(8) by default [yes]?  
+<pre><code>Start sshd(8) by default [yes]?  
+</code></pre>
 
-For the functions listed previously, X Windows and xdm(1) are unnecessary.
+<p>For the functions listed previously, X Windows and xdm(1) are unnecessary.</p>
 
-Do you want the X Window System to be started by xdm(1)? [no]  
+<pre><code>Do you want the X Window System to be started by xdm(1)? [no]  
+</code></pre>
 
-A non-privileged user is an important step in running a secure system.
+<p>A non-privileged user is an important step in running a secure system.</p>
 
-Setup a user? (enter a lower-case loginname, or 'no') [no]  
-
-sshd(8) access should only be available to non-privileged users, and not the root user.
+<pre><code>Setup a user? (enter a lower-case loginname, or 'no') [no]  
 
 Allow root ssh login? (yes, no, prohibit-password) [no]
 
@@ -75,14 +77,15 @@ What timezone are you in? ('?' for list) [(local timezone guess)]
 
 <p>In this case, standard output noted that the CF card is located on sd2. An incorrect choice here, such as selecting the bootstrap computer&#8217;s disk, will mean overwriting the wrong disk.</p>
 
-<pre><code>Which disk is the root disk? ('?' for details) [sd0] ?
+<p>Select ? to verify the correct disk.</p>
 
-Select ? to verify the correct disk.
+<pre><code>Which disk is the root disk? ('?' for details) [sd0] ?
 </code></pre>
 
 <p>The default install will cease booting with this line unless console access is enabled.</p>
 
-<p>entry point at 0x200120</p>
+<pre><code>entry point at 0x200120
+</code></pre>
 
 <p>In /etc/ttys, change this line:</p>
 
