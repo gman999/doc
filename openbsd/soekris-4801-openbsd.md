@@ -1,8 +1,8 @@
-##Soekris 4801: Continuing Relevance After All These Years##
+##Soekris 4801: Relevance After All These Years##
 
 The venerable [Soekris 4801](https://soekris.com) with 128 megabytes of RAM and slow 233 MHz processor can still maintain a useful role. Thousands reside quietly in drawers and closets around the globe, forgotten as expired goods past their relevance.
 
-But even an ancient Soekris box running OpenBSD is more than adequate for use as a serial console server, a recursive/caching DNS, a lightweight monitoring server, etc.
+Even an ancient Soekris box running OpenBSD is more than adequate for use as a serial console server, a recursive/caching DNS, a lightweight monitoring server, etc.
 
 OpenBSD is an ideal candidate operating system for the Soekris, since it's built lean by default, yet an array of functions are available in the base system.
 
@@ -57,7 +57,7 @@ sshd(8) will likely be necessary.
 
 	Start sshd(8) by default [yes]? yes
 
-For the functions listed previously, X Windows and xdm(1) are unnecessary.
+Since we are looking for a small, tight system, X Windows and xdm(1) are unnecessary.
 
 	Do you want the X Window System to be started by xdm(1)? [no] no
 
@@ -107,11 +107,11 @@ Now enter an OpenBSD mirror. Typing __?__ will display a list of the current mir
 
 	HTTP Server? (hostname, list#, 'done' or '?') {your-mirror-selection}
 
-The OpenBSD project insists on maintaining identical directory hierarchies on their mirrors. The next prompt should illustrate why, since you just need to hit "enter."
+The OpenBSD project insists on maintaining identical directory hierarchies on their mirrors. The next prompt illustrates why, since you just need to hit "enter."
 
 	Server directory? [pub/OpenBSD/5.8/i386]
 
-Now the full list of sets is displayed. In our case, the Soekris install should be painfully small, and not contain any unnecessary parts of the base system.
+The full list of sets is then displayed. In our case, the Soekris install should be painfully small, and not contain any unnecessary parts of the base system.
 
 	Set name(s)? (or 'abort' or 'done') [done]
 
@@ -131,7 +131,7 @@ At this point there should only be three install components remaining: the kerne
 
 	Location of sets? (disk http or 'done') [http] {done}
 
-We are quite sure the bsd.mp kernel is unnecessary, so type __yes__.
+We are sure the bsd.mp kernel is unnecessary, so type __yes__.
 
 	Are you *SURE* your install is complete without 'bsd.mp'? [no] yes
 
@@ -139,13 +139,13 @@ The install process will complete and return to a prompt, from which we'll reboo
 
 	# reboot
 
-As the system reboots remove both the USB disk with the install media and the CF card adapter.
+As the system reboots, disconnect both the USB disk with the install media and the CF card adapter.
 
 Ideally, the bootstrap computer will boot normally, and you didn't do a fresh OpenBSD install to the wrong disk. Measure twice, cut once!
 
 ###Pre-First Boot Configuration###
 
-There is an important set of changes to make to successfully boot the Soekris board with OpenBSD as there is no VGA output, and the default output is to console.
+There is an important set of changes to make to boot the Soekris board with OpenBSD as there is no VGA output, and the default output is to console.
 
 The default install will cease booting at this line unless console access is enabled.
 
@@ -169,7 +169,7 @@ Create /etc/boot.conf, and add the following line:
 
 ###Final Configuration###
 
-Setup the non-privileged user with doas(1) permissions in /etc/doas.conf(5):
+OpenBSD [removed sudo](http://www.openbsd.org/faq/faq10.html#doas) from its base, and replaced it with doas(1). Configuration is simple. Setup the non-privileged user with doas(1) permissions in /etc/doas.conf(5):
 
 	permit nopass keepenv {user name} as root
 
@@ -190,7 +190,7 @@ From an OpenBSD shell and the serial console cable connected, use cu(1) to acces
 
 	cu -l /dev/ttyU0 -s 19200
 
-I recommend setting every system to 9600 since it's the default for programs such as cu(1), it's unnecessary to have speeds exceeding 9600 for any console access. Don't confuse console speed with broadband connectivity.
+Setting systems to 9600 makes sense since it's the default for programs such as cu(1), and it's rarely necessary to have speeds exceeding 9600 for console access.
 
 Plug in the Soekris power, and hit control-p when prompted, and display the current BIOS settings.
 
@@ -210,7 +210,7 @@ Begin booting OpenBSD.
 
 	> boot
 
-At this point, close the current cu(1) session and reconnnect with:
+At this point, close the current cu(1) session with __~ .__ and reconnnect with:
 
 	cu -l /dev/ttyU0
 
@@ -222,7 +222,7 @@ Either set a static address with:
 
 	inet {IP} {netmask}
 
-And also the appropriate gateway in /etc/mygate and DNS in /etc/resolv.conf.
+And add the appropriate gateway in /etc/mygate and DNS in /etc/resolv.conf.
 
 Or set to dhcp:
 
@@ -232,4 +232,4 @@ Reboot and the Soekris is ready for the particular function you've chosen.
 
 ###Also Consider###
 
-There are other configuration enhancements to consider when building OpenBSD for Soekris and similar hardware, such as mount_tmpfs(8).
+There are other configuration enhancements to consider when building OpenBSD for Soekris and similar hardware, such as mount_tmpfs(8) for the /tmp partition.
