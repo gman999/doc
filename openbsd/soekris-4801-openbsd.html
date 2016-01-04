@@ -1,8 +1,8 @@
-<h2 id="soekris4801:continuingrelevanceafteralltheseyears">Soekris 4801: Continuing Relevance After All These Years</h2>
+<h2 id="soekris4801:relevanceafteralltheseyears">Soekris 4801: Relevance After All These Years</h2>
 
 <p>The venerable <a href="https://soekris.com">Soekris 4801</a> with 128 megabytes of RAM and slow 233 MHz processor can still maintain a useful role. Thousands reside quietly in drawers and closets around the globe, forgotten as expired goods past their relevance.</p>
 
-<p>But even an ancient Soekris box running OpenBSD is more than adequate for use as a serial console server, a recursive/caching DNS, a lightweight monitoring server, etc.</p>
+<p>Even an ancient Soekris box running OpenBSD is more than adequate for use as a serial console server, a recursive/caching DNS, a lightweight monitoring server, etc.</p>
 
 <p>OpenBSD is an ideal candidate operating system for the Soekris, since it&#8217;s built lean by default, yet an array of functions are available in the base system.</p>
 
@@ -60,7 +60,7 @@
 <pre><code>Start sshd(8) by default [yes]? yes
 </code></pre>
 
-<p>For the functions listed previously, X Windows and xdm(1) are unnecessary.</p>
+<p>Since we are looking for a small, tight system, X Windows and xdm(1) are unnecessary.</p>
 
 <pre><code>Do you want the X Window System to be started by xdm(1)? [no] no
 </code></pre>
@@ -120,12 +120,12 @@ Location of sets? (disk http or 'done') [http] http
 <pre><code>HTTP Server? (hostname, list#, 'done' or '?') {your-mirror-selection}
 </code></pre>
 
-<p>The OpenBSD project insists on maintaining identical directory hierarchies on their mirrors. The next prompt should illustrate why, since you just need to hit &#8220;enter.&#8221;</p>
+<p>The OpenBSD project insists on maintaining identical directory hierarchies on their mirrors. The next prompt illustrates why, since you just need to hit &#8220;enter.&#8221;</p>
 
 <pre><code>Server directory? [pub/OpenBSD/5.8/i386]
 </code></pre>
 
-<p>Now the full list of sets is displayed. In our case, the Soekris install should be painfully small, and not contain any unnecessary parts of the base system.</p>
+<p>The full list of sets is then displayed. In our case, the Soekris install should be painfully small, and not contain any unnecessary parts of the base system.</p>
 
 <pre><code>Set name(s)? (or 'abort' or 'done') [done]
 </code></pre>
@@ -148,7 +148,7 @@ Location of sets? (disk http or 'done') [http] http
 <pre><code>Location of sets? (disk http or 'done') [http] {done}
 </code></pre>
 
-<p>We are quite sure the bsd.mp kernel is unnecessary, so type <strong>yes</strong>.</p>
+<p>We are sure the bsd.mp kernel is unnecessary, so type <strong>yes</strong>.</p>
 
 <pre><code>Are you *SURE* your install is complete without 'bsd.mp'? [no] yes
 </code></pre>
@@ -158,13 +158,13 @@ Location of sets? (disk http or 'done') [http] http
 <pre><code># reboot
 </code></pre>
 
-<p>As the system reboots remove both the USB disk with the install media and the CF card adapter.</p>
+<p>As the system reboots, disconnect both the USB disk with the install media and the CF card adapter.</p>
 
 <p>Ideally, the bootstrap computer will boot normally, and you didn&#8217;t do a fresh OpenBSD install to the wrong disk. Measure twice, cut once!</p>
 
 <h3 id="pre-firstbootconfiguration">Pre-First Boot Configuration</h3>
 
-<p>There is an important set of changes to make to successfully boot the Soekris board with OpenBSD as there is no VGA output, and the default output is to console.</p>
+<p>There is an important set of changes to make to boot the Soekris board with OpenBSD as there is no VGA output, and the default output is to console.</p>
 
 <p>The default install will cease booting at this line unless console access is enabled.</p>
 
@@ -193,7 +193,7 @@ Location of sets? (disk http or 'done') [http] http
 
 <h3 id="finalconfiguration">Final Configuration</h3>
 
-<p>Setup the non-privileged user with doas(1) permissions in /etc/doas.conf(5):</p>
+<p>OpenBSD <a href="http://www.openbsd.org/faq/faq10.html#doas">removed sudo</a> from its base, and replaced it with doas(1). Configuration is simple. Setup the non-privileged user with doas(1) permissions in /etc/doas.conf(5):</p>
 
 <pre><code>permit nopass keepenv {user name} as root
 </code></pre>
@@ -217,7 +217,7 @@ smtpd_flags=NO
 <pre><code>cu -l /dev/ttyU0 -s 19200
 </code></pre>
 
-<p>I recommend setting every system to 9600 since it&#8217;s the default for programs such as cu(1), it&#8217;s unnecessary to have speeds exceeding 9600 for any console access. Don&#8217;t confuse console speed with broadband connectivity.</p>
+<p>Setting systems to 9600 makes sense since it&#8217;s the default for programs such as cu(1), and it&#8217;s rarely necessary to have speeds exceeding 9600 for console access.</p>
 
 <p>Plug in the Soekris power, and hit control-p when prompted, and display the current BIOS settings.</p>
 
@@ -241,7 +241,7 @@ smtpd_flags=NO
 <pre><code>&gt; boot
 </code></pre>
 
-<p>At this point, close the current cu(1) session and reconnnect with:</p>
+<p>At this point, close the current cu(1) session with <strong>~ .</strong> and reconnnect with:</p>
 
 <pre><code>cu -l /dev/ttyU0
 </code></pre>
@@ -256,7 +256,7 @@ smtpd_flags=NO
 <pre><code>inet {IP} {netmask}
 </code></pre>
 
-<p>And also the appropriate gateway in /etc/mygate and DNS in /etc/resolv.conf.</p>
+<p>And add the appropriate gateway in /etc/mygate and DNS in /etc/resolv.conf.</p>
 
 <p>Or set to dhcp:</p>
 
@@ -267,4 +267,4 @@ smtpd_flags=NO
 
 <h3 id="alsoconsider">Also Consider</h3>
 
-<p>There are other configuration enhancements to consider when building OpenBSD for Soekris and similar hardware, such as mount_tmpfs(8).</p>
+<p>There are other configuration enhancements to consider when building OpenBSD for Soekris and similar hardware, such as mount_tmpfs(8) for the /tmp partition.</p>
