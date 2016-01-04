@@ -1,0 +1,49 @@
+<h2 id="torsshdhiddenserviceasaremedyfordynamicips">Tor SSHD Hidden Service as a Remedy for Dynamic IPs</h2>
+
+<p>Free dynamic IP services have evolved into a sloppy system requiring regular attention while inconsistently delivering their commodity.</p>
+
+<p>I access a number of hosts utilizing dynamic IPs, and have fought through a number of services over the years. Some have evolved into a fee-based model, while others are now just inoperable. Even worse, I suspect that many now consider themselves purely data mining services, not just for the hosts they provide services for, but even for logging in. Well, maybe not on purpose, but once I see domains such as <a href="http://queair.net/files/blocklist.html">these</a> showing up on a login page, the hair raises on the back of my neck.</p>
+
+<p>One solution is SSHD as a Tor hidden service.</p>
+
+<p>A Tor hidden service hostname is a long, somewhat ugly hash that can only be accessed over Tor. It may fail the <a href="https://en.wikipedia.org/wiki/Zooko%27s_triangle">Zooko&#8217;s Triangle</a> &#8220;human meaningful&#8221; criteria since the long hashes as hostnames are difficult to remember as opposed to normal FQDNs or even IPv4 addresses, but you can&#8217;t have everything. It requires Tor to be running on both the local host, for torsocks, and on the destination host.</p>
+
+<p>Other problems arise with the possibility that Tor crashes, say, on small embedded boxes. Some boxes I access have only 256M or even just 128M of RAM, and Tor isn&#8217;t meant to be stable on that latter. It is unimaginable to have a phone with even 128M of RAM today, so asking a host with less to run SSHD and Tor is a bit presumptuous.</p>
+
+<p>On the other hand, setup is easy. In some cases, I do occasionally access those hosts on the local network, so SSHD needs to listen on both the local IPv4 network, in addition to as a Tor hidden service.</p>
+
+<p>Here&#8217;s the simple setup.</p>
+
+<p>In the section of the torrc file, subtitled with:</p>
+
+<h6 id="thissectionisjustforlocation-hiddenservices">######### This section is just for location-hidden services</h6>
+
+<p>Add the following lines to have a hidden service listening the localhost&#8217;s tcp/22:</p>
+
+<p>HiddenServiceDir /var/db/tor/sshd
+HiddenServicePort 22 127.0.0.1:22</p>
+
+<p>The first line is the Tor data directory, which is the location of hidden service&#8217;s private key, in addition to its hostname. We created an <strong>sshd</strong> directory for this particular service, but any standard Unix directory name is fine.</p>
+
+<p>Next, we&#8217;ll need to edit the appropriate /etc/ssh/sshd_config lines. The first entry will allow SSHD to listen normally on the local network:</p>
+
+<p>ListenAddress 192.168.0.2:2222</p>
+
+<p>That means SSHD will listen on tcp/2222 on the local network for SSH connections.</p>
+
+<p>After that line, add another for SSHD as a Tor hidden service:</p>
+
+<p>ListenAddress localhost:22</p>
+
+<p>Now restart Tor, then restart SSHD in whichever way your operating system requires.</p>
+
+<pre><code>/etc/rc.d/sshd restart
+</code></pre>
+
+<p>Remotely accessing SSHD as a hidden service, as noted, requires Tor and its step-child torsocks.</p>
+
+<p>For instance, one might run:</p>
+
+<p>$ torsocks ssh ugly-long-hash.onion</p>
+
+<p>Note we&#8217;re relying on either/both the host and network based firewalls to keep access to the 192.168 address solely on the local network. Although without some type of forwarding on the NAT device, it&#8217;s not accessible anyway.</p>
