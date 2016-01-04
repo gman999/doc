@@ -1,18 +1,18 @@
 ##Soekris 4801: Continuing Relevance After All These Years##
 
-The venerable [Soekris 4801](https://soekris.com) with its 128 megabytes of RAM and slow 233 MHz processor can still maintain a useful role. Thousands reside quietly in drawers and closets around the globe, imagined to be far past their expiration date.
+The venerable [Soekris 4801](https://soekris.com) with 128 megabytes of RAM and slow 233 MHz processor can still maintain a useful role. Thousands reside quietly in drawers and closets around the globe, forgotten as expired goods past their relevance.
+
+But even an ancient Soekris box running OpenBSD is more than adequate for use as a serial console server, a recursive/caching DNS, a lightweight monitoring server, etc.
 
 OpenBSD is an ideal candidate operating system for the Soekris, since it's built lean by default, yet an array of functions are available in the base system.
 
 One might also consider custom OpenBSD systems such as [flashrd](http://www.nmedia.net/flashrd) or its derivation [resflash](http://stable.rcesoftware.com/resflash/). Both are aimed at small systems, and minimize disk writes which is ideal for flash media-based systems. However, flashrd hasn't been updated since OpenBSD 5.7 and resflash is in its early stages of development.
 
-A Soekris box running OpenBSD is more than adequate for use as a serial console server, a recursive/caching DNS, a lightweight monitoring server, etc., without installing any third-party software.
-
 In terms of formatting with this piece:
 
 * __bold__ indicates user input
 
-* indented and shadowed text indicates standard output displayed
+* indented and shadowed text indicates standard output as it's displayed
 
 * a number after a command, such as sshd(8), indicates an OpenBSD manual page
 
@@ -22,7 +22,7 @@ In terms of formatting with this piece:
 
 Needs:
 
-* bootable media with OpenBSD/i386 stable version on a [USB stick](http://www.openbsd.org/faq/faq4.html#Flash). Using snapshots is not ideal in this scenario, as we're looking for a low-maintenance system.
+* bootable media with OpenBSD/i386 [stable](http://www.openbsd.org/faq/faq5.html#Flavors) on a [USB stick](http://www.openbsd.org/faq/faq4.html#Flash). Using current (snapshots) is not ideal in this scenario, as we're looking for a low-maintenance system.
 
 * compact flash (CF) card with adapter
 
@@ -69,13 +69,9 @@ And set the password.
 
 	Allow root ssh login? (yes, no, prohibit-password) [no] no
 
-	What timezone are you in? ('?' for list) [(local timezone guess)]
-
-Next determine the disk to which OpenBSD is installed.
-
 	Available disks are: sd0 sd1 sd2.
 
-In this case, standard output noted that the CF card is located on sd2. An incorrect choice here, such as selecting the bootstrap computer's disk, will mean overwriting the wrong disk.
+An incorrect choice here, such as selecting the bootstrap computer's disk, will mean overwriting the wrong disk.
 
 Type __?__ to verify the correct disk.
 

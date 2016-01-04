@@ -1,18 +1,18 @@
 <h2 id="soekris4801:continuingrelevanceafteralltheseyears">Soekris 4801: Continuing Relevance After All These Years</h2>
 
-<p>The venerable <a href="https://soekris.com">Soekris 4801</a> with its 128 megabytes of RAM and slow 233 MHz processor can still maintain a useful role. Thousands reside quietly in drawers and closets around the globe, imagined to be far past their expiration date.</p>
+<p>The venerable <a href="https://soekris.com">Soekris 4801</a> with 128 megabytes of RAM and slow 233 MHz processor can still maintain a useful role. Thousands reside quietly in drawers and closets around the globe, forgotten as expired goods past their relevance.</p>
+
+<p>But even an ancient Soekris box running OpenBSD is more than adequate for use as a serial console server, a recursive/caching DNS, a lightweight monitoring server, etc.</p>
 
 <p>OpenBSD is an ideal candidate operating system for the Soekris, since it&#8217;s built lean by default, yet an array of functions are available in the base system.</p>
 
 <p>One might also consider custom OpenBSD systems such as <a href="http://www.nmedia.net/flashrd">flashrd</a> or its derivation <a href="http://stable.rcesoftware.com/resflash/">resflash</a>. Both are aimed at small systems, and minimize disk writes which is ideal for flash media-based systems. However, flashrd hasn&#8217;t been updated since OpenBSD 5.7 and resflash is in its early stages of development.</p>
 
-<p>A Soekris box running OpenBSD is more than adequate for use as a serial console server, a recursive/caching DNS, a lightweight monitoring server, etc., without installing any third-party software.</p>
-
 <p>In terms of formatting with this piece:</p>
 
 <ul>
 <li><p><strong>bold</strong> indicates user input</p></li>
-<li><p>indented and shadowed text indicates standard output displayed</p></li>
+<li><p>indented and shadowed text indicates standard output as it&#8217;s displayed</p></li>
 <li><p>a number after a command, such as sshd(8), indicates an OpenBSD manual page</p></li>
 <li><p>and { } represents custom user input, such as a user name</p></li>
 </ul>
@@ -22,7 +22,7 @@
 <p>Needs:</p>
 
 <ul>
-<li><p>bootable media with OpenBSD/i386 stable version on a <a href="http://www.openbsd.org/faq/faq4.html#Flash">USB stick</a>. Using snapshots is not ideal in this scenario, as we&#8217;re looking for a low-maintenance system.</p></li>
+<li><p>bootable media with OpenBSD/i386 <a href="http://www.openbsd.org/faq/faq5.html#Flavors">stable</a> on a <a href="http://www.openbsd.org/faq/faq4.html#Flash">USB stick</a>. Using current (snapshots) is not ideal in this scenario, as we&#8217;re looking for a low-maintenance system.</p></li>
 <li><p>compact flash (CF) card with adapter</p></li>
 <li><p>bootstrap i386/amd64 computer with any operating system</p></li>
 <li><p>a serial console cable with a null modem</p></li>
@@ -74,15 +74,10 @@
 
 <pre><code>Allow root ssh login? (yes, no, prohibit-password) [no] no
 
-What timezone are you in? ('?' for list) [(local timezone guess)]
+Available disks are: sd0 sd1 sd2.
 </code></pre>
 
-<p>Next determine the disk to which OpenBSD is installed.</p>
-
-<pre><code>Available disks are: sd0 sd1 sd2.
-</code></pre>
-
-<p>In this case, standard output noted that the CF card is located on sd2. An incorrect choice here, such as selecting the bootstrap computer&#8217;s disk, will mean overwriting the wrong disk.</p>
+<p>An incorrect choice here, such as selecting the bootstrap computer&#8217;s disk, will mean overwriting the wrong disk.</p>
 
 <p>Type <strong>?</strong> to verify the correct disk.</p>
 
