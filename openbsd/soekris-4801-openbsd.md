@@ -1,4 +1,4 @@
-##Soekris 4801: Relevance After All These Years##
+##Soekris 4801: Relevant After All These Years##
 
 The venerable [Soekris 4801](https://soekris.com) with 128 megabytes of RAM and slow 233 MHz processor can still maintain a useful role. Thousands reside quietly in drawers and closets around the globe, forgotten as expired goods past their relevance.
 
