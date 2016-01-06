@@ -8,14 +8,14 @@ Current directories include:
 
 * OpenBSD
 
-* Presentation, in [MagicPoint](http://member.wide.ad.jp/wg/mgp/) format
+* Presentation, generally in [MagicPoint](http://member.wide.ad.jp/wg/mgp/) format
 
 * Tor
 
-All materials are licensed under the ISC License:
+All materials are under the ISC License:
 
 
-Copyright (c) 2015 gman999 <george AT queair DOT net>
+Copyright (c) 2015 gman999 george AT queair DOT net
 
  Permission to use, copy, modify, and distribute these materials for any
  purpose with or without fee is hereby granted, provided that the above
