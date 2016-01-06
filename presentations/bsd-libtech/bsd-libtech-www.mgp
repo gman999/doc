@@ -1,0 +1,171 @@
+%include "online.mgp"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%center, size 9, fore "white", font "thick"
+
+
+The LibTech Scene and the BSD Projects
+After Snowden
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Me and My Perceptions
+
+
+	long-term interest with more recent involvement
+	Two prongs: BSD infrastructure and broadly UX
+		Tor-BSD list
+		relays & bridges
+		ARMing the masses
+		UX project
+		workshops home and abroad
+	many good people, some BSD people
+	a huge hole screaming out for BSD sanity
+	LibTech matters: the stakes are high
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+The Old LibTech Scene
+
+
+	PGP/GPG
+	Tor
+	as simple as HTTPS campaigns from EFF
+	stakes felt lower
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+The long-term BSD connection
+
+
+	Calyx & Nick Merrill
+		First NSL contested
+		BSD Shop
+		mickey@
+
+	Wikileaks & Julian Assange
+		http://blather.michaelwlucas.com/archives/443
+		NetBSD dev: sparring with Robert Watson
+		OpenBSD infrastructure for obvious reasons
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Then came Iran, MENA Explosions, "over there"
+
+
+	circumvention around/through internet filters
+	adversaries armed with BlueCoat (BSD Users)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Beyond circumvention "over there": enter Edward Snowden
+
+
+	privacy gained importance
+	anonymity began to matter to more people
+	an overall shift in perceptions
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Linux domination
+
+
+	default developer OS for projects, like Tor
+	basis for projects: FreedomBox, TAILS, Whonix
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Why Does It Matter?
+
+
+	monoculture--3.87% of Tor relays are *BSDs   (torstatus.blutmagie.de 20131015)
+	Ubuntu data mining not an option; included in base
+	other Linux habits and patterns: /dev/random ain't
+	GPL software: needs more lawyers, not as end-users
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Linux Approach Infects Tool Building
+
+
+	it does *everything*: like Windows, but open source
+	often splashy releases, little results
+	lack of a dev-centric culture/Unix method
+		modularity, portability, right tool, correctly not just quickly, flavor-of-the-week, world didn't start in 1991
+	GPL
+		complicates a developer's life: v1 v2 v3
+		delusions of a radical license
+	cathedrals *are* beautiful, don't actually pursue ugly
+	yet often not user friendly or UX driven
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+What Can You Do?
+
+
+	getting some things into BSD ports/pkgs with cleanup: StrongBox, Martus
+	Tor Browser Bundle
+	better Tor performance
+	send patches, engage the projects
+	TA3M, Stanford LibTech, Tor lists
+	tmux, varnish, OpenSSH and pf/pfSense: models of supra-BSD sanity
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+*BSD Projects To-Do List? (part 1)
+
+
+	SSL Certs
+		all www sites
+	signatures, not just checksums for base and ports/pkgs
+		because some people care
+	policy or by design: Tor-friendly vs. Google Analytics
+		allow users to be anonymous
+	no JavaScript, Flash, etc.
+		really just overhead, not to mention privacy problems
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+*BSD Projects To-Do List? (part 2)
+
+
+	stop blocking Tor IPs (e.g., forums.freebsd.org)
+		we are better than amateurish IP blacklisting
+	build an explicit wall between open source and binaries
+		disclaimers: make users confirm binary blob usage?
+	easy socksification of remote base tools
+		svn, cvs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+In Summary
+
+
+	LibTech needs the BSDs on many levels
+	value in a privacy/anonymity-conscious OS appreciated
+	supra-operating system land is a harder battle
+	significant real world impact
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
