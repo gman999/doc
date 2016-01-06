@@ -1,0 +1,490 @@
+%include "default.mgp"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%center, size 10, fore "white", font "thick"
+
+The BSDs in the Privacy Scene:
+%size 12
+the Tor BSD Diversity Project
+(TDP)
+
+%nodefault
+%right, size 5, fore "white"
+https://torbsd.github.io/  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+To Start
+
+
+	We have no affiliations with the Tor Project
+		nor formally with any other project
+
+	TDP is Attila and I, the former is smarter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Our Platforms
+
+	Broadly the BSD Community with BoFs and more
+		informal meetings back to 2011 or so
+			"recruit BSD Tor relay admins"
+		vBSDCon 2013, NYC*BSDCon 2014, BSDCan 2015, BSDCon Br 2015
+
+	NYC*BUG: Invaluable
+		Tor relays for years (2005 exit node shutdown?)
+		Tor-BSD mailing list
+		colleagues with common jargon, histories
+		input, ideas
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+What Is TDP?
+
+	Launched around Spring 2015, but a long time coming
+
+	Diversify the Linux monoculture with Tor
+		no BSD Tor Browser (TB)
+			desktop: Tor Browser on OpenBSD
+		over 90% of public relays are Linux
+			relays/network: how-to's, BSD firm relays
+		Engage the BSD community: meetings, events
+			Debian/Linux the primary OS of development
+
+	https://github.com/torbsd/
+		TB releases
+		comprehensive FAQ and Resource pages
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+TDP Broad View
+
+
+	how we got here
+
+	where we are
+
+	where we want to go	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+How It All Began: PETs & TDP
+
+
+	Related to security, but separate
+
+	Privacy and/or Anonymity
+
+	David Chaum and beyond
+		http://freehaven.net/anonbib/
+
+	PGP and Zimmerman
+		not just about the cypherpunk elite
+
+	BSD intertwined in the history
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Noted BSD Appearances
+
+
+	Calyx/Nick Merrill
+		National Security Letter
+		mickey@
+
+	Wikileaks
+		OpenBSD infrastructure
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Assange, Robert Watson and Toasters
+
+%size 4, font "standard"
+%left
+
+https://marc.info/?l=freebsd-security&m=91299675201059&w=2
+
+On 5 Dec 1998, Julian Assange wrote:
+
+> Use NetBSD
+
+Use a toaster oven.  Toaster ovens have excellent network security
+characteristics.  For example, they are not susceptible to any IMAP-based
+buffer overflow attacks; additionally, current toaster ovens are not known
+to have any bugs in their TCP/IP stacks, nor have been vulnerable to any
+in the recent past (according to CERT advisories, anyway).  Toaster ovens
+require console access to perform administrative functions (such as
+modification of temperature settings), but this will not impede deployment
+in a number of environment.
+
+Robert Watson 19981207
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Rubberhose encrypted FS discussion with Theo
+
+https://marc.info/?l=openbsd-misc&m=100635812629128&w=2
+
+"you personally are viewed as a
+disgrace and OpenBSD little more than some kind of NetBSD Milli
+Vanilli one should avoid at all costs."
+
+Julian Assange 20011121
+
+
+%center, font "italic", size 5
+all credit to Michael W Lucas' blog from 20101210
+http://blather.michaelwlucas.com/archives/443
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Made the First Train, Missed the Connection
+
+
+	Debian: the hacker OS?
+
+	Very significant factor with gender diversity
+
+	Disturbing overall sloppiness
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+And BOOM, that @Snowden guy
+
+
+	Privacy/Anonymity to the mainstream
+		with it Tor, PGP/GPG, Blackphone and so on
+
+	But that attitude
+		of course surveillance was an accepted fact
+			"because they could"
+		they know now, but don't care
+		nothing you can do about it now
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+PHK Says: https://queue.acm.org/detail.cfm?id=2508864
+%center
+%newimage "phk-acm.png"
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+That Attitude is Our Primary Target
+
+	Snowden example, one particularly powerful adversary
+		industrial espionage: Petrobras
+		Globo, Fantastico
+		don't overfocus on that adversary
+
+	Other contexts are forgotten
+		domestic violence victims?
+		LGBT people in the closet?
+		journalists?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Or Chico Mendes's Ranchers?
+
+%center
+%newimage "chico-mendes.jpg"
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+More
+
+	When you can't defeat censorship and surveillance, you can often mitigate it, raise an adversary's costs, etc.
+
+	Extending PETs usage matters
+		too many targets, too little time
+		or just unsophisticated adversaries
+
+	Most importantly, you're missing the shift
+		you can talk about surveillance with non-technical people
+		without sounding crazy
+		they get it, but a lot of us don't
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Briefly on Diversity and TDP
+
+	Dan Geer paper, USENIX 2004 about Microsoft on the desktop
+
+	If majority of relays and bandwidth is moved by Linux
+		One kernel-level vulnerability to rule them all?
+
+	BSDs are the best OS for the obvious reasons
+		impressive developer and user base
+
+	Which are you?
+		"I don't know how to write an RNG, but I do know that..."
+		"I can probably write an RNG, I mean, dice roles
+		are pretty random, right?"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Taking You to Part II, Part II
+
+
+	TB Headaches
+
+	Linuxisms and worse
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+TB onto OpenBSD
+
+
+	Where standards decide all, therefore easiest OS to port *from*
+		not going to find POSIX "extensions" and esoteric ports	
+
+	They don't rely on bloated assumptions, even upstream
+		GPG for signing and verifying? signify(1)
+		a pretend-developer writes an RNG? arc4random(3)
+
+	I don't know OpenBSD user-base versus other BSDs
+		but neither do you
+
+	If you can make it there, you can make it anywhere
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+TB onto OpenBSD
+
+	Anonymity is a moving target
+		an arms race in surveillance and censorship
+		adversaries:
+			nation-states and their tentacles
+			entities of all sizes
+			
+	Mozilla code is a moving target
+
+	An OpenBSD snapshot is a moving target
+
+	Fitting into the ports infrastructure is difficult
+		is upstream listening?
+		bash is a dependency or a cancerous tumor?
+			Tor startup script
+			Firefox addon: HTTPS Everywhere
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Portability Demands Standards
+
+
+%left, font "standard", size 8
+$ /bin/bash
+ksh: /bin/bash: not found
+$ apropos bash
+apropos: nothing appropriate
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Hard-Coded Variables
+
+
+	$HOME sweet $HOME
+
+	$vars scattered around the scripts
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+As MWL once said,
+
+
+%center, font "italic", size 12
+Write not to be understood,
+but rather so that you can't
+be misunderstood
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault, size 2, left, font "standard", vgap 10, prefix "            "
+# used on high bandwidth nodes (gbit interface)
+
+# disabling forwarding first as this will
+# reset some other values back to default (!)
+net.ipv4.ip_forward = 0
+net.ipv4.tcp_syncookies = 1
+#net.ipv4.tcp_synack_retries = 2
+#net.ipv4.tcp_syn_retries = 2
+    
+net.ipv4.conf.default.forwarding = 0 
+net.ipv4.conf.default.proxy_arp = 0 
+net.ipv4.conf.default.send_redirects = 1
+net.ipv4.conf.all.rp_filter = 0
+net.ipv4.conf.all.send_redirects = 0
+
+kernel.sysrq = 1
+net.ipv4.icmp_echo_ignore_broadcasts = 1
+net.ipv4.conf.all.accept_redirects = 0
+net.ipv4.icmp_ignore_bogus_error_responses = 1
+
+# optimizations
+net.core.rmem_max = 33554432
+net.core.wmem_max = 33554432
+net.ipv4.tcp_rmem = 4096 87380 33554432 
+net.ipv4.tcp_wmem = 4096 65536 33554432  
+net.core.netdev_max_backlog = 262144
+net.ipv4.tcp_no_metrics_save = 1
+net.ipv4.tcp_moderate_rcvbuf = 1
+net.ipv4.tcp_tw_recycle = 1
+net.ipv4.tcp_max_orphans = 262144
+net.ipv4.tcp_max_syn_backlog = 262144
+net.ipv4.tcp_fin_timeout = 4 
+vm.min_free_kbytes = 65536
+net.ipv4.netfilter.ip_conntrack_max = 196608
+net.netfilter.nf_conntrack_tcp_timeout_established = 7200
+net.netfilter.nf_conntrack_checksum = 0
+net.netfilter.nf_conntrack_max = 196608 
+net.netfilter.nf_conntrack_tcp_timeout_syn_sent = 15
+net.nf_conntrack_max = 196608
+net.ipv4.tcp_keepalive_time = 60
+net.ipv4.tcp_keepalive_intvl = 10
+net.ipv4.tcp_keepalive_probes = 3
+net.ipv4.ip_local_port_range = 1025 65530
+net.core.somaxconn = 20480
+net.ipv4.tcp_max_tw_buckets = 2000000
+net.ipv4.tcp_timestamps = 0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+WTF
+
+why?  what do these do?  jhb@ chuckling: i bet they cancel themselves out
+
+GNN: the difficulty of testing when you can't control the test or production environments
+
+%font "italic"
+how do you control and isolate a test environment in a dynamic, purposefully randomized anonymity network?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Final Point: Is Tor the Perfect Solution? 
+
+
+	No.  Tor could be compromised by an adversary with a full global network view, watching critical flows, sitting on backbone routers
+
+	No.  What about Linux RNG and other vulnerabilities?
+
+	We shouldn't be encouraging delusions about any bullet-proof solutions
+
+%center, font "italic"
+it's about mitigation, relative strength versus
+particular adversaries in particular contexts
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%size 7, font "standard"
+
+Some smart guy once said,
+
+%center, size 9 
+"...measured against reality, (it) is
+primitive and childlike--and yet it's
+the most precious thing we have."
+
+%center, font "italic", size 5
+people in this room matter in enhancing the software,
+extending the current solutions, and Tor provides a strong
+foundation for moving forward to the next generation of
+privacy and anonymity solutions.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+%newimage "br-relays.png"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+What You Can Do
+
+
+	The obvious
+		run BSD relays
+			.br relays .5% of network, Linux and one Win
+		encourage {university,firm,ngo}: NYI, check
+		join Tor-BSD mailing list
+		join BSD buildbot at http://buildbot.pixelminers.net
+
+	Fork/contribute to https://github.com/torbsd/openbsd-ports
+		porting effort to FreeBSD would be wonderful
+		contributions to documentation
+		sane optimization, understanding the realities
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Thanks from TDP
+
+
+	NYC*BUG for the last 13 years or so; too many to mention
+		but recently: Brian, Ike, Mark, Okan. . .
+
+	New York Internet
+
+	the Tor Project, in particular Moritz and Matt
+
+	*BSD Community is our broad platform
+		tedu, landry, gnn, jhb
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%center, size 10, fore "white", font "thick"
+
+Comments?  Questions?
+
+Condemnations?
