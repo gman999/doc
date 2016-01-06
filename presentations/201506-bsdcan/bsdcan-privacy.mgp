@@ -1,0 +1,40 @@
+Two years after Snowden
+
+vBSDCon Fall of 2013, initial version
+
+Explosion in PETs
+	focused on communications, layer 7
+
+Developer scene is predominantly Linux
+
+A Scary Monoculture
+	if you're in PETs, probably use Debian
+
+A number of us looked to shift things
+
+Tor-BSD List
+	BuildBot
+	Optimizing relays
+	Add a space for BSD people
+
+TDP
+	publicity/advocacy
+		taking on some of the arguments
+	relay guides, more relays
+	TB on OpenBSD
+
+Where We Need to Go
+	
+
+Small and large roles
+	small more important
+		relays/bridges
+		join the buildbot
+		Tor-BSD mailing list	
+	larger
+		porting TB
+		full socks support in OSs
+		TB: upstream sanity
+			arc4random as an example
+
+
