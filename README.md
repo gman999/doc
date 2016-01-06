@@ -8,7 +8,7 @@ Current directories include:
 
 * OpenBSD
 
-* Presentation, in MagicPoint format
+* Presentation, in [MagicPoint](http://member.wide.ad.jp/wg/mgp/) format
 
 * Tor
 
