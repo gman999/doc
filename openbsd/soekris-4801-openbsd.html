@@ -93,9 +93,9 @@ Available disks are: sd0 sd1 sd2.
 <pre><code>Use (W)hole disk, use the (O)penBSD area, or (E)dit the MBR? [OpenBSD] w
 </code></pre>
 
-<p>Next the autoconfigured partition layout will be displayed. Unless there are particular needs, choose <strong>a</strong> for auto.</p>
+<p>Next the autoconfigured partition layout will be displayed. How the disk is configured depends on a few factors, including the CF card size and the function of this system. For an 8Gb CF card, it might make sense to create a 1G /, 300M swap, plus /usr and /home partitions. While swap should generally be avoided on media such as CF cards, it could be vital for a system with only 128Mb of RAM.</p>
 
-<pre><code>Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout [a]? a
+<pre><code>Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout [a]? c
 </code></pre>
 
 <p>At this point, the installer will ask for the next disk to configure. Type <strong>done</strong> as our disk setup is complete.</p>

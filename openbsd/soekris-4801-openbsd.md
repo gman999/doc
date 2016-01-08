@@ -85,9 +85,9 @@ Choose __w__ to utilize the entire disk.
 
 	Use (W)hole disk, use the (O)penBSD area, or (E)dit the MBR? [OpenBSD] w
 
-Next the autoconfigured partition layout will be displayed. Unless there are particular needs, choose __a__ for auto.
+Next the autoconfigured partition layout will be displayed. How the disk is configured depends on a few factors, including the CF card size and the function of this system. For an 8Gb CF card, it might make sense to create a 1G /, 300M swap, plus /usr and /home partitions. While swap should generally be avoided on media such as CF cards, it could be vital for a system with only 128Mb of RAM.
 
-	Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout [a]? a
+	Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout [a]? c
 
 At this point, the installer will ask for the next disk to configure. Type __done__ as our disk setup is complete.
 
