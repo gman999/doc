@@ -216,7 +216,7 @@ ntpd_flags=&quot;-s&quot;
 <pre><code>boot&gt; boot hd0a:/bsd -c
 </code></pre>
 
-<p>Which delivers you into the UKC(8), the User Kernel Config, in which we&#8217;ll just type <strong>change wd</strong>, set the <strong>0x0ff0</strong> for wd(4) devices and <strong>quit</strong>:</p>
+<p>Which delivers you into the UKC(8), the User Kernel Config, in which we&#8217;ll just type <strong>change wd</strong>, set the <strong>0x0ff0</strong> flag for wd(4) devices and <strong>quit</strong>:</p>
 
 <pre><code>UKC&gt; change wd
  53 wd* at wdc0|wdc1|wdc*|wdc*|pciide*|pciide* channel -1 flags 0x0
