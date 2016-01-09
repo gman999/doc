@@ -198,7 +198,7 @@ Location of sets? (disk http or 'done') [http] http
 <pre><code>permit nopass keepenv {user name} as root
 </code></pre>
 
-<p>Create /etc/rc.conf.local for minimizing unnecessary daemons, such as sndiod(1) and smtpd(8), and forcing ntpd(8) to synchronize time on boot:</p>
+<p>Create /etc/rc.conf.local for minimizing unnecessary daemons, such as sndiod(1) and smtpd(8), and forcing ntpd(8) to synchronize on boot:</p>
 
 <pre><code>sndiod_flags=NO
 smtpd_flags=NO
@@ -207,7 +207,7 @@ ntpd_flags=&quot;-s&quot;
 
 <p>Install the CF card into the Soekris, plug in an ethernet cable to the first port on the right (sis0) and plug in the serial console cable.</p>
 
-<p>Depending on the CF card model, there might be various errors connected to mounting wd(4), which refers to the CF card, due to DMA mode errors. The system may or may not still boot, but there will be a delay as the kernel adjusts.</p>
+<p>Depending on the CF card model, there might be various errors connected to mounting wd(4), which refers to the CF card, due to DMA mode errors. The system may or may not still boot, but there will at least be a delay as the kernel adjusts.</p>
 
 <p>This is a known issue with legacy hardware and UDMA. The first step for a (one-time) successful boot is to disable UDMA and use PIO mode.</p>
 
@@ -216,16 +216,16 @@ ntpd_flags=&quot;-s&quot;
 <pre><code>boot&gt; boot hd0a:/bsd -c
 </code></pre>
 
-<p>Which delivers you into the UKC(8), the User Kernel Config:</p>
+<p>Which delivers you into the UKC(8), the User Kernel Config, in which we&#8217;ll just type <strong>change wd</strong>, set <strong>0x0ff0</strong> and <strong>quit</strong>:</p>
 
-<pre><code>UKC&gt; __change wd__
+<pre><code>UKC&gt; change wd
  53 wd* at wdc0|wdc1|wdc*|wdc*|pciide*|pciide* channel -1 flags 0x0
 change (y/n) ?
 channel [-1] ? 
-flags [0] ? __0x0ff0__
+flags [0] ? 0x0ff0
  53 wd* changed
  53 wd* at wdc0|wdc1|wdc*|wdc*|pciide*|pciide* channel -1 flags 0xff0
-UKC&gt; __quit__
+UKC&gt; quit
 </code></pre>
 
 <p>The <a href="http://www.openbsd.org/faq/faq14.html#pciideErr">OpenBSD FAQ</a> documents this issue with legacy hardware. The change to wd(4) can be made permanent with config(8) in multi-user mode.</p>

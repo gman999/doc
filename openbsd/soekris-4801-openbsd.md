@@ -173,7 +173,7 @@ OpenBSD [removed sudo](http://www.openbsd.org/faq/faq10.html#doas) from its base
 
 	permit nopass keepenv {user name} as root
 
-Create /etc/rc.conf.local for minimizing unnecessary daemons, such as sndiod(1) and smtpd(8), and forcing ntpd(8) to synchronize time on boot:
+Create /etc/rc.conf.local for minimizing unnecessary daemons, such as sndiod(1) and smtpd(8), and forcing ntpd(8) to synchronize on boot:
 
 	sndiod_flags=NO
 	smtpd_flags=NO
@@ -181,7 +181,7 @@ Create /etc/rc.conf.local for minimizing unnecessary daemons, such as sndiod(1) 
 
 Install the CF card into the Soekris, plug in an ethernet cable to the first port on the right (sis0) and plug in the serial console cable.
 
-Depending on the CF card model, there might be various errors connected to mounting wd(4), which refers to the CF card, due to DMA mode errors. The system may or may not still boot, but there will be a delay as the kernel adjusts.
+Depending on the CF card model, there might be various errors connected to mounting wd(4), which refers to the CF card, due to DMA mode errors. The system may or may not still boot, but there will at least be a delay as the kernel adjusts.
 
 This is a known issue with legacy hardware and UDMA. The first step for a (one-time) successful boot is to disable UDMA and use PIO mode.
 
@@ -189,16 +189,16 @@ At the boot prompt:
 
 	boot> boot hd0a:/bsd -c
 
-Which delivers you into the UKC(8), the User Kernel Config:
+Which delivers you into the UKC(8), the User Kernel Config, in which we'll just type __change wd__, set __0x0ff0__ and __quit__:
 
-	UKC> __change wd__
+	UKC> change wd
 	 53 wd* at wdc0|wdc1|wdc*|wdc*|pciide*|pciide* channel -1 flags 0x0
 	change (y/n) ?
 	channel [-1] ? 
-	flags [0] ? __0x0ff0__
+	flags [0] ? 0x0ff0
 	 53 wd* changed
 	 53 wd* at wdc0|wdc1|wdc*|wdc*|pciide*|pciide* channel -1 flags 0xff0
-	UKC> __quit__
+	UKC> quit
 
 The [OpenBSD FAQ](http://www.openbsd.org/faq/faq14.html#pciideErr) documents this issue with legacy hardware. The change to wd(4) can be made permanent with config(8) in multi-user mode.
 
