@@ -85,7 +85,7 @@ Choose __w__ to utilize the entire disk.
 
 	Use (W)hole disk, use the (O)penBSD area, or (E)dit the MBR? [OpenBSD] w
 
-Next the autoconfigured partition layout will be displayed. How the disk is configured depends on a few factors, including the CF card size and the function of this system. For an 8Gb CF card, it might make sense to create a 1G /, 300M swap, plus /usr and /home partitions. While swap should generally be avoided on media such as CF cards, it could be vital for a system with only 128Mb of RAM.
+Next the autoconfigured partition layout will be displayed. How the disk is configured depends on a few factors, including the CF card size and the function of this system. For an 8Gb CF card, it might make sense to create a 1G /, 300M swap, plus /usr and /home partitions. While swap should generally be avoided on media such as CF cards, it could be vital for a system with only 128Mb of RAM. Note that a /tmp partition should be configured, but in this case a tmpfs mount will be added after the initial boot.
 
 	Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout [a]? c
 
@@ -135,7 +135,7 @@ We are sure the bsd.mp kernel is unnecessary, so type __yes__.
 
 	Are you *SURE* your install is complete without 'bsd.mp'? [no] yes
 
-The install process will complete and return to a prompt, from which we'll reboot.
+The install process will complete and return to a prompt from which we'll reboot.
 
 	# reboot
 
@@ -173,16 +173,36 @@ OpenBSD [removed sudo](http://www.openbsd.org/faq/faq10.html#doas) from its base
 
 	permit nopass keepenv {user name} as root
 
-Create /etc/rc.conf.local for minimizing unnecessary daemons, such as sndiod(1) and smtpd(8):
+Create /etc/rc.conf.local for minimizing unnecessary daemons, such as sndiod(1) and smtpd(8), and forcing ntpd(8) to synchronize time on boot:
 
 	sndiod_flags=NO
 	smtpd_flags=NO
+	ntpd_flags="-s"
 
 Install the CF card into the Soekris, plug in an ethernet cable to the first port on the right (sis0) and plug in the serial console cable.
 
-###Booting Up###
+Depending on the CF card model, there might be various errors connected to mounting wd(4), which refers to the CF card, due to DMA mode errors. The system may or may not still boot, but there will be a delay as the kernel adjusts.
 
-Setup the bootstrap computer with the serial console cable and some terminal emulation application.
+This is a known issue with legacy hardware and UDMA. The first step for a (one-time) successful boot is to disable UDMA and use PIO mode.
+
+At the boot prompt:
+
+	boot> boot hd0a:/bsd -c
+
+Which delivers you into the UKC(8), the User Kernel Config:
+
+	UKC> __change wd__
+	 53 wd* at wdc0|wdc1|wdc*|wdc*|pciide*|pciide* channel -1 flags 0x0
+	change (y/n) ?
+	channel [-1] ? 
+	flags [0] ? __0x0ff0__
+	 53 wd* changed
+	 53 wd* at wdc0|wdc1|wdc*|wdc*|pciide*|pciide* channel -1 flags 0xff0
+	UKC> __quit__
+
+The [OpenBSD FAQ](http://www.openbsd.org/faq/faq14.html#pciideErr) documents this issue with legacy hardware. The change to wd(4) can be made permanent with config(8) in multi-user mode.
+
+###Booting Up###
 
 By default, the Soekris 4801 uses 19200 as the console speed, yet we set the speed to 9600 in the /etc/boot.conf and /etc/ttys files. In this case, we'll set the Soekris console speed to 9600 in the BIOS.
 
@@ -210,6 +230,8 @@ Begin booting OpenBSD.
 
 	> boot
 
+For more details about Soekris' BIOS, the [Soekris Wiki](http://wiki.soekris.info/What_do_all_those_BIOS_settings_do%3F) provides some insight.
+
 At this point, close the current cu(1) session with __~ .__ and reconnnect with:
 
 	cu -l /dev/ttyU0
@@ -228,8 +250,21 @@ Or set to dhcp:
 
 	dhcp
 
+As noted earlier, the /tmp partition will be mounted as a tmpfs device, and not use the CF card. In this case, a small 10Mb /tmp partition should be sufficient.
+
+	echo "swap /tmp tmpfs rw,-s10m,nodev,nosuid,noexec 0 0" >>/etc/fstab
+
 Reboot and the Soekris is ready for the particular function you've chosen.
 
-###Also Consider###
+To confirm the disk layout, use mount(8):
 
-There are other configuration enhancements to consider when building OpenBSD for Soekris and similar hardware, such as mount_tmpfs(8) for the /tmp partition.
+$ mount
+
+	/dev/wd0a on / type ffs (local)
+	/dev/wd0e on /home type ffs (local, nodev, nosuid)
+	/dev/wd0d on /usr type ffs (local, nodev)
+	tmpfs on /tmp type tmpfs (local, nodev, noexec, nosuid)
+
+###Finally###
+
+The Soekris running OpenBSD should be ready for any number of simple functions at this point, with the obvious restraints one would expect from a device from a low-powered legacy device.
