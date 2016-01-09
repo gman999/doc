@@ -189,7 +189,7 @@ At the boot prompt:
 
 	boot> boot hd0a:/bsd -c
 
-Which delivers you into the UKC(8), the User Kernel Config, in which we'll just type __change wd__, set __0x0ff0__ and __quit__:
+Which delivers you into the UKC(8), the User Kernel Config, in which we'll just type __change wd__, set the __0x0ff0__ for wd(4) devices and __quit__:
 
 	UKC> change wd
 	 53 wd* at wdc0|wdc1|wdc*|wdc*|pciide*|pciide* channel -1 flags 0x0
