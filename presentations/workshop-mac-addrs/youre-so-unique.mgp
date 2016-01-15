@@ -6,7 +6,9 @@
 
 You're So Unique:
 
-Three Things You Need to Know About MAC Addresses
+Three Things You Need to Know
+% size 14
+About MAC Addresses
 
 
 %nodefault
@@ -15,18 +17,22 @@ Three Things You Need to Know About MAC Addresses
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
 The Three Things
 
-	1. What is a MAC address?
 
-	2. How can it be used to track a computer or cell phone?
+1. What is a MAC address?
 
-	3. What can you do about it?
+2. How can it be used to track a computer or cell phone?
+
+3. What can you do about it?
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
 What is a MAC address?
+
 
 	Media Access Control address
 		physical address
@@ -41,52 +47,63 @@ What is a MAC address?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
 Determining a device's MAC address
 
+
 	OSX
+
 	Windows
+
 	Android
-		Settings, More, About device, Status
-		"Wi-Fi MAC address"
+		Settings, More, About device, Status, "Wi-Fi MAC address"
+
 	iOS
+
 	BSDs/Linux
 		ifconfig(8)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
 Breakdown of a MAC address
 
 
-	
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
 How can it be used to track a computer or phone?
+
 
 	Snowden example
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
 MAC addresses on a local network
 
-	not over the public internet
+	Not over the public internet
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
 How it's uniquely you
 
-	tied to your hardware
 
-	registration
+	Tied to your hardware
 
-	credit card purchase
+	Registration
+
+	Credit card purchase
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
 First Demo
 
 
@@ -97,6 +114,7 @@ First Demo
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
 Imagining the Threat
 
 
@@ -111,6 +129,7 @@ Imagining the Threat
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
 What can you do about it?
 
 
@@ -127,19 +146,27 @@ What can you do about it?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
 Changing based on OS
 
 
 	OSX
+		Terminal: ifconfig {interface} ether {new MAC}
+
 	Windows
+
 	Android
+
 	iOS
+
 	BSDs/Linux
-
-
+		OpenBSD: ifconfig {interface} lladdr random
+		FreeBSD: ifconfig {interface} ether {new MAC}
+		Linux: iconfig {interface} hw ether {new MAC}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
 Second Demo
 
 
@@ -149,6 +176,7 @@ Second Demo
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
 Operational Conclusions
 
 
