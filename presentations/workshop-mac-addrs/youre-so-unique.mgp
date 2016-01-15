@@ -1,0 +1,160 @@
+%include "default.mgp"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%center, size 10, fore "white", font "standard"
+
+You're So Unique:
+
+Three Things You Need to Know About MAC Addresses
+
+
+%nodefault
+%right, size 5, fore "white"
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+The Three Things
+
+	1. What is a MAC address?
+
+	2. How can it be used to track a computer or cell phone?
+
+	3. What can you do about it?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+What is a MAC address?
+
+	Media Access Control address
+		physical address
+		link layer address
+
+	How is it used?
+		general networking
+		billing services
+			e.g., limiting to one device for a service
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Determining a device's MAC address
+
+	OSX
+	Windows
+	Android
+		Settings, More, About device, Status
+		"Wi-Fi MAC address"
+	iOS
+	BSDs/Linux
+		ifconfig(8)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Breakdown of a MAC address
+
+
+	
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+How can it be used to track a computer or phone?
+
+	Snowden example
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+MAC addresses on a local network
+
+	not over the public internet
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+How it's uniquely you
+
+	tied to your hardware
+
+	registration
+
+	credit card purchase
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+First Demo
+
+
+	wireless router with connecting MAC addresses displayed
+
+	correlate to attendees
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Imagining the Threat
+
+
+	Public wireless provider
+		cafe, hotel, airport, bar
+
+	Retail store: tracking movements at and between locations
+		Apple users paying more with flight tickets
+
+	Adversary that sees lots of networks
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+What can you do about it?
+
+
+	Don't use wireless?
+
+	Anonymous purchase with cash
+		but then tied to you through usage
+
+	Changing it is likely the most practical
+		"spoofing"
+
+	iOS randomizes MAC addresses when searching for networks
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Changing based on OS
+
+
+	OSX
+	Windows
+	Android
+	iOS
+	BSDs/Linux
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Second Demo
+
+
+	Change MAC address on device
+
+	Now look at the wireless router MAC addresses
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+Operational Conclusions
+
+
+	Turn off wireless when not in use
+
+	Wired is always preferred
+		security, speed, battery consumption
+
+	Start spoofing on public networks
