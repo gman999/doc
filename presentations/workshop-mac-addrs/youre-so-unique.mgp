@@ -6,9 +6,9 @@
 
 You're So Unique:
 
-Three Things You Need to Know
+Three Things You Need to Know About
 % size 14
-About MAC Addresses
+MAC Addresses
 
 
 %nodefault
@@ -34,14 +34,15 @@ The Three Things
 What is a MAC address?
 
 
-	Media Access Control address
-		physical address
-		link layer address
+Media Access Control address
+	physical address
+	link layer address
 
-	How is it used?
-		general networking
-		billing services
-			e.g., limiting to one device for a service
+How is it used?
+	general networking
+	limiting free wireless
+	billing services
+		e.g., limiting to one device for a service
 
 
 
@@ -58,9 +59,9 @@ Determining a device's MAC address
 	Android
 		Settings, More, About device, Status, "Wi-Fi MAC address"
 
-	iOS
+	iOS/iPhone/iPad
 
-	BSDs/Linux
+	BSDs/Linux/OSX
 		ifconfig(8)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -74,7 +75,7 @@ Breakdown of a MAC address
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-How can it be used to track a computer or phone?
+How can it be used to track a device?
 
 
 	Snowden example
@@ -147,22 +148,21 @@ What can you do about it?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Changing based on OS
+Changing by System
 
-
-	OSX
+	OSX/FreeBSD
 		Terminal: ifconfig {interface} ether {new MAC}
 
 	Windows
 
 	Android
 
-	iOS
+	iOS/iPhone/iPad
 
 	BSDs/Linux
-		OpenBSD: ifconfig {interface} lladdr random
-		FreeBSD: ifconfig {interface} ether {new MAC}
 		Linux: iconfig {interface} hw ether {new MAC}
+                OpenBSD: ifconfig {interface} lladdr random
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -185,4 +185,6 @@ Operational Conclusions
 	Wired is always preferred
 		security, speed, battery consumption
 
-	Start spoofing on public networks
+	Start spoofing when on public networks
+
+	Know how to create valid MAC addresses
