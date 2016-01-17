@@ -1,0 +1,34 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% This default.mgp is "TrueType fonts" oriented.
+%% First, you should create "~/.mgprc" whose contents are:
+%%	tfdir "/path/to/truetype/fonts"
+%%
+%% To visualize English, install "standard.ttf", "thick.ttf", and 
+%% "typewriter.ttf" into the "tfdir" directory above:
+%%	ftp://ftp.mew.org/pub/mgp/ttf-us.tar.gz
+%%
+%% To visualize Japanese, install "kochi-mincho.ttf" and "goth.ttf"
+%% into the "tfdir" directory above:
+%%	ftp://ftp.mew.org/pub/mgp/ttf-jp.tar.gz
+%%
+%deffont "standard"   tfont "LiberationSans-Regular.ttf",   tmfont "LiberationSerif-Regular.ttf"
+%deffont "thick"      tfont "LiberationSans-Bold.ttf",      tmfont "LiberationSerif-Bold.ttf"
+%deffont "typewriter" tfont "LiberationSans-Regular.ttf", tmfont "LiberationSerif-Regular.ttf"
+%deffont "italic" tfont "LiberationSans-Italic.ttf",  tmfont "LiberationSans-Italic.ttf"
+%deffont "mono" tfont "LiberationMono-Regular.ttf", tmfont "LiberationMono-Regular.ttf"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Default settings per each line numbers.
+%%
+%default 1 area 95 95, leftfill, size 2, fore "white", back "black", font "standard"
+%default 2 size 9, vgap 30, prefix " "
+%default 3 size 7, bar "red", vgap 20
+%default 4 size 7, fore "white", vgap 30, prefix " ", font "standard"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Default settings that are applied to TAB-indented lines.
+%%
+%tab 1 size 6, vgap 30, prefix "  ", icon box "white" 20
+%tab 2 size 5, vgap 30, prefix "          "
+%tab 3 size 3, vgap 20, prefix "                  "
