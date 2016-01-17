@@ -22,7 +22,7 @@ The Three Things
 
 
 What is a MAC address?
-	general overview of what it is
+	a general overview
 
 How can it be used to track a device?
 	implications for anonymity
@@ -66,6 +66,15 @@ Determining a device's MAC address
 
 	BSDs/Linux/OSX
 		ifconfig(8)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Oh, and the sticker
+
+%newimage -xyzoom 130 130 "ipad-mac.jpg"
+
+%newimage -xyzoom 100 100 "tp-mac.jpg"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -151,6 +160,9 @@ What can you do about it?
 %page
 
 Creating Valid MAC Addresses
+
+
+	Always 12 characters long, with pairs separated by : or -
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
