@@ -14,8 +14,7 @@ Current directories include:
 
 All materials are under the ISC License:
 
-
-Copyright (c) 2015 gman999 george AT queair DOT net
+Copyright (c) 2015 gman999 <george AT queair DOT net>
 
  Permission to use, copy, modify, and distribute these materials for any
  purpose with or without fee is hereby granted, provided that the above
