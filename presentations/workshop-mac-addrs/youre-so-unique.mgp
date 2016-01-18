@@ -73,8 +73,9 @@ Determining a device's MAC address
 Oh, and the sticker
 
 %newimage -xyzoom 130 130 "ipad-mac.jpg"
+%newimage -xyzoom 80 80 "tp-mac.jpg"
+%newimage -xyzoom 50 50 "avtech-mac.jpg"
 
-%newimage -xyzoom 100 100 "tp-mac.jpg"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -137,6 +138,9 @@ Imagining the Threat
 	Retail store: tracking movements at and between locations
 		Apple users paying more with flight tickets
 
+	Fake wireless networks
+		"Hey, I'm not a real wireless network, but what's your MAC address?"
+
 	Adversary that sees lots of networks
 
 
@@ -181,7 +185,7 @@ Changing by System
 
 	BSDs/Linux
 		Linux: iconfig {interface} hw ether {new MAC}
-                OpenBSD: ifconfig {interface} lladdr random
+		OpenBSD: ifconfig {interface} lladdr random
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
