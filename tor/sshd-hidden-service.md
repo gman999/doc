@@ -11,6 +11,7 @@ A Tor hidden service hostname is a long, somewhat ugly hash that can only be acc
 source-->(Tor network)-->destination with dynamic IP
 
 The "source" is using ssh(1) over torsocks(1) 
+
 The "destination" is sshd(8) listening over the Tor network as a hidden service
 
 Other potential problems arise with the possibility that Tor crashes on the destination host, say, on small embedded boxes. Some boxes I access have only 256M or even just 128M of RAM, and Tor isn't meant to be stable on that latter. It is unimaginable to have a phone with even 128M of RAM today, so asking a host with less to run sshd(8) and Tor is a bit presumptuous.
