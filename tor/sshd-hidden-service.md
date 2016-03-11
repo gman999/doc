@@ -9,7 +9,9 @@ One solution is to run sshd(8) as a Tor hidden service. A Tor hidden service pro
 A Tor hidden service hostname is a long, somewhat ugly hash that can only be accessed over Tor. It may fail the [Zooko's Triangle](https://en.wikipedia.org/wiki/Zooko%27s_triangle) "human meaningful" criteria since the long hashes as hostnames are difficult to remember as opposed to normal FQDNs or even IPv4 addresses, but you can't have everything. It requires Tor to be running on both the source host that is using ssh(1) and the destination host with the dynamic IP. torsocks is also required to use ssh(1) over Tor on the source host.
 
 source-->(Tor network)-->destination with dynamic IP
+
 ssh(1) over		sshd(8) listening
+
 torsocks		as a Tor hidden service
 
 
@@ -25,22 +27,27 @@ In the section of the torrc file, subtitled with:
 
 ############### This section is just for location-hidden services ###
 
-Add the following lines to have a hidden service listening the localhost's tcp/22:
+Add the following lines to have a hidden service listening the localhost's tcp/22 on FreeBSD:
 
-HiddenServiceDir /var/db/tor/sshd
-HiddenServicePort 22 127.0.0.1:22
+	HiddenServiceDir /var/db/tor/sshd
+
+	HiddenServicePort 22 127.0.0.1:22
+
+For OpenBSD, the Tor data directory is located in /var/tor, so the first line would be:
+
+	HiddenServiceDir /var/tor/sshd
 
 The first line is the Tor data directory, which is the location of hidden service's private key, in addition to its hashed Tor hostname. We created an __sshd__ directory for this particular service, but any standard Unix directory name is fine.
 
 Next, we'll need to edit the appropriate /etc/ssh/sshd_config(5) lines. The first entry will allow sshd(8) to listen normally on the local network:
 
-ListenAddress 192.168.0.2:2222
+	ListenAddress 192.168.0.2:2222
 
 That means sshd(8) will listen on tcp/2222 on the local network for SSH connections.
 
 After that line, add another for sshd(8) as a Tor hidden service:
 
-ListenAddress localhost:22
+	ListenAddress localhost:22
 
 Now restart Tor, then restart sshd(8) in whichever way your operating system requires.
 
@@ -50,6 +57,6 @@ Remotely accessing sshd(8) as a hidden service, as noted, requires both Tor and 
 
 For instance, one might run:
 
-$ torsocks ssh ugly-long-hash.onion
+	$ torsocks ssh ugly-long-hash.onion
 
 Note we're relying on either/both the host and network based firewalls to keep access to the 192.168 address solely on the local network. Although without some type of forwarding on the NAT device, it's not accessible anyway.

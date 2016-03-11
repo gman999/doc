@@ -8,9 +8,11 @@
 
 <p>A Tor hidden service hostname is a long, somewhat ugly hash that can only be accessed over Tor. It may fail the <a href="https://en.wikipedia.org/wiki/Zooko%27s_triangle">Zooko&#8217;s Triangle</a> &#8220;human meaningful&#8221; criteria since the long hashes as hostnames are difficult to remember as opposed to normal FQDNs or even IPv4 addresses, but you can&#8217;t have everything. It requires Tor to be running on both the source host that is using ssh(1) and the destination host with the dynamic IP. torsocks is also required to use ssh(1) over Tor on the source host.</p>
 
-<p>source&#8211;&gt;(Tor network)&#8211;&gt;destination with dynamic IP
-ssh(1) over sshd(8) listening
-torsocks as a Tor hidden service</p>
+<p>source&#8211;&gt;(Tor network)&#8211;&gt;destination with dynamic IP</p>
+
+<p>ssh(1) over sshd(8) listening</p>
+
+<p>torsocks as a Tor hidden service</p>
 
 <p>Other potential problems arise with the possibility that Tor crashes on the destination host, say, on small embedded boxes. Some boxes I access have only 256M or even just 128M of RAM, and Tor isn&#8217;t meant to be stable on that latter. It is unimaginable to have a phone with even 128M of RAM today, so asking a host with less to run sshd(8) and Tor is a bit presumptuous.</p>
 
@@ -24,22 +26,31 @@ torsocks as a Tor hidden service</p>
 
 <h6 id="thissectionisjustforlocation-hiddenservices">######### This section is just for location-hidden services</h6>
 
-<p>Add the following lines to have a hidden service listening the localhost&#8217;s tcp/22:</p>
+<p>Add the following lines to have a hidden service listening the localhost&#8217;s tcp/22 on FreeBSD:</p>
 
-<p>HiddenServiceDir /var/db/tor/sshd
-HiddenServicePort 22 127.0.0.1:22</p>
+<pre><code>HiddenServiceDir /var/db/tor/sshd
+
+HiddenServicePort 22 127.0.0.1:22
+</code></pre>
+
+<p>For OpenBSD, the Tor data directory is located in /var/tor, so the first line would be:</p>
+
+<pre><code>HiddenServiceDir /var/tor/sshd
+</code></pre>
 
 <p>The first line is the Tor data directory, which is the location of hidden service&#8217;s private key, in addition to its hashed Tor hostname. We created an <strong>sshd</strong> directory for this particular service, but any standard Unix directory name is fine.</p>
 
 <p>Next, we&#8217;ll need to edit the appropriate /etc/ssh/sshd_config(5) lines. The first entry will allow sshd(8) to listen normally on the local network:</p>
 
-<p>ListenAddress 192.168.0.2:2222</p>
+<pre><code>ListenAddress 192.168.0.2:2222
+</code></pre>
 
 <p>That means sshd(8) will listen on tcp/2222 on the local network for SSH connections.</p>
 
 <p>After that line, add another for sshd(8) as a Tor hidden service:</p>
 
-<p>ListenAddress localhost:22</p>
+<pre><code>ListenAddress localhost:22
+</code></pre>
 
 <p>Now restart Tor, then restart sshd(8) in whichever way your operating system requires.</p>
 
@@ -50,6 +61,7 @@ HiddenServicePort 22 127.0.0.1:22</p>
 
 <p>For instance, one might run:</p>
 
-<p>$ torsocks ssh ugly-long-hash.onion</p>
+<pre><code>$ torsocks ssh ugly-long-hash.onion
+</code></pre>
 
 <p>Note we&#8217;re relying on either/both the host and network based firewalls to keep access to the 192.168 address solely on the local network. Although without some type of forwarding on the NAT device, it&#8217;s not accessible anyway.</p>
