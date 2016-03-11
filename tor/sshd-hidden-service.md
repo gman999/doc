@@ -51,7 +51,7 @@ After that line, add another for sshd(8) as a Tor hidden service:
 
 Now restart Tor, then restart sshd(8) in whichever way your operating system requires.
 
-	/etc/rc.d/sshd restart
+	$ /etc/rc.d/sshd restart
 
 Remotely accessing sshd(8) as a hidden service, as noted, requires both Tor and torsocks.
 
