@@ -10,8 +10,7 @@ A Tor hidden service hostname is a long, somewhat ugly hash that can only be acc
 
 source-->(Tor network)-->destination with dynamic IP
 
-ssh(1) over		sshd(8) listening
-
+ssh(1) over		sshd(8) listening 
 torsocks		as a Tor hidden service
 
 
