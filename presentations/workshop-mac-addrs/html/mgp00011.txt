@@ -1,0 +1,17 @@
+
+Imagining the Threat
+
+
+Public wireless provider
+cafe, hotel, airport, bar
+
+Retail store: tracking movements at and between locations
+Apple users paying more with flight tickets
+where did this customer browse?
+
+Fake wireless networks
+"Hi, I'm not a real wireless network, but what's your MAC address?"
+
+Adversary that sees lots of networks
+
+

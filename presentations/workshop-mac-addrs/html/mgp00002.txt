@@ -1,0 +1,14 @@
+
+The Three Things
+
+
+What is a MAC address?
+a general overview
+
+How can it be used to track a device?
+implications for anonymity
+
+What can you do about it?
+mitigating MAC address tracking
+
+

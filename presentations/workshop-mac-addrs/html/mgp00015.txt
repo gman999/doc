@@ -1,0 +1,27 @@
+
+OpenBSD: Security is a Starting Point
+
+ifconfig {interface} lladdr random
+
+$ ifconfig run0
+run0: flags=8802<BROADCAST,SIMPLEX,MULTICAST> mtu 1500
+        lladdr 18:50:3a:ae:65:d0
+        index 5 priority 4
+        groups: wlan
+        media: IEEE802.11 autoselect (DS1 mode 11b)
+        status: no network
+        ieee80211: nwid ""
+
+$ ifconfig run0 lladdr random
+
+$ ifconfig run0
+run0: flags=8802<BROADCAST,SIMPLEX,MULTICAST> mtu 1500
+        lladdr c4:71:0c:c0:bb:57
+        index 5 priority 4
+        groups: wlan
+        media: IEEE802.11 autoselect (DS1 mode 11b)
+        status: no network
+        ieee80211: nwid ""
+
+
+

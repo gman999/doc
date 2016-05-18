@@ -1,0 +1,16 @@
+
+Operational Conclusions
+
+
+Turn off wireless when not in use
+and avoid using on non-trusted networks
+
+Wired is always preferred
+security, speed, data integrity, battery consumption
+
+Make it second-nature to do on phones, laptops, tablets
+an application, the shell command
+
+Start MAC address spoofing when on public networks
+
+Know how to recognize and create valid MAC addresses

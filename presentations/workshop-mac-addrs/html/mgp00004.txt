@@ -1,0 +1,15 @@
+
+Determining a device's MAC address
+
+OSX
+
+Windows
+
+Android
+Settings, More, About device, Status, "Wi-Fi MAC address"
+
+iOS/iPhone/iPad
+
+BSDs/Linux/OSX
+ifconfig(8)
+

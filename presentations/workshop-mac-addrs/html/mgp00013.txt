@@ -1,0 +1,7 @@
+
+Creating Valid MAC Addresses
+
+
+Always 12 characters long, with pairs separated by : or -
+
+

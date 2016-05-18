@@ -1,0 +1,16 @@
+
+What is a MAC address?
+
+
+Media Access Control address
+physical address
+link layer address
+
+How is it used?
+general networking
+limiting free wireless
+billing services
+e.g., limiting service to one device
+
+
+

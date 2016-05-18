@@ -1,0 +1,16 @@
+
+Changing by System
+
+
+OSX/FreeBSD
+Terminal: ifconfig {interface} ether {new MAC}
+
+Linux
+ifconfig {interface} hw ether {new MAC}
+
+Windows
+
+Android
+
+iOS/iPhone/iPad
+

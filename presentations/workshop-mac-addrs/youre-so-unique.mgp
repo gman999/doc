@@ -2,12 +2,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 %nodefault
-%center, size 10, fore "white", font "standard"
+%center, size 16, fore "white", font "standard"
 
-You're So Unique:
+You're Soooo Unique:
 
+% size 10
 Three Things You Need to Know About
-% size 14
+% size 16
 MAC Addresses
 
 
@@ -53,7 +54,6 @@ How is it used?
 %page
 
 Determining a device's MAC address
-
 
 	OSX
 
@@ -137,9 +137,10 @@ Imagining the Threat
 
 	Retail store: tracking movements at and between locations
 		Apple users paying more with flight tickets
+		where did this customer browse?
 
 	Fake wireless networks
-		"Hey, I'm not a real wireless network, but what's your MAC address?"
+		"Hi, I'm not a real wireless network, but what's your MAC address?"
 
 	Adversary that sees lots of networks
 
@@ -156,7 +157,7 @@ What can you do about it?
 		but then tied to you through usage
 
 	Changing it is likely the most practical
-		"spoofing"
+		MAC addreess "spoofing"
 
 	iOS randomizes MAC addresses when searching for wireless networks
 
@@ -174,8 +175,12 @@ Creating Valid MAC Addresses
 
 Changing by System
 
+
 	OSX/FreeBSD
 		Terminal: ifconfig {interface} ether {new MAC}
+
+	Linux
+		ifconfig {interface} hw ether {new MAC}
 
 	Windows
 
@@ -183,9 +188,34 @@ Changing by System
 
 	iOS/iPhone/iPad
 
-	BSDs/Linux
-		Linux: iconfig {interface} hw ether {new MAC}
-		OpenBSD: ifconfig {interface} lladdr random
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+OpenBSD: Security is a Starting Point
+
+		ifconfig {interface} lladdr random
+
+%size 3 
+$ ifconfig run0
+run0: flags=8802<BROADCAST,SIMPLEX,MULTICAST> mtu 1500
+        lladdr 18:50:3a:ae:65:d0
+        index 5 priority 4
+        groups: wlan
+        media: IEEE802.11 autoselect (DS1 mode 11b)
+        status: no network
+        ieee80211: nwid ""
+
+$ ifconfig run0 lladdr random
+
+$ ifconfig run0
+run0: flags=8802<BROADCAST,SIMPLEX,MULTICAST> mtu 1500
+        lladdr c4:71:0c:c0:bb:57
+        index 5 priority 4
+        groups: wlan
+        media: IEEE802.11 autoselect (DS1 mode 11b)
+        status: no network
+        ieee80211: nwid ""
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -205,10 +235,14 @@ Operational Conclusions
 
 
 	Turn off wireless when not in use
+		and avoid using on non-trusted networks
 
 	Wired is always preferred
 		security, speed, data integrity, battery consumption
 
-	Start spoofing when on public networks
+	Make it second-nature to do on phones, laptops, tablets
+		an application, the shell command
 
-	Know how to create valid MAC addresses
+	Start MAC address spoofing when on public networks
+
+	Know how to recognize and create valid MAC addresses
