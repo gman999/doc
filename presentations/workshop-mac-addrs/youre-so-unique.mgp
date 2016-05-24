@@ -47,6 +47,8 @@ How is it used?
 	limiting free wireless
 	billing services
 		e.g., limiting service to one device
+	can't be remotely read without direct device access
+		but does your ISP have router access?
 
 
 
@@ -55,9 +57,11 @@ How is it used?
 
 Determining a device's MAC address
 
+
 	OSX
 
 	Windows
+		network adapter properties
 
 	Android
 		Settings, More, About device, Status, "Wi-Fi MAC address"
@@ -83,6 +87,12 @@ Oh, and the sticker
 Breakdown of a MAC address
 
 
+%font "mono", size 10
+
+AB : CD : EF : 01 : 23 : 45
+Organization | Host ID 
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -94,26 +104,20 @@ How can it be used to track a device?
 	Snowden example
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
-MAC addresses on a local network
-
-	Not over the public internet
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
 How it's uniquely you
 
 
-	It *is* unique
+Manufacturer creates network device, imprints with MAC address
 
-	Tied to your hardware, registration, non-cash purchase
+Network device shipped with hardware
 
-$=> laptop=> registration=> online=> MAC:$
+User employs a credit card to purchase hardware with network device
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -161,19 +165,33 @@ What can you do about it?
 
 	iOS randomizes MAC addresses when searching for wireless networks
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+WARNING
+
+
+There are reports that you could "brick" a device when changing the MAC address.
+
+
 %%%%%%%%%%%%%%%%%%
 %page
 
 Creating Valid MAC Addresses
 
 
-	Always 12 characters long, with pairs separated by : or -
+	Always 12 characters long, in pairs separated by : or -
+
+	Characters are hexadecimals
+		A B C D E F
+		0 1 2 3 4 5 6 7 8 9
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Changing by System
+Temporarily Changing by System
 
 
 	OSX/FreeBSD
@@ -191,7 +209,7 @@ Changing by System
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-OpenBSD: Security is a Starting Point
+OpenBSD: Security isn't an Afterthought
 
 		ifconfig {interface} lladdr random
 
@@ -237,7 +255,7 @@ Operational Conclusions
 	Turn off wireless when not in use
 		and avoid using on non-trusted networks
 
-	Wired is always preferred
+	Wired should be preferred
 		security, speed, data integrity, battery consumption
 
 	Make it second-nature to do on phones, laptops, tablets

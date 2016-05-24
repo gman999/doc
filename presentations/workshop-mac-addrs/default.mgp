@@ -12,11 +12,12 @@
 %% into the "tfdir" directory above:
 %%	ftp://ftp.mew.org/pub/mgp/ttf-jp.tar.gz
 %%
-%deffont "standard"   tfont "LiberationSans-Regular.ttf",   tmfont "LiberationSerif-Regular.ttf"
-%deffont "thick"      tfont "LiberationSans-Bold.ttf",      tmfont "LiberationSerif-Bold.ttf"
-%deffont "typewriter" tfont "LiberationSans-Regular.ttf", tmfont "LiberationSerif-Regular.ttf"
-%deffont "italic" tfont "LiberationSans-Italic.ttf",  tmfont "LiberationSans-Italic.ttf"
+%deffont "standard"   tfont "LiberationSerif-Regular.ttf",   tmfont "LiberationSerif-Regular.ttf"
+%deffont "thick"      tfont "LiberationSerif-Bold.ttf",      tmfont "LiberationSerif-Bold.ttf"
+%deffont "typewriter" tfont "LiberationSans-Regular.ttf", tmfont "LiberationSans-Regular.ttf"
+%deffont "italic" tfont "LiberationSerif-Italic.ttf",  tmfont "LiberationSerif-Italic.ttf"
 %deffont "mono" tfont "LiberationMono-Regular.ttf", tmfont "LiberationMono-Regular.ttf"
+%deffont "mono-italic" tfont "LiberationMono-Italic.ttf", tmfont "LiberationMono-Italic.ttf"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %% Default settings per each line numbers.
