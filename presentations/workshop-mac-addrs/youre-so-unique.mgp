@@ -92,6 +92,16 @@ Breakdown of a MAC address
 AB : CD : EF : 01 : 23 : 45
 Organization | Host ID 
 
+%font "standard", size 7
+
+http://standards-oui.ieee.org/oui.txt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+OUI List
+https://twitter.com/WebBreacher/status/733619976708444160
+
 
 
 
@@ -264,3 +274,4 @@ Operational Conclusions
 	Start MAC address spoofing when on public networks
 
 	Know how to recognize and create valid MAC addresses
+
