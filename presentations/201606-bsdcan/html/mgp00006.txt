@@ -1,0 +1,10 @@
+
+Quick-and-Dirty Statistics
+
+
+ugly shell scripts giving a broad snapshot of
+the public Tor network
+
+https://torbsd.github.io/dirty-stats.html
+
+

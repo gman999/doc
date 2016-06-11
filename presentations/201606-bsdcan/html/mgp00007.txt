@@ -1,0 +1,16 @@
+
+In Absolute Numbers
+
+7142 public Tor relays
+-count-    -platform-    -percent-
+6360         Linux        89.0507%
+374          Windows       5.23663%
+285          FreeBSD       3.99048%
+79           OpenBSD       1.10613%
+26           Darwin        0.364044%
+7            NetBSD        0.0980118%
+4            ElectroBSD    0.0560067%
+3            SunOS         0.042005%
+2            DragonFly     0.0280034%
+
+

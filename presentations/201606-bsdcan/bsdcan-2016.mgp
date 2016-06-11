@@ -1,0 +1,382 @@
+%include "default.mgp"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%center, size 16, fore "white", font "standard"
+
+Beyond Monocultures:
+%size 12
+the BSDs in Torland
+
+
+%nodefault
+%right, size 5, fore "white"
+george@nycbug.org 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+To Start
+
+
+	no affiliation with the Tor Project
+
+	Tor BSD Diversity Project is Attila and I
+
+	recent upheaval in the news, relevant for all software projects
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+%nodefault
+%center
+%newimage -zoom 60 "vu.jpg"
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+
+
+
+Whither Bananas?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Tor's Cavendish
+
+Linux
+
+Relays, TAILS
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Quick-and-Dirty Statistics
+
+
+ugly shell scripts giving a broad snapshot of
+the public Tor network
+
+https://torbsd.github.io/dirty-stats.html
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+In Absolute Numbers
+
+%size 6
+7142 public Tor relays
+-count-    -platform-    -percent-
+6360         Linux        89.0507%
+374          Windows       5.23663%
+285          FreeBSD       3.99048%
+79           OpenBSD       1.10613%
+26           Darwin        0.364044%
+7            NetBSD        0.0980118%
+4            ElectroBSD    0.0560067%
+3            SunOS         0.042005%
+2            DragonFly     0.0280034%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+The Bandwidth Monoculture
+
+%size 6
+8573189 Kbps
+-----------
+-platform-    -Kbps-   -percent-
+Linux         8011728  93.451%
+FreeBSD       460918   5.37627%
+OpenBSD       34163    0.398486%
+Windows       20523    0.239386%
+ElectroBSD    14793    0.17255%
+SunOS         14651    0.170893%
+Darwin        8586     0.100149%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Punching Above Your Weight-Class
+
+
+%size 7
+Percent of relays
+Windows ~5.24%
+FreeBSD ~4%
+
+Yet percent of bandwidth
+FreeBSD ~5.38%
+Windows ~0.24%
+
+%center, font "italic"
+significant BSD user access to the data centers
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+And By Countries
+
+Total Number of Public Tor Relays:
+7054
+-----
+-count-   -country_code-   -percent-
+1487            DE              21.0802%  
+1453            US              20.5982%  
+819             FR              11.6104%  
+526             NL              7.45676%  
+356             RU              5.04678%  
+286             GB              4.05444%  
+257             CA              3.64332%  
+229             SE              3.24639%  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Bandwidth Concentration by Country
+%size 6
+Total Bandwidth of Tor Network:
+8573189 Kbps
+----------
+-cc- -Kbps-   -percent-
+FR   2053510  24.0326%
+DE   1698966  19.8833%
+NL   1138186  13.3204%
+US   664164   7.77284%
+GB   530351   6.2068%
+SE   351004   4.10787%
+
+%font "italic"
+what if France banned Tor relays?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Total Number of Tor Exit Relays:
+894
+----------
+-num-   -country-  -percent_of_exits-
+137        US         15.3244%  
+95         NL         10.6264%  
+80         DE         8.94855%  
+76         FR         8.50112% 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+But then, why Tor?
+
+
+	"Tor is 0wn3d"
+
+	Snowden slides
+		a central target
+		watching the flows
+		But critical tool for Snowden
+
+	Tor v2?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+The Strengths
+
+
+	Open source, documented
+
+	Engaging community
+
+	A public network with low-barriers of entry
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+What Is TDP?
+
+%size 7
+	Launched around Spring 2015, but a long time coming
+
+	Diversify the Linux monoculture with Tor
+		no BSD Tor Browser (TB)
+		desktop: Tor Browser on OpenBSD
+	Relays/network: how-to's, BSD firm relays
+		Engage the BSD community: meetings, events
+		Debian/Linux the primary OS of development
+	https://github.com/torbsd/openbsd-ports/
+		TB releases
+		comprehensive FAQ and Resource pages
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+A Long History of the BSDs PETs-Land
+
+%size 7
+Rubberhose encrypted FS discussion with Theo
+
+"you personally are viewed as a
+disgrace and OpenBSD little more than
+some kind of NetBSD Milli Vanilli one
+should avoid at all costs."
+
+Julian Assange 20011121
+
+https://marc.info/?l=openbsd-misc&m=100634669529662&w=2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Ports Developers are Developers Too
+
+
+	Lots of users go to which OS supports their port
+
+	Those users won't use an OS that doesn't support their port
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Tor Browser on OpenBSD
+
+
+	Where standards decide all, therefore easiest OS to port *from*
+		not going to find POSIX "extensions" and esoteric ports 
+
+	They don't rely on bloated assumptions, even upstream
+		GPG for signing and verifying? signify(1)
+		a pretend-developer writes an RNG? arc4random(3)
+
+	If you can make it there, you can make it anywhere
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+TB onto OpenBSD: the Problems
+
+	Anonymity is a moving target
+		an arms race in surveillance and censorship
+		adversaries:
+			nation-states and their tentacles
+			entities of all sizes
+
+	Mozilla code is a moving target
+
+	An OpenBSD snapshot is a moving target
+
+	Fitting into the ports infrastructure is difficult
+		is upstream listening?
+		bash is a dependency or a cancerous tumor?
+			Tor startup script
+			Firefox addon: HTTPS Everywhere
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Portability Demands Standards
+
+
+%left, font "standard", size 8
+$ /bin/bash
+ksh: /bin/bash: not found
+$ apropos bash
+apropos: nothing appropriate
+
+
+https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=bash/
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Hard-Coded Variables
+
+
+        $HOME sweet $HOME
+
+        $vars scattered around the scripts
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+As MWL once said,
+
+
+%center, font "italic", size 12
+Write not to be understood,
+but rather so that you can't
+be misunderstood
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Again: Is Tor the Perfect Solution? 
+
+
+	No.  Tor could be compromised by an adversary with a full global network view, watching critical flows, sitting on backbone routers
+
+	No.  What about Linux RNG and other lowest-common denominators
+
+	We shouldn't be encouraging delusions about any bullet-proof solutions
+
+%center, font "italic"
+it's about mitigation, relative strength versus
+particular adversaries in particular contexts
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Disrupting the Monoculture
+
+
+	The obvious
+		run BSD relays
+			.br relays .5% of network, Linux and one Win
+		encourage {university,firm,ngo}: NYI, check
+		join Tor-BSD mailing list
+
+	Fork/contribute to https://github.com/torbsd/openbsd-ports/
+		porting effort to FreeBSD would be wonderful
+		HardenedBSD?	
+		contributions to documentation
+		sane optimization, understanding the realities
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Thanks
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%center, size 11, fore "white", font "thick"
+
+Comments?  Questions?
+
+
+%right, size 5 
+george @ nycbug . org
+E129 651D 71E3 124F 971E 0287 48E0 46EF 16E8 4828

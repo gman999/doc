@@ -1,0 +1,12 @@
+
+Total Number of Tor Exit Relays:
+894
+----------
+-num-   -country-  -percent_of_exits-
+137        US         15.3244%  
+95         NL         10.6264%  
+80         DE         8.94855%  
+76         FR         8.50112% 
+
+
+

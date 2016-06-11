@@ -1,0 +1,15 @@
+
+Bandwidth Concentration by Country
+Total Bandwidth of Tor Network:
+8573189 Kbps
+----------
+-cc- -Kbps-   -percent-
+FR   2053510  24.0326%
+DE   1698966  19.8833%
+NL   1138186  13.3204%
+US   664164   7.77284%
+GB   530351   6.2068%
+SE   351004   4.10787%
+
+what if France banned Tor relays?
+

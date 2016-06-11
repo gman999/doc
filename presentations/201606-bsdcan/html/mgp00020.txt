@@ -1,0 +1,14 @@
+
+Portability Demands Standards
+
+
+$ /bin/bash
+ksh: /bin/bash: not found
+$ apropos bash
+apropos: nothing appropriate
+
+
+https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=bash/
+
+
+

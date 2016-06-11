@@ -1,0 +1,14 @@
+
+The Bandwidth Monoculture
+
+8573189 Kbps
+-----------
+-platform-    -Kbps-   -percent-
+Linux         8011728  93.451%
+FreeBSD       460918   5.37627%
+OpenBSD       34163    0.398486%
+Windows       20523    0.239386%
+ElectroBSD    14793    0.17255%
+SunOS         14651    0.170893%
+Darwin        8586     0.100149%
+

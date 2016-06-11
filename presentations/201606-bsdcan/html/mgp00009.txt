@@ -1,0 +1,15 @@
+
+Punching Above Your Weight-Class
+
+
+Percent of relays
+Windows ~5.24%
+FreeBSD ~4%
+
+Yet percent of bandwidth
+FreeBSD ~5.38%
+Windows ~0.24%
+
+significant BSD user access to the data centers
+
+
