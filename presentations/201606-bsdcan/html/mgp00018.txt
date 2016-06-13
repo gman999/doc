@@ -3,7 +3,7 @@ Tor Browser on OpenBSD
 
 
 Where standards decide all, therefore easiest OS to port *from*
-not going to find POSIX "extensions" and esoteric ports 
+not going to find POSIX extensions and esoteric ports 
 
 They don't rely on bloated assumptions, even upstream
 GPG for signing and verifying? signify(1)

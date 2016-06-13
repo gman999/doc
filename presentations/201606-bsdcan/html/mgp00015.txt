@@ -10,7 +10,7 @@ Relays/network: how-to's, BSD firm relays
 Engage the BSD community: meetings, events
 Debian/Linux the primary OS of development
 https://github.com/torbsd/openbsd-ports/
-TB releases
+21 TB releases (still at 5.5.4)
 comprehensive FAQ and Resource pages
 
 

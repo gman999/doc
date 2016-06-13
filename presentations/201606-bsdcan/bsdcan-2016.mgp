@@ -11,7 +11,7 @@ the BSDs in Torland
 
 %nodefault
 %right, size 5, fore "white"
-george@nycbug.org 
+george @ nycbug . org 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -38,15 +38,13 @@ To Start
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-
-
-
 Whither Bananas?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
 Tor's Cavendish
+
 
 Linux
 
@@ -153,7 +151,7 @@ US   664164   7.77284%
 GB   530351   6.2068%
 SE   351004   4.10787%
 
-%font "italic"
+%font "italic", center
 what if France banned Tor relays?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -213,7 +211,7 @@ What Is TDP?
 		Engage the BSD community: meetings, events
 		Debian/Linux the primary OS of development
 	https://github.com/torbsd/openbsd-ports/
-		TB releases
+		21 TB releases (still at 5.5.4)
 		comprehensive FAQ and Resource pages
 
 
@@ -240,9 +238,9 @@ https://marc.info/?l=openbsd-misc&m=100634669529662&w=2
 Ports Developers are Developers Too
 
 
-	Lots of users go to which OS supports their port
+	Lots of users go to the OS that supports their application
 
-	Those users won't use an OS that doesn't support their port
+	Users won't use an OS that doesn't support their application
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -252,7 +250,7 @@ Tor Browser on OpenBSD
 
 
 	Where standards decide all, therefore easiest OS to port *from*
-		not going to find POSIX "extensions" and esoteric ports 
+		not going to find POSIX extensions and esoteric ports 
 
 	They don't rely on bloated assumptions, even upstream
 		GPG for signing and verifying? signify(1)
@@ -329,7 +327,6 @@ be misunderstood
 
 Again: Is Tor the Perfect Solution? 
 
-
 	No.  Tor could be compromised by an adversary with a full global network view, watching critical flows, sitting on backbone routers
 
 	No.  What about Linux RNG and other lowest-common denominators
@@ -352,7 +349,7 @@ Disrupting the Monoculture
 		run BSD relays
 			.br relays .5% of network, Linux and one Win
 		encourage {university,firm,ngo}: NYI, check
-		join Tor-BSD mailing list
+		join Tor-BSD mailing list http://lists.nycbug.org/
 
 	Fork/contribute to https://github.com/torbsd/openbsd-ports/
 		porting effort to FreeBSD would be wonderful

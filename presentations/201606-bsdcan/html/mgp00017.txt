@@ -2,8 +2,8 @@
 Ports Developers are Developers Too
 
 
-Lots of users go to which OS supports their port
+Lots of users go to the OS that supports their application
 
-Those users won't use an OS that doesn't support their port
+Users won't use an OS that doesn't support their application
 
 
