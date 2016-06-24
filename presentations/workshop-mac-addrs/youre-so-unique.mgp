@@ -2,7 +2,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 %nodefault
-%center, size 16, fore "white", font "standard"
+%center, size 14, fore "white", font "standard"
 
 You're Soooo Unique:
 
@@ -55,21 +55,17 @@ How is it used?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Determining a device's MAC address
-
+Determining a MAC address
 
 	OSX
 
-	Windows
-		network adapter properties
+	Windows: network adapter properties
 
-	Android
-		Settings, More, About device, Status, "Wi-Fi MAC address"
+	Android: Settings, More, About device, Status, "Wi-Fi MAC address"
 
 	iOS/iPhone/iPad
 
-	BSDs/Linux/OSX
-		ifconfig(8)
+	BSDs/Linux/OSX: ifconfig(8)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -87,19 +83,22 @@ Oh, and the sticker
 Breakdown of a MAC address
 
 
-%font "mono", size 10
+%font "mono", size 8
 
 AB : CD : EF : 01 : 23 : 45
-Organization | Host ID 
+OUI          | NIC
 
 %font "standard", size 7
 
+The Full OUI List
 http://standards-oui.ieee.org/oui.txt
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-OUI List
+
+
+
 https://twitter.com/WebBreacher/status/733619976708444160
 
 
@@ -111,7 +110,6 @@ https://twitter.com/WebBreacher/status/733619976708444160
 How can it be used to track a device?
 
 
-	Snowden example
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -120,11 +118,11 @@ How can it be used to track a device?
 How it's uniquely you
 
 
-Manufacturer creates network device, imprints with MAC address
+Manufacturer creates network device, burns in MAC address
 
 Network device shipped with hardware
 
-User employs a credit card to purchase hardware with network device
+User with credit card purchases hardware with network device
 
 
 
@@ -132,12 +130,9 @@ User employs a credit card to purchase hardware with network device
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-First Demo
+Demo
 
 
-	wireless router with connecting MAC addresses displayed
-
-	correlate to attendees
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -219,7 +214,7 @@ Temporarily Changing by System
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-OpenBSD: Security isn't an Afterthought
+OpenBSD
 
 		ifconfig {interface} lladdr random
 
@@ -249,29 +244,16 @@ run0: flags=8802<BROADCAST,SIMPLEX,MULTICAST> mtu 1500
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Second Demo
-
-
-	Change MAC address on device
-
-	Now look at the wireless router MAC addresses
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
 Operational Conclusions
-
 
 	Turn off wireless when not in use
 		and avoid using on non-trusted networks
 
-	Wired should be preferred
+	Wired should always be preferred
 		security, speed, data integrity, battery consumption
 
 	Make it second-nature to do on phones, laptops, tablets
-		an application, the shell command
 
-	Start MAC address spoofing when on public networks
+	Spoof your MAC address on public networks
 
 	Know how to recognize and create valid MAC addresses
-

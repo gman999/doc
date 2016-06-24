@@ -1,9 +1,11 @@
 
 Determining a device's MAC address
 
+
 OSX
 
 Windows
+network adapter properties
 
 Android
 Settings, More, About device, Status, "Wi-Fi MAC address"

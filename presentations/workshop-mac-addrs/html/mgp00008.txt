@@ -1,7 +1,6 @@
 
-MAC addresses on a local network
+How can it be used to track a device?
 
-Not over the public internet
 
 
 

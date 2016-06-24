@@ -2,9 +2,12 @@
 How it's uniquely you
 
 
-It *is* unique
+Manufacturer creates network device, burns in MAC address
 
-Tied to your hardware, registration, non-cash purchase
+Network device shipped with hardware
 
-$=> laptop=> registration=> online=> MAC:$
+User with credit card purchases hardware with network device
+
+
+
 

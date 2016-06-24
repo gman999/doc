@@ -1,7 +1,7 @@
 
-Creating Valid MAC Addresses
+WARNING
 
 
-Always 12 characters long, with pairs separated by : or -
+There are reports that you could "brick" a device when changing the MAC address.
 
 

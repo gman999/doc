@@ -11,6 +11,8 @@ general networking
 limiting free wireless
 billing services
 e.g., limiting service to one device
+can't be remotely read without direct device access
+but does your ISP have router access?
 
 
 
