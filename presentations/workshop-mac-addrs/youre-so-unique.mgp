@@ -57,15 +57,18 @@ How is it used?
 
 Determining a MAC address
 
-	OSX
 
 	Windows: network adapter properties
 
 	Android: Settings, More, About device, Status, "Wi-Fi MAC address"
 
-	iOS/iPhone/iPad
+	OSX/iOS/iPhone/iPad
 
 	BSDs/Linux/OSX: ifconfig(8)
+
+$ ifconfig rl0
+rl0: flags=8802<BROADCAST,SIMPLEX,MULTICAST> mtu 1500
+       lladdr b0:98:3c:37:17:bd
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -86,7 +89,7 @@ Breakdown of a MAC address
 %font "mono", size 8
 
 AB : CD : EF : 01 : 23 : 45
-OUI          | NIC
+<--------OUI | NIC------->
 
 %font "standard", size 7
 
@@ -123,9 +126,10 @@ Manufacturer creates network device, burns in MAC address
 Network device shipped with hardware
 
 User with credit card purchases hardware with network device
-
-
-
+        or, you register product with manufacturer or retailer
+        or, 
+        or, physical presence correlated to DVR system
+        or, they have a Stingray
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
