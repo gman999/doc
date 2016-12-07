@@ -237,6 +237,22 @@ rzewfon-q8)sz7nd(*onDAswKORN.
 je-phon-quait-schevend-on-the southwest corner is how I'd say it
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+How Many Password Possibilities?
+
+
+universe^length (to the power of)
+
+Arabic numerals, 10 digits long
+10^10 is 10 billion possible passwords
+
+full 95 ASCII Universe
+95^10 is 59,873,693,924 billion possible passwords
+
+%font "italic", size 6
+a shorter password from a bigger universe can be stronger
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -287,3 +303,18 @@ Testing Passwords with ent
 %center
 https://www.fourmilab.ch/random/
 %newimage "ent.png"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+what makes a password...
+
+strong: a long time to break it
+
+memorable: type a few times, remember it the fifth time
+
+unique: if you see it in plain text, you can't use it on other systems, or figure out a pattern.
+
+references
+
+A Somewhat Brief Explanantion of Password Entropy
+https://www.itdojo.com/a-somewhat-brief-explanation-of-password-entropy/
