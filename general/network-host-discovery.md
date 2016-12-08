@@ -24,16 +24,16 @@ To quickly show all the hosts on a network and their IP addresses, plus "latency
 
 Output for one host might look like this:
 
-Nmap scan report for firewall (192.168.1.1)
+Nmap scan report for firewall (192.168.1.1) 
 Host is up (0.0020s latency).
 
-Nmap scan report for 192.168.1.50
+Nmap scan report for 192.168.1.50 
 Host is up (0.00060s latency).
 
-Nmap scan report for 192.168.1.100
+Nmap scan report for 192.168.1.100 
 Host is up (0.0021s latency).
 
-Nmap scan report for 192.168.1.101
+Nmap scan report for 192.168.1.101 
 Host is up (0.0036s latency).
 
 Higher latency numbers might indicate network issues, including misconfiguration of network interfaces or network congestion.
