@@ -13,7 +13,7 @@ While ARM support is improving, x86 hardware remains the best supported, particu
 
 __Operating System__
 
-While these directions are adaptable for any Unix-like system, in this case the option is [OpenBSD](https://www.openbsd.org/), an open source operating system noted for its focus on security and following [POSIX](https://www.opengroup.org/austin/) standards. Both security and standards are critical attributes for a NIDS device. Security is obvious enough, since an operating system that requires prolific knob-turning is not by default secure. Standards are equally important, as following accepted network protocols and communications allows inoperability for the device.
+While these directions are adaptable for any Unix-like system, in this case the option is [OpenBSD](https://www.openbsd.org/), an open source operating system noted for its focus on security and following [POSIX](https://www.opengroup.org/austin/) standards. Both security and standards are critical attributes for a NIDS device. Security is obvious enough, since an operating system that requires prolific knob-turning is not by default secure. Standards are equally important, as following accepted network protocols and communications allows interoperability for the device on any network, regardless of the array of devices.
 
 __Building__
 
