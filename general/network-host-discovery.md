@@ -99,13 +99,14 @@ $nmap is just the location of the executible nmap application, which may vary pe
 
 ```
 #!/bin/sh -x
+
 # variables
 targets="${targets:-{192.168.27.1,192.168.27.50}}"
 options="${options:-"-v -T4 -F -sV"}"
 now="${now:-"`date +%Y%m%d-%M`"}"
 nmap="${nmap:-/usr/local/bin/nmap}"
 
-# keep the scan outputs in your home directory
+# keep the scan outputs in your home directory, edit
 cd /home/user/scans;
 
 $nmap $options $targets -oN scan-$now.txt > /dev/null;
