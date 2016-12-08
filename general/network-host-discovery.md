@@ -24,8 +24,7 @@ To quickly show all the hosts on a network and their IP addresses, plus "latency
 
 Output for one host might look like this:
 
-Nmap scan report for firewall (192.168.1.1)
-
+Nmap scan report for firewall (192.168.1.1)  
 Host is up (0.0020s latency).
 
 Nmap scan report for 192.168.1.50
