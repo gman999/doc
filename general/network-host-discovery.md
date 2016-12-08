@@ -80,7 +80,7 @@ To do the same, while also identifying the operating systems and their versions:
 
 With every nmap command, adding "-v" will increase verbosity, which means additional details that may or may not be useful. If a particular command doesn't provide enough information, it may be worth running again with "-v".
 
-To output the results to a text file, add "-oN output.txt" to the options. For those looking to diminish their vision, "-oX output.xml" will output to the XML format.
+To output the results to a text file, add "-oN output.txt" to the options. For those looking to diminish their vision or are using the _ndiff_ tool, "-oX output.xml" will output to the XML format.
 
 __Automating Daily nmap Scans and the ndiff Command__
 
