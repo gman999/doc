@@ -71,6 +71,8 @@ Any range can be specified. "-p" can also be used to target individual ports to 
 
 	$ nmap -A -T4 -p22 192.168.1.1
 
+The "-T4" option will speed up scans considerably.
+
 To do the same, while also identifying the operating systems and their versions:
 
 	$ nmap -sS -A 192.168.1.0/24
