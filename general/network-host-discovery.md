@@ -97,6 +97,8 @@ $now refers to the time appended to the output file, reflecting the frequency th
 
 $nmap is just the location of the executible nmap application, which may vary per operating system.
 
+The result to check is the diff-date file, which will include changes from the previous scan.
+
 ```
 #!/bin/sh -x
 
