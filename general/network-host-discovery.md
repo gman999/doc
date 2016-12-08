@@ -107,7 +107,7 @@ The result to check is the diff-date file, which will include changes from the p
 
 # variables
 targets="${targets:-{192.168.27.1,192.168.27.50}}"
-options="${options:-"-v -T4 -F -sV"}"
+options="${options:-"-T4 -F -sV"}"
 now="${now:-"`date +%Y%m%d-%M`"}"
 nmap="${nmap:-/usr/local/bin/nmap}"
 
