@@ -10,7 +10,7 @@ In these examples, the target network is listed as:
 
 	192.168.1.0/24
 
-...which translates to all the hosts on the 192.168.1.x network, which can mean up to 256 computers and devices.
+...which translates to all the hosts on the 192.168.1.x network, which can mean up to 254 computers and devices.
 
 This can be changed to any network IP address block, but can also be a single host, such as 192.168.1.1.
 
