@@ -16,7 +16,7 @@ This can be changed to any network IP address block, but can also be a single ho
 
 Shell commands are indented once, preceded by "$".
 
-__List the hosts on a network__
+__List Hosts on a Network__
 
 To quickly show all the hosts on a network and their IP addresses, plus "latency" to the host:
 
@@ -40,20 +40,21 @@ Higher latency numbers might indicate network issues, including misconfiguration
 
 __Getting MAC Addresses with the Same Command__
 
-Running the above command with root privileges (or sudo) will also provide the network interface (wired or wireless) hard-coded MAC address. Additionally, it provides the suspected network interface manufacturer, based on the [organizationally unique identifier](http://standards-oui.ieee.org/oui.txt).
+Running the above command with root privileges (or sudo) will also provide the network interface's (wired or wireless) hard-coded MAC address. Additionally, it provides the suspected network interface manufacturer, based on the [organizationally unique identifier](http://standards-oui.ieee.org/oui.txt).
 
 	$ sudo nmap -sn 192.168.1.0/24
 
 Output will list each host, and provide a summary of the scanned hosts:
 
-MAC Address: 00:0B:00:41:AB:4B (Fujian Start Computer Equipment)
-Nmap scan report for 192.168.1.100
-Host is up.
+MAC Address: 00:0B:00:41:AB:4B (Fujian Start Computer Equipment)  
+Nmap scan report for 192.168.1.100  
+Host is up.  
+
 Nmap done: 256 IP addresses (7 hosts up) scanned in 1.34 seconds
 
 Note that MAC addresses are only discoverable on a local network, and not over the internet.
 
-__Do a more comprehensive scan of a particular host__
+__A More Comprehensive Scan of a Particular Host__
 
 Outputs to the above commands produces a list that can be compared to existing inventory lists, or even a quick eyeball survey on smaller local networks. But what if a host can't be identified? A more in-depth scan might be warranted:
 
@@ -71,7 +72,7 @@ Any range can be specified. "-p" can also be used to target individual ports to 
 
 	$ nmap -A -T4 -p22 192.168.1.1
 
-The "-T4" option will speed up scans considerably.
+The "-T4" option speeds up scans considerably.
 
 To do the same, while also identifying the operating systems and their versions:
 
@@ -89,7 +90,7 @@ nmap includes the ndiff tool, which makes comparing nmap output easier, allowing
 
 The [nmap Book](https://nmap.org/book/ndiff-man-periodic.html) provides a simple shell script to run out of the Unix cron daemon.
 
-This is a customization of that shell script, and it should run on any Unix or Unix like system. The four variables can be edited as per particular needs or the system the script is running from.
+This is a customization of that shell script, and it should run on any Unix or Unix-like system. The four variables can be edited as per particular needs or the system the script is running from.
 
 _$targets_ refers to the nmap scan targets, and can be edited to scan individual hosts {192.168.1.1} or a network {192.168.1.0/24}.
 
