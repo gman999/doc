@@ -40,7 +40,7 @@ Higher latency numbers might indicate network issues, including misconfiguration
 
 __Getting MAC Addresses with the Same Command__
 
-Running the above command with root privileges (or sudo) will also provide the nework interface (wired or wireless) hard-coded MAC address. Additionally, it provides the suspected network interface manufacturer, based on the [organizationally unique identifier](http://standards-oui.ieee.org/oui.txt).
+Running the above command with root privileges (or sudo) will also provide the network interface (wired or wireless) hard-coded MAC address. Additionally, it provides the suspected network interface manufacturer, based on the [organizationally unique identifier](http://standards-oui.ieee.org/oui.txt).
 
 	$ sudo nmap -sn 192.168.1.0/24
 
@@ -89,15 +89,15 @@ nmap includes the ndiff tool, which makes comparing nmap output easier, allowing
 
 The [nmap Book](https://nmap.org/book/ndiff-man-periodic.html) provides a simple shell script to run out of the Unix cron daemon.
 
-This is an edit of that shell script, and it should run on any Unix or Unix like system. The four variables can be edited as per particular wishes or the system the script is running from.
+This is a customization of that shell script, and it should run on any Unix or Unix like system. The four variables can be edited as per particular needs or the system the script is running from.
 
-$targets refers to the nmap scan targets, and can be edited to scan individual hosts {192.168.1.1} or a network {192.168.1.0/24}.
+_$targets_ refers to the nmap scan targets, and can be edited to scan individual hosts {192.168.1.1} or a network {192.168.1.0/24}.
 
-$options specifies the nmap options.
+_$options_ specifies the nmap options.
 
-$now refers to the time appended to the output file, reflecting the frequency that a scan is run. For daily scans, $now might be set to "`date +%Y%m%d`" while hourly scans might use "`date +%Y%m%d-%H`" with %H indicating the hour.
+_$now_ refers to the time appended to the output file, reflecting the frequency that a scan is run. For daily scans, _$now_ might be set to "`date +%Y%m%d`" while hourly scans might use "`date +%Y%m%d-%H`" with %H indicating the hour.
 
-$nmap is just the location of the executible nmap application, which may vary per operating system.
+_$nmap_ is just the location of the executible nmap application, which may vary per operating system.
 
 The result to check is the diff-date file, which will include changes from the previous scan.
 
@@ -128,3 +128,7 @@ cat scan-$now.txt;
 
 ln -sf scan-$now.txt scan-prev.txt
 ```
+
+__Other Online nmap Resources__
+
+Besides the [nmap book](https://nmap.org/book/), half of which is [free online](https://nmap.org/book/toc.html), there are a number of nmap "cheat sheets" available online which are easy enough to find.
