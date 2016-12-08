@@ -97,8 +97,9 @@ $now refers to the time appended to the output file, reflecting the frequency th
 
 $nmap is just the location of the executible nmap application, which may vary per operating system.
 
-#!/bin/sh -x
-
+```#!/bin/sh -x
+```
+```
 # variables
 targets="${targets:-{192.168.27.1,192.168.27.50}}"
 options="${options:-"-v -T4 -F -sV"}"
