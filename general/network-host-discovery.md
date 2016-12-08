@@ -84,9 +84,9 @@ To output the results to a text file, add "-oN output.txt" to the options. For t
 
 __Automating Daily nmap Scans and the ndiff Command__
 
-On local networks where regularly monitoring of hosts is a necessarity, it may be worth automating regular scans such as daily or even hourly for unauthorized hosts.
+On local networks where regularly monitoring of hosts is a necessity, it may be worth automating regular scans such as daily or even hourly for unauthorized hosts.
 
-nmap includes the ndiff tool, which makes comparing nmap output easier, allowing changes to be displayed once a local network's baseline hosts are established.
+nmap includes the ndiff tool, which makes comparing nmap output easier, allowing changes to be displayed once a local network's baseline hosts are established. But instead of comparing nmap output as ASCII text, XML must be used.
 
 The [nmap Book](https://nmap.org/book/ndiff-man-periodic.html) provides a simple shell script to run out of the Unix cron daemon.
 
@@ -96,9 +96,9 @@ _$targets_ refers to the nmap scan targets, and can be edited to scan individual
 
 _$options_ specifies the nmap options.
 
-_$now_ refers to the time appended to the output file, reflecting the frequency that a scan is run. For daily scans, _$now_ might be set to "`date +%Y%m%d`" while hourly scans might use "`date +%Y%m%d-%H`" with %H indicating the hour.
+_$now_ refers to the time appended to the output file, reflecting the frequency that a scan is run. For daily scans, _$now_ might be set to "`date +%Y%m%d`" while hourly scans might use "`date +%Y%m%d-%H`" with %H indicating the hour. In this scripts example, the full date and time to the second are used.
 
-_$nmap_ is just the location of the executible nmap application, which may vary per operating system.
+_$nmap_  and _$ndiff_ are just the full path of the applications, which may vary per operating system.
 
 The result to check is the diff-date file, which will include changes from the previous scan.
 
@@ -106,18 +106,18 @@ The result to check is the diff-date file, which will include changes from the p
 #!/bin/sh -x
 
 # variables
-targets="${targets:-{192.168.27.1,192.168.27.50}}"
+targets="${targets:-{192.168.1.0/24}}"
 options="${options:-"-T4 -F -sV"}"
-now="${now:-"`date +%Y%m%d-%M`"}"
+now="${now:-"`date +%Y%m%d-%H:%M:%S`"}"
 nmap="${nmap:-/usr/local/bin/nmap}"
 
 # keep the scan outputs in your home directory, edit
-cd /home/user/scans;
+cd /home/_user_/scans;
 
-$nmap $options $targets -oN scan-$now.txt > /dev/null;
+$nmap $options $targets -oX scan-$now.xml > /dev/null;
 
-if [ -e scan-prev.txt ]; then
-        ndiff scan-prev.txt scan-$now.txt > diff-$now
+if [ -e scan-prev.xml ]; then
+        ndiff scan-prev.xml scan-$now.xml > diff-$now
         echo "*** NDIFF RESULTS ***"
         cat diff-$now
         echo
@@ -125,9 +125,9 @@ fi
 
 echo "*** NMAP RESULTS ***"
 
-cat scan-$now.txt;
+cat scan-$now.xml;
 
-ln -sf scan-$now.txt scan-prev.txt
+ln -sf scan-$now.xml scan-prev.xml
 ```
 
 __Other Online nmap Resources__
