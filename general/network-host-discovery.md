@@ -1,10 +1,10 @@
 ##Using nmap to Learn About a Local Network##
 
-This brief guide is meant as a simple reference for anyone comfortable in a Unix shell ("the command-line") to gain a basic understanding of a local network using [nmap](https://nmap.org/). It is not meant to be comprehensive, but rather as a starting point for users unfamiliar with such a task or with nmap.
+This brief guide is meant as a simple reference for anyone comfortable in a Unix shell ("the command-line") to gain a basic understanding of a local network using [nmap](https://nmap.org/). It is not meant to be comprehensive, but rather as a starting point for users unfamiliar with such a task or with _nmap_.
 
-nmap maintains a long list of options, and this short guide is by no mean exhaustive, nor even necessarily the best options.
+_nmap_ maintains a long list of options, and this short guide is by no mean exhaustive, nor even necessarily the best options.
 
-The nmap book [page](https://nmap.org/book/man-host-discovery.html) on "Host Discovery" may be useful.
+The _nmap_ book [page](https://nmap.org/book/man-host-discovery.html) on "Host Discovery" may be useful.
 
 In these examples, the target network is listed as:
 
@@ -52,11 +52,11 @@ Host is up.
 
 Nmap done: 256 IP addresses (7 hosts up) scanned in 1.34 seconds
 
-Note that MAC addresses are only discoverable on a local network, and not over the internet.
+Note that MAC addresses are only discoverable on a local network and not over the internet.
 
 __A More Comprehensive Scan of a Particular Host__
 
-Outputs to the above commands produces a list that can be compared to existing inventory lists, or even a quick eyeball survey on smaller local networks. But what if a host can't be identified? A more in-depth scan might be warranted:
+The above commands produces a list that can be compared to existing inventory lists, or even a quick eyeball survey on smaller local networks. But what if a host can't be identified? A more in-depth scan might be warranted:
 
 	$ nmap -A -T4 192.168.1.1
 
@@ -68,7 +68,7 @@ To check the range of all 65535 ports, and not just 1-1000, use the "-p" option.
 
 	$ nmap -A -T4 -p1-65535 192.168.1.1
 
-Any range can be specified. "-p" can also be used to target individual ports to scan, such viewing TCP port 22, which is usually SSH.
+Any range can be specified. "-p" can also be used to target individual ports to scan, such viewing TCP port 22, the default port for SSH.
 
 	$ nmap -A -T4 -p22 192.168.1.1
 
@@ -78,7 +78,7 @@ To do the same, while also identifying the operating systems and their versions:
 
 	$ nmap -sS -A 192.168.1.0/24
 
-With every nmap command, adding "-v" will increase verbosity, which means additional details that may or may not be useful. If a particular command doesn't provide enough information, it may be worth running again with "-v".
+With every _nmap_ command, adding "-v" will increase verbosity, which means additional details that may or may not be useful. If a particular command doesn't provide enough information, it may be worth running again with "-v".
 
 To output the results to a text file, add "-oN output.txt" to the options. For those looking to diminish their vision or are using the _ndiff_ tool, "-oX output.xml" will output to the XML format.
 
@@ -116,7 +116,12 @@ now="${now:-"`date +%Y%m%d-%H:%M:%S`"}"
 nmap="${nmap:-/usr/local/bin/nmap}"
 ndiff="${ndiff:-/usr/local/bin/ndiff}"
 
-# keep the scan outputs in your home directory, edit if you want
+# if we must die...
+die() {
+        echo >&2 "ERROR:" "$@"
+        exit 1
+
+# scan outputs in your home directory, edit if you want
 cd $HOME/scans
 
 $nmap $options $targets -oX scan-$now.xml > /dev/null;
