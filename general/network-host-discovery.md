@@ -86,15 +86,15 @@ __Automating Daily nmap Scans and the ndiff Command__
 
 On local networks where regularly monitoring of hosts is a necessity, it may be worth automating regular scans such as daily or even hourly for unauthorized hosts.
 
-nmap includes the ndiff tool, which makes comparing nmap output easier, allowing changes to be displayed once a local network's baseline hosts are established. But instead of comparing nmap output as ASCII text, XML must be used.
+_nmap_ includes the _ndiff_ tool, which makes comparing _nmap_ output easier, allowing changes to be displayed once a local network's baseline hosts are established. But instead of comparing _nmap_ output as ASCII text, XML must be used.
 
 The [nmap Book](https://nmap.org/book/ndiff-man-periodic.html) provides a simple shell script to run out of the Unix cron daemon.
 
 This is a customization of that shell script, and it should run on any Unix or Unix-like system. The four variables can be edited as per particular needs or the system the script is running from.
 
-_$targets_ refers to the nmap scan targets, and can be edited to scan individual hosts {192.168.1.1} or a network {192.168.1.0/24}.
+_$targets_ refers to the _nmap_ scan targets, and can be edited to scan individual hosts {192.168.1.1} or a network {192.168.1.0/24}.
 
-_$options_ specifies the nmap options.
+_$options_ specifies the _nmap_ options.
 
 _$now_ refers to the time appended to the output file, reflecting the frequency that a scan is run. For daily scans, _$now_ might be set to "`date +%Y%m%d`" while hourly scans might use "`date +%Y%m%d-%H`" with %H indicating the hour. In this scripts example, the full date and time to the second are used.
 
@@ -104,20 +104,25 @@ The result to check is the diff-date file, which will include changes from the p
 
 ```
 #!/bin/sh -x
+# ISC-licensed: give credit where it's due, and don't sue me
 
 # variables
+# define the network or host
 targets="${targets:-{192.168.1.0/24}}"
 options="${options:-"-T4 -F -sV"}"
+# this will output date with full time with seconds
 now="${now:-"`date +%Y%m%d-%H:%M:%S`"}"
+# where are nmap and ndiff?
 nmap="${nmap:-/usr/local/bin/nmap}"
+ndiff="${ndiff:-/usr/local/bin/ndiff}"
 
-# keep the scan outputs in your home directory, edit
-cd /home/_user_/scans;
+# keep the scan outputs in your home directory, edit if you want
+cd $HOME/scans
 
 $nmap $options $targets -oX scan-$now.xml > /dev/null;
 
 if [ -e scan-prev.xml ]; then
-        ndiff scan-prev.xml scan-$now.xml > diff-$now
+        $ndiff scan-prev.xml scan-$now.xml > diff-$now
         echo "*** NDIFF RESULTS ***"
         cat diff-$now
         echo
@@ -132,4 +137,4 @@ ln -sf scan-$now.xml scan-prev.xml
 
 __Other Online nmap Resources__
 
-Besides the [nmap book](https://nmap.org/book/), half of which is [free online](https://nmap.org/book/toc.html), there are a number of nmap "cheat sheets" available online which are easy enough to find.
+Besides the [nmap book](https://nmap.org/book/), half of which is [free online](https://nmap.org/book/toc.html), there are a number of _nmap_ "cheat sheets" available online which are easy enough to find.
