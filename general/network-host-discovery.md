@@ -52,7 +52,7 @@ Host is up.
 
 Nmap done: 256 IP addresses (7 hosts up) scanned in 1.34 seconds
 
-Note that MAC addresses are only discoverable on a local network and not over the internet.
+MAC addresses are only discoverable on a local network and not over the internet.
 
 __A More Comprehensive Scan of a Particular Host__
 
@@ -60,9 +60,9 @@ The above commands produces a list that can be compared to existing inventory li
 
 	$ nmap -A -T4 192.168.1.1
 
-Output will include services listening on TCP ports 1000.
+Output will include services listening on TCP ports 1000 and below.
 
-TCP ports often follow the standards for assigned services. For instance, an SMTP server normally resides on TCP port 25, while SSH is on TCP port 22. The complete list of officially assigned ports for TCP and other protocols is maintained by the standards organization the [Internet Assigned Numbers Authority](https://www.iana.org/). The [full list](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt) can be useful when figuring out what service a particular open port is providing.
+By default, TCP ports follow the standards for assigned services. For instance, a web server normally listens on TCP port 80, while SSH is on TCP port 22. The complete list of officially assigned ports for TCP and other protocols is maintained by the standards organization the [Internet Assigned Numbers Authority](https://www.iana.org/). The [full list](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt) can be useful when figuring out what service a particular open port is providing.
 
 To check the range of all 65535 ports, and not just 1-1000, use the "-p" option.
 
@@ -96,15 +96,14 @@ _$targets_ refers to the _nmap_ scan targets, and can be edited to scan individu
 
 _$options_ specifies the _nmap_ options.
 
-_$now_ refers to the time appended to the output file, reflecting the frequency that a scan is run. For daily scans, _$now_ might be set to "`date +%Y%m%d`" while hourly scans might use "`date +%Y%m%d-%H`" with %H indicating the hour. In this scripts example, the full date and time to the second are used.
+_$now_ refers to the time appended to the output file which should reflect the frequency that a scan is run. For daily scans, _$now_ might be set to "`date +%Y%m%d`" while hourly scans might use "`date +%Y%m%d-%H`" with %H indicating the hour. In this scripts example, the full date and time is employed.
 
 _$nmap_  and _$ndiff_ are just the full path of the applications, which may vary per operating system.
 
-The result to check is the diff-date file, which will include changes from the previous scan.
+The result to check is the diff-$now file, which will include changes from the previous scan.
 
 ```
 #!/bin/sh -x
-# ISC-licensed: give credit where it's due, and don't sue me
 
 # variables
 # define the network or host
@@ -120,6 +119,7 @@ ndiff="${ndiff:-/usr/local/bin/ndiff}"
 die() {
         echo >&2 "ERROR:" "$@"
         exit 1
+}
 
 # scan outputs in your home directory, edit if you want
 cd $HOME/scans
