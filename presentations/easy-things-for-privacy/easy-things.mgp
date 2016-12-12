@@ -1,0 +1,431 @@
+%include "default.mgp"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%center, size 10, fore "white", font "standard"
+
+
+Lots of Easy Things To Do Today
+%size 14
+to Improve Privacy
+%size 10
+and Mitigate Some Surveillance
+
+
+%nodefault
+%right, size 5, fore "white"
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Long List that Can Be Done
+
+	learning new tools
+		keeping up with updates
+		making the tool a natural part of life
+
+	but tools aren't the key element
+		vulnerabilities discovered
+		development stops
+		there is a tool fetish in this community
+
+	behavior shift
+
+%center, size 7, font "italic"
+most generally, a piece-by-piece overhauling of life
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+But There's Things to Do Now
+
+
+	a lot focused on cell phones
+		your personalized beacon device
+
+	most provide small steps towards mitigating surveillance
+		poisoning data mining
+		moving from digital to "analog" storage
+
+%center, font "italic", size 6
+our desired outcome is breaking up the neat digital matrix of life;
+increasing surveillance costs for known and unknown adversaries
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Using Your Brain, or a Little Planning
+
+
+	what is already in your brain
+		long-known phone numbers
+
+	what is easy to store in your brain
+		smarter handling of passwords
+
+	and what can be planned
+		look at a map for new routes
+		before visiting other cities
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Adversaries to Consider
+
+	the data miners: who isn't?
+
+	health care provider, insurance company
+
+	landlord/mortgage company
+
+	employer
+
+	3LGA: three-letter government agencies
+		but how effective if really targeted?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+But also consider,
+
+	someone who finds/steals your cell phone
+
+	apps which snoop cell phone data
+
+	amateur stalkers
+
+	nosy parents
+
+	third-party services that mine data for small businesses
+		is your pizza place using it? dry cleaner?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+The General Thrust
+
+
+	from the digital matrix => "analog"
+		off the electronic devices
+
+	segment, buffer
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Cell Phone: take out battery at night
+
+
+	create habitual blackouts
+		unlike conspicuous periodic blackouts
+
+	late night phone calls?
+
+	get an alarm clock
+
+	regularly on other opportune occasions
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Cell Phone: minimize data
+
+
+	contacts: review storage list
+		do you really need your mother's phone number saved?
+
+	periodically deleting all SMS/MMS messages, logs, etc.
+
+	maps: get to know your environment
+
+	calendar
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Stop Using Browser Forms to Save Passwords
+
+
+	if you can't remember, write them down
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Get an Address in Another Country
+
+
+	Germany: gmx.com
+
+	Russia: yandex.com
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Install Tor Browser (or use TAILS)
+
+
+	It's hard to use regularly
+
+	Start using it occasionally
+
+	For things you don't want your mother to see
+		or health care company
+		or insurance company
+		or employer
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Tor Browser?
+
+
+	unlikely to move all browsing there
+
+	effective against lots of adversaries
+		from noisy employers and ISPs to most 3LGAs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Cash is King: For "sin" purchases
+
+"sex and drugs and rock n' roll"
+
+	tobacco
+
+	bars, alcohol purchases
+
+	sex-related
+
+	books: used books are great
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Another "Residence": CMRAs, Mail drops
+
+Commercial Mail Receiving Agency
+
+	not UPS Store, but independents
+		immigrant neighborhoods
+
+	with cash, as a corporation if you can
+
+	start getting mail there
+
+	in the meantime, you'll move, etc.
+		and don't update information
+
+	some adversaries will know it's a CMRA, some won't
+		there is a national registry of CMRAs
+		use for employment
+		corporate registration
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Segmenting Residence and CMRA
+
+
+	Creates a buffer between address and actual residence
+
+	cell phone company will usually know
+		where does your phone rest at night?
+
+	adversaries in focus: stalkers, employer
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Back to the Future: Numeric Pagers
+
+
+	It was hip in 1992, it should be again
+
+	cash, pre-paid for a year	
+
+	dry cleaner, one-off contacts, etc.
+
+	use codes for some people?
+
+%center, font "italic"
+anonymous, no triangulation or GPS
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Offline Computer: Airwalls are fun
+
+
+	so much cheap hardware
+
+	operating system irrelevant
+
+	remove Bluetooth, wireless, microphone, etc., if you can
+
+	or put glue in the wired port, microphone
+
+	dont put it online ever again
+
+	usb drive to transfer
+
+	play videos, DVDs, write, PDFs
+
+	don't worry about updates
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Get a "Deceased" Stamp
+
+RAY??
+
+
+	poison the datamining pool
+
+	put on junk mail
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Well
+
+	not a plan to be "off-the-grid"
+
+	basic, attainable steps
+
+	mitigate surveillance for some adversaries
+
+	not a defense plan against three-letter government agencies
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Identification
+
+
+	use a passport, not a driver's license
+		doesn't have a home address
+
+	proliferation of cheap building IDs in NYC
+		have a friend create one with an alias?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+NYC Specific
+
+
+	MetroCard: use unlimited cards to swipe others
+		screw up the data mining
+		use cash-bought on occasion
+
+	EZPass: keep in the sleeve when not in use
+		for years NYPD uses it to track
+		and likely so can many others
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+On the Loopy Side...
+
+
+	randomize your travel
+		enter at different subway stations for commute
+
+	curtains/blinds on those windows?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+More?
+
+Let's expand and refine this list into 52 playing cards?
+	What other measures can you think of?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Some Resources
+
+How to Be Invisible: JJ Luna
+	and his occasionally loopy blog
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%center, size 11, fore "white", font "thick"
+
+Comments?  Questions?
+
+
+%right, size 5 
