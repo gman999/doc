@@ -2,6 +2,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 %nodefault
+
 %center, size 10, fore "white", font "standard"
 Please Stop Teaching Tools
 
@@ -28,7 +29,6 @@ Okay, a Little Exaggerated
 
 But, there's a Problem
 
-
 	tools became a quick answer to all questions
 		"how do I do $task?"
 
@@ -48,13 +48,15 @@ the telephone of tool choice, to trainers, to users is long and full of delays
 Case in Point: TrueCrypt
 
 
-	in the triad with Tor, PGP
+	in the "Holy Trinity" with Tor, PGP
 
 	died an ugly sudden death
 
 	how long did it take for the word to spread?
 
 	did users just migrate to a new tool?
+
+	who is still training or using TrueCrypt?
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -70,39 +72,103 @@ Let's be Honest Here
 	rely on regularly broken pieces, can you say O-p-e-n-S-S-L?
 
 
-	
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+But It's Easy
 
 
+Typical example New York Times November 17 2016
+	"Protecting Your Personal Digital Data in 7 Easy Steps"
 
+a journalist is writing an article for the right reasons,
+and listing tools is the easy way
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+The List, and everyone loves lists. . .
+
+%size 4 
+1.  Download Signal, or Start Using WhatsApp to send text messages
+
+2.  Protect your computer's hard drive with FileVault or BitLocker
+
+3.  The way you handle your passwords is probably wrong and bad
+
+4.  Protect your email and other accounts with two-factor authentication
+
+5.  Use a browser plug-in called HTTPS Everywhere
+
+6.  Remember that incognito mode isn't always private
+
+7.  Do sensitive searches in DuckDuckGo
+
+and the bonus: Cover your webcam with tape.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+The End Result
+
+You now have a trusting reader who relies on:
+
+	Signal, WhatsApp
+
+	FileVault, BitLocker
+
+	HTTPS Everywhere
+
+	and DuckDuckGo
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+The End Result
 
+
+	the tools are broken on November 12?
+		I hope people read the NYT error corrections
+
+	Users now think that a search engine that promises privacy is being honest
+
+	ultimately disempowers the user: rely on tools, you can never remember passwords
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+So What Should Trainers Do?
+
+
+	stop assuming the users should trust you technical knowledge
+		vast majority of technical people don't really get privacy tools
+
+	don't look for short-cuts
+		yes, tools is easy, but ultimately can be harmful
+
+	teach methods, not tools
+		let's explore that
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
+Fundmentals of Computing
+
+
+	It's not about software or hardware, but rather about:
+
+What problem are you trying to solve?
+
+	Users should minimize trusting tools unless they can audit them
+		or people they trust audit them
+		assuming they really need the tools in the first place
+
 
 
 
