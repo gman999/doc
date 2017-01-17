@@ -47,11 +47,11 @@ But There's Things to Do Now
 
 	most provide small steps towards mitigating surveillance
 		poisoning data mining
-		moving from digital to "analog" storage
+		moving from digital to "analog"
 
 %center, font "italic", size 6
-our desired outcome is breaking up the neat digital matrix of life;
-increasing surveillance costs for known and unknown adversaries
+our desired outcome is breaking up the neat digital matrix of our lives;
+increase surveillance "costs" for known and unknown adversaries
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -65,10 +65,10 @@ Using Your Brain, or a Little Planning
 
 	what is easy to store in your brain
 		smarter handling of passwords
+		methods of remembering and storing passwords
 
 	and what can be planned
-		look at a map for new routes
-		before visiting other cities
+		look at a map for new routes before travel
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -79,7 +79,7 @@ Adversaries to Consider
 
 	health care provider, insurance company
 
-	landlord/mortgage company
+	landlord
 
 	employer
 
@@ -89,7 +89,7 @@ Adversaries to Consider
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-But also consider,
+But also consider
 
 	someone who finds/steals your cell phone
 
@@ -158,17 +158,19 @@ Stop Using Browser Forms to Save Passwords
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Get an Address in Another Country
+Get Email in Another Country
 
 
 	Germany: gmx.com
 
 	Russia: yandex.com
 
+particulary in the case in which email could be evidence in US courts
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Install Tor Browser (or use TAILS)
+Install Tor Browser (or TAILS)
 
 
 	It's hard to use regularly
@@ -189,7 +191,7 @@ Tor Browser?
 	unlikely to move all browsing there
 
 	effective against lots of adversaries
-		from noisy employers and ISPs to most 3LGAs
+		from nosy employers and ISPs to most 3LGAs
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -217,7 +219,7 @@ Commercial Mail Receiving Agency
 	not UPS Store, but independents
 		immigrant neighborhoods
 
-	with cash, as a corporation if you can
+	with cash, or as a corporation if you must
 
 	start getting mail there
 
@@ -242,6 +244,9 @@ Segmenting Residence and CMRA
 
 	adversaries in focus: stalkers, employer
 
+	lots of people do it for other reasons
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
@@ -252,10 +257,11 @@ Back to the Future: Numeric Pagers
 
 	cash, pre-paid for a year	
 
-	dry cleaner, one-off contacts, etc.
+	pizza delivery, one-off contacts, etc.
 
 	use codes for some people?
-
+		amateur paper cryptography should also make a comeback
+		
 %center, font "italic"
 anonymous, no triangulation or GPS
 
@@ -271,12 +277,9 @@ Offline Computer: Airwalls are fun
 	operating system irrelevant
 
 	remove Bluetooth, wireless, microphone, etc., if you can
+		or put glue in the microphone
 
-	or put glue in the wired port, microphone
-
-	dont put it online ever again
-
-	usb drive to transfer
+	dont put it online ever again, usb drive to transfer
 
 	play videos, DVDs, write, PDFs
 
@@ -288,10 +291,8 @@ Offline Computer: Airwalls are fun
 
 Get a "Deceased" Stamp
 
-RAY??
 
-
-	poison the datamining pool
+	poison the data-mining pool
 
 	put on junk mail
 
@@ -335,6 +336,9 @@ Well
 	not a plan to be "off-the-grid"
 
 	basic, attainable steps
+
+	some things can be taken a step further
+		tried to avoid higher "cost"
 
 	mitigate surveillance for some adversaries
 
