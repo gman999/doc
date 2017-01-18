@@ -3,8 +3,9 @@
 %page
 %nodefault
 
-%center, size 10, fore "white", font "standard"
-Please Stop Teaching Tools
+%center, size 16, fore "white", font "standard"
+Please Stop
+Teaching Tools
 
 
 %nodefault
@@ -27,19 +28,39 @@ Okay, a Little Exaggerated
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-But, there's a Problem
+But, There's a Problem
 
 	tools became a quick answer to all questions
 		"how do I do $task?"
 
-	trusted trainers technical prowess, choices
+	users must trust trainers technical prowess, choices
 
 	users don't update with new vulnerabilities
 
 	users don't hear when the tools are deprecated
 
-the telephone of tool choice, to trainers,
-to users is long and full of delays
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+The "Information Flow"
+
+%size 4
+someone picks a tool
+
+trainers are convinced to teach the tool
+
+users use the tool
+
+tool is junk or vulnerabilities proliferate, or is deprecated
+
+someone else picks another tool as the alternative
+
+some trainers start preaching the alternative, but unclear why
+
+some users continue to use the old tool, others adopt new tool
+
+%font "italic", center
+but ultimately the user is lost to any reasoning
 
 
 
@@ -49,13 +70,13 @@ to users is long and full of delays
 Case in Point: TrueCrypt
 
 
-	in the "Holy Trinity" with Tor, PGP
+	was in the "Holy Trinity" with Tor, PGP
 
 	died an ugly sudden death
 
 	how long did it take for the word to spread?
 
-	did users just migrate to a new tool?
+	did users migrate to a new tool? which?
 
 	who is still training or using TrueCrypt?
 
@@ -65,19 +86,24 @@ Case in Point: TrueCrypt
 
 Let's be Honest Here
 
-
 	a lot of tools are just utter crap
 
 	poorly written, unaudited, not modular, not interoperable
 
 	rely on regularly broken pieces, can you say O-p-e-n-S-S-L?
 
+	complexity: just by using software thousands of lines of code
+		which most likely you won't or can't audit
+
+%center, font "italic"
+so let's drop the "it's better than nothing" attitude
+"more somethings" can often mean worse
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-But It's Easy
+"But It's Easy"
 
 
 Typical example New York Times November 17 2016
@@ -85,6 +111,10 @@ Typical example New York Times November 17 2016
 
 a journalist is writing an article for the right reasons,
 and listing tools is the easy way
+
+(stupid CloudFlare)
+https://www.nytimes.com/2016/11/17/technology/personaltech/
+encryption-privacy.html
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -109,11 +139,24 @@ The List, and everyone loves lists. . .
 
 and the bonus: Cover your webcam with tape.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Off the Bat: What's Good?
+
+3.  yes, passwords are always a weak link, and end-user practices do matter
+
+5.  HTTPS is good when available
+
+6.  warning about "igcognito mode" is good, but not something you can do
+
+and yes, tape over webcams is good
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-The End Result
+But the End Result
 
 You now have a trusting reader who relies on:
 
@@ -125,7 +168,6 @@ You now have a trusting reader who relies on:
 
 	and DuckDuckGo
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
@@ -135,9 +177,29 @@ The End Result
 	the tools are broken on November 12?
 		I hope people read the NYT error corrections
 
-	Users now think that a search engine that promises privacy is being honest
+	Users now think that a search engine that promises privacy has validity
 
 	ultimately disempowers the user: rely on tools, you can never remember passwords
+
+	again, "just click that icon and you shall be free"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+An Antecdote about "Security Marketing"
+
+
+	Event in Washington, DC
+
+two panelists debate on "privacy merits" of Yahoo versus Google mail
+
+Yahoo is obviously crap with lack of disclosures, late to the HTTPS world
+
+Google, well, is a data-mining firm that does email and a search engine you may have heard about
+
+%font "italic"
+is that what users need? debates in which self-proclaimed authorities debate on the merits of two providers they know nothing about?
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -146,20 +208,26 @@ The End Result
 So What Should Trainers Do?
 
 
-	stop assuming the users should trust you technical knowledge
-		vast majority of technical people don't really get privacy tools
+	training isn't as easy as "hey just click this icon..."
+		". . . instead of that other one"
+
+	stop assuming the users should trust your technical knowledge
+		vast majority of technical people don't really understand privacy tools
 
 	don't look for short-cuts
-		yes, tools is easy, but ultimately can be harmful
+		yes, tools are easy, but ultimately can be harmful
 
 	teach methods, not tools
 		let's explore that
+
+%center, font "italic"
+digital tools can be part of the answer, not the full solution unto themselves
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Fundmentals of Computing
+Fundmentals of Computing Services
 
 
 	It's not about software or hardware, but rather about:
@@ -168,7 +236,11 @@ What problem are you trying to solve?
 
 	Users should minimize trusting tools unless they can audit them
 		or people they trust audit them
-		assuming they really need the tools in the first place
+
+%font "italic"
+assuming they really need the tools in the first place
+if the users don't start employing the tools, trainings are considered failures
+regardless of how ineffective or even dangerous those tools are
 
 
 
@@ -176,20 +248,41 @@ What problem are you trying to solve?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+Arm the Users: Threat-Modeling
 
 
+	Who are the adversaries and their resources?
 
+	What are the stakes of being compromised?
 
+	How much cost/effort/changes is the user willing to endure?
+
+	How far will the adversaries go to compromise the user data/identity?
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+Then Again, "What do you want?"
+
+
+	specify what exactly the functions, in non-technical terms
+
+	"tools" can work in creating solutions, but should not be the starting point
+
+	non-digital tools should be considered
+
+	going "multi-modal" mixing up digital and analog tools
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
+An Example
+
+
 
 
 
