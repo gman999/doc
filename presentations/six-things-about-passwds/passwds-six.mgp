@@ -20,7 +20,6 @@ Passwords are Ubiquitous
 
 	We need for access all over:
 		ATM Cards
-		Phone Access Systems
 		Email Accounts: work, personal
 		Online accounts: banking, retirement, etc
 
@@ -55,7 +54,6 @@ The Six Things
 
 The Inherent Weaknesses
 
-
 	Often unprotected in storage and transmission
 
 	Too many to remember
@@ -85,9 +83,8 @@ Passwords Have Certain Advantages
 
 The Three Factors of Authentication
 
-
 	What you know
-		passwords
+		passwords, mother's maiden name, ATM pin
 
 	What you have
 		digital or physical keys, identification
@@ -119,7 +116,7 @@ Strong Unique Passwords Matter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Three Elements to a Stronger Password
+3 Elements to a Stronger Password
 
 
 	Length
@@ -197,11 +194,14 @@ Common Password-Creation Advice
 	Some other methods
 		Diceware
 
+%font "italic", size 6
+results are usually either passwords that are not memorable or weak
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-What's Memorable to You: Unique Personal Mosaics
+What's Memorable to You: Unique
 
 
 	Familiarity with other languages
@@ -242,7 +242,6 @@ je-phon-quait-schevend-on-the southwest corner is how I'd say it
 
 How Many Password Possibilities?
 
-
 universe^length (to the power of)
 
 Arabic numerals, 10 digits long
@@ -252,7 +251,7 @@ full 95 ASCII Universe
 95^10 is 59,873,693,924 billion possible passwords
 
 %font "italic", size 6
-a shorter password from a bigger universe can be stronger
+a shorter password from a bigger universe can be stronger than a shorter one from a smaller universe of characters
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -271,7 +270,7 @@ Other Possible Components
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Password Storage Matters: worst to best
+Password Storage: worst to best
 
 	remote online service
 		completely relying on assurances from provider
@@ -293,7 +292,21 @@ Or Maybe Better Yet?
 
 	Rubberhose encryption
 
-as a counter-measure to Rubber-Hose cryptanalysis
+as a counter-measure to "Rubber-Hose cryptanalysis"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Consider the Adversary
+
+
+	someone just trying possible passwords who knows you
+		knows your kids' names, mother's maiden name, etc
+
+	massive computing power trying millions per second
+		multiple language dictionaries, variations of typical passwords, etc
+
+	or some where in between?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
