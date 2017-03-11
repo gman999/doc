@@ -227,7 +227,7 @@ digital tools can be part of the answer, not the full solution unto themselves
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Fundmentals of Computing Services
+Fundamentals of Computing Services
 
 
 	It's not about software or hardware, but rather about:
@@ -280,14 +280,27 @@ Then Again, "What do you want?"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-An Example
+An Example: Email Encryption
 
 
+	You want to teach or learn about encrypting email
 
+	Either way, it's a good thing(TM)
+
+	But users aren't taught about private/public keys
+		and that public keys are like door locks
+		and private keys are like physical keys
+
+	And then users are surmise or are instructed to put their private keys on their phone
+
+%font "italic"
+"but hey, at least I'm encrypting my email"
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -266,6 +266,9 @@ Other Possible Components
 	Hand shift on keyboard?
 		for those who touch-type
 
+	Describe a scene
+		"sitting on a box was a orange frog frothing at his lips"
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -311,6 +314,22 @@ Consider the Adversary
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+When Should You Change Your Password?
+
+
+	Stupid rule of 30, 60, 90 day force changes
+		makes users do stupider things
+
+	When a password database has been breached
+
+	When you come up with a new password scheme
+
+	If you stupidly give it to someone else
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
 Testing Passwords with ent
 
 %center
@@ -331,3 +350,15 @@ references
 
 A Somewhat Brief Explanantion of Password Entropy
 https://www.itdojo.com/a-somewhat-brief-explanation-of-password-entropy/
+
+NIST's New password rules
+https://nakedsecurity.sophos.com/2016/08/18/nists-new-password-rules-what-you-need-to-know/
+
+NIST SP 800-63-3
+https://pages.nist.gov/800-63-3/
+
+Password Rules Are Bullshit
+https://blog.codinghorror.com/password-rules-are-bullshit/
+
+What the Most Common Passwords of 2016...
+://blog.keepersecurity.com/2017/01/13/most-common-passwords-of-2016-research-study/hat the Most Common Passwords of 2016..
