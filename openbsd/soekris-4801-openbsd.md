@@ -36,7 +36,7 @@ The OpenBSD installer is graphics-free, yet clear and simple to navigate.
 
 Type __i__ to enter the install system.
 
-	Welcome to the OpenBSD/i386 5.8 installation program.
+	Welcome to the OpenBSD/i386 6.1 installation program.
 	(I)nstall, (U)pgrade, (A)utoinstall or (S)hell? i
 
 Plug in the CF card adapter and note the device listed to standard output, normally sd(4) with a respective number, such as sd2.
@@ -109,7 +109,7 @@ Now enter an OpenBSD mirror. Typing __?__ will display a list of the current mir
 
 The OpenBSD project insists on maintaining identical directory hierarchies on their mirrors. The next prompt illustrates why, since you just need to hit "enter."
 
-	Server directory? [pub/OpenBSD/5.8/i386]
+	Server directory? [pub/OpenBSD/6.1/i386]
 
 The full list of sets is then displayed. In our case, the Soekris install should be painfully small, and not contain any unnecessary parts of the base system.
 
