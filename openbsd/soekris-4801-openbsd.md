@@ -202,6 +202,28 @@ Which delivers you into the UKC(8), the User Kernel Config, in which we'll just 
 
 The [OpenBSD FAQ](http://www.openbsd.org/faq/faq14.html#pciideErr) documents this issue with legacy hardware. The change to wd(4) can be made permanent with config(8) in multi-user mode.
 
+The permanent change to wd(4) will be done logged in in full multi-user mode.
+
+To enter the kernel edit mode with a copy of the current /bsd kernel:
+
+	# config -o /bsd.wd -e /bsd
+
+The interface will change to the above view with the ukc> prompt.
+
+Adjust the changes as above, and reboot.
+
+At the boot> prompt, enter the new kernel:
+
+	boot> boot /bsd.wd
+
+If the system boots fine without any wd(4) errors, make the new, edited kernel the default kernel:
+
+	# mv /bsd /bsd.org
+
+	# mv /bsd.wd /bsd
+
+By default, the default flag for wd should now be 0x0ff0. If there are any problems, the original kernel is still available as /bsd.org.
+
 ###Booting Up###
 
 By default, the Soekris 4801 uses 19200 as the console speed, yet we set the speed to 9600 in the /etc/boot.conf and /etc/ttys files. In this case, we'll set the Soekris console speed to 9600 in the BIOS.
