@@ -6,7 +6,7 @@ Even an ancient Soekris box running OpenBSD is more than adequate for use as a s
 
 OpenBSD is an ideal candidate operating system for the Soekris, since it's built lean by default, yet an array of functions are available in the base system.
 
-One might also consider custom OpenBSD systems such as [flashrd](http://www.nmedia.net/flashrd) or its derivation [resflash](http://stable.rcesoftware.com/resflash/). Both are aimed at small systems, and minimize disk writes which is ideal for flash media-based systems. However, flashrd hasn't been updated since OpenBSD 5.7 and resflash is in its early stages of development.
+One might also consider custom OpenBSD systems such as [flashrd](http://www.nmedia.net/flashrd) or its derivation [resflash](http://stable.rcesoftware.com/resflash/). Both are aimed at small systems, and minimize disk writes which is ideal for flash media-based systems. However, flashrd hasn't been updated since OpenBSD 5.9 and resflash is in its early stages of development.
 
 In terms of formatting with this piece:
 
@@ -22,7 +22,7 @@ In terms of formatting with this piece:
 
 Needs:
 
-* bootable media with OpenBSD/i386 [stable](http://www.openbsd.org/faq/faq5.html#Flavors) on a [USB stick](http://www.openbsd.org/faq/faq4.html#Flash). Using current (snapshots) is not ideal in this scenario, as we're looking for a low-maintenance system.
+* bootable media with OpenBSD/i386 [stable](http://www.openbsd.org/faq/faq5.html#Flavors) on a [USB stick](http://www.openbsd.org/faq/faq4.html#Flash). Using current (snapshots) is not ideal in this scenario, as we're looking for a low-maintenance system. With the introduction of [syspatch(8)](https://man.openbsd.org/syspatch) in OpenBSD 6.1 -stable, keeping the system patched became enormously easier.
 
 * compact flash (CF) card with adapter
 
@@ -202,9 +202,7 @@ Which delivers you into the UKC(8), the User Kernel Config, in which we'll just 
 
 The [OpenBSD FAQ](http://www.openbsd.org/faq/faq14.html#pciideErr) documents this issue with legacy hardware. The change to wd(4) can be made permanent with config(8) in multi-user mode.
 
-The permanent change to wd(4) will be done logged in in full multi-user mode.
-
-To enter the kernel edit mode with a copy of the current /bsd kernel:
+To enter the kernel edit mode with a copy of the current /bsd kernel as /bsd.wd:
 
 	# config -o /bsd.wd -e /bsd
 
@@ -286,6 +284,20 @@ $ mount
 	/dev/wd0e on /home type ffs (local, nodev, nosuid)
 	/dev/wd0d on /usr type ffs (local, nodev)
 	tmpfs on /tmp type tmpfs (local, nodev, noexec, nosuid)
+
+###syspatch(8) for a Secure System###
+
+As noted above, [syspatch(8)](https://man.openbsd.org/syspatch) was introduced in OpenBSD 6.1 -stable for applying binary patches to a system.
+
+While removing some install sets such as x11 will cause the system to bark since certain parts are unavailable for syspatch(8) to apply patches to, the tool is still of utility.
+
+There's a major caveat to making the /tmp mount only 10M: syspatch(8) requires more space.
+
+To temporarily work around it, edit /etc/fstab to make it 50M in size.
+
+Even with that size, syspatch(8) will note that the file system is full after one, two or three patches are applied. But the /tmp files will clear out once syspatch(8) stops running.
+
+Once it stops, run again and keep running until all the patches apply. When it's done, change the /tmp back to 10M in size, and reboot.
 
 ###Finally###
 
