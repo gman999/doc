@@ -6,7 +6,7 @@
 
 <p>OpenBSD is an ideal candidate operating system for the Soekris, since it&#8217;s built lean by default, yet an array of functions are available in the base system.</p>
 
-<p>One might also consider custom OpenBSD systems such as <a href="http://www.nmedia.net/flashrd">flashrd</a> or its derivation <a href="http://stable.rcesoftware.com/resflash/">resflash</a>. Both are aimed at small systems, and minimize disk writes which is ideal for flash media-based systems. However, flashrd hasn&#8217;t been updated since OpenBSD 5.7 and resflash is in its early stages of development.</p>
+<p>One might also consider custom OpenBSD systems such as <a href="http://www.nmedia.net/flashrd">flashrd</a> or its derivation <a href="http://stable.rcesoftware.com/resflash/">resflash</a>. Both are aimed at small systems, and minimize disk writes which is ideal for flash media-based systems. However, flashrd hasn&#8217;t been updated since OpenBSD 5.9 and resflash is in its early stages of development.</p>
 
 <p>In terms of formatting with this piece:</p>
 
@@ -22,7 +22,7 @@
 <p>Needs:</p>
 
 <ul>
-<li><p>bootable media with OpenBSD/i386 <a href="http://www.openbsd.org/faq/faq5.html#Flavors">stable</a> on a <a href="http://www.openbsd.org/faq/faq4.html#Flash">USB stick</a>. Using current (snapshots) is not ideal in this scenario, as we&#8217;re looking for a low-maintenance system.</p></li>
+<li><p>bootable media with OpenBSD/i386 <a href="http://www.openbsd.org/faq/faq5.html#Flavors">stable</a> on a <a href="http://www.openbsd.org/faq/faq4.html#Flash">USB stick</a>. Using current (snapshots) is not ideal in this scenario, as we&#8217;re looking for a low-maintenance system. With the introduction of <a href="https://man.openbsd.org/syspatch">syspatch(8)</a> in OpenBSD 6.1 -stable, keeping the system patched became enormously easier.</p></li>
 <li><p>compact flash (CF) card with adapter</p></li>
 <li><p>bootstrap i386/amd64 computer with any operating system</p></li>
 <li><p>a serial console cable with a null modem</p></li>
@@ -230,6 +230,29 @@ UKC&gt; quit
 
 <p>The <a href="http://www.openbsd.org/faq/faq14.html#pciideErr">OpenBSD FAQ</a> documents this issue with legacy hardware. The change to wd(4) can be made permanent with config(8) in multi-user mode.</p>
 
+<p>To enter the kernel edit mode with a copy of the current /bsd kernel as /bsd.wd:</p>
+
+<pre><code># config -o /bsd.wd -e /bsd
+</code></pre>
+
+<p>The interface will change to the above view with the ukc&gt; prompt.</p>
+
+<p>Adjust the changes as above, and reboot.</p>
+
+<p>At the boot&gt; prompt, enter the new kernel:</p>
+
+<pre><code>boot&gt; boot /bsd.wd
+</code></pre>
+
+<p>If the system boots fine without any wd(4) errors, make the new, edited kernel the default kernel:</p>
+
+<pre><code># mv /bsd /bsd.org
+
+# mv /bsd.wd /bsd
+</code></pre>
+
+<p>By default, the default flag for wd should now be 0x0ff0. If there are any problems, the original kernel is still available as /bsd.org.</p>
+
 <h3 id="bootingup">Booting Up</h3>
 
 <p>By default, the Soekris 4801 uses 19200 as the console speed, yet we set the speed to 9600 in the /etc/boot.conf and /etc/ttys files. In this case, we&#8217;ll set the Soekris console speed to 9600 in the BIOS.</p>
@@ -304,6 +327,20 @@ UKC&gt; quit
 tmpfs on /tmp type tmpfs (local, nodev, noexec, nosuid)
 </code></pre>
 
+<h3 id="syspatch8forasecuresystem">syspatch(8) for a Secure System</h3>
+
+<p>As noted above, <a href="https://man.openbsd.org/syspatch">syspatch(8)</a> was introduced in OpenBSD 6.1 -stable for applying binary patches to a system.</p>
+
+<p>While removing some install sets such as x11 will cause the system to bark since certain parts are unavailable for syspatch(8) to apply patches to, the tool is still of utility.</p>
+
+<p>There&#8217;s a major caveat to making the /tmp mount only 10M: syspatch(8) requires more space.</p>
+
+<p>To temporarily work around it, edit /etc/fstab to make it 50M in size.</p>
+
+<p>Even with that size, syspatch(8) will note that the file system is full after one, two or three patches are applied. But the /tmp files will clear out once syspatch(8) stops running.</p>
+
+<p>Once it stops, run again and keep running until all the patches apply. When it&#8217;s done, change the /tmp back to 10M in size, and reboot.</p>
+
 <h3 id="finally">Finally</h3>
 
-<p>The Soekris running OpenBSD should be ready for any number of simple functions at this point, with the obvious restraints one would expect from a device from a low-powered legacy device.</p>
+<p>The Soekris running OpenBSD should be ready for any number of simple functions at this point, with the obvious restraints one would expect from a low-powered legacy device.</p>
