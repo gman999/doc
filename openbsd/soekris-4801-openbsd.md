@@ -301,4 +301,4 @@ Once it stops, run again and keep running until all the patches apply. When it's
 
 ###Finally###
 
-The Soekris running OpenBSD should be ready for any number of simple functions at this point, with the obvious restraints one would expect from a device from a low-powered legacy device.
+The Soekris running OpenBSD should be ready for any number of simple functions at this point, with the obvious restraints one would expect from a low-powered legacy device.
