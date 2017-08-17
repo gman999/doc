@@ -235,7 +235,7 @@ UKC&gt; quit
 <pre><code># config -o /bsd.wd -e /bsd
 </code></pre>
 
-<p>The interface will change to the above view with the ukc&gt; prompt.</p>
+<p>The interface will change to the above view with the UKC&gt; prompt.</p>
 
 <p>Adjust the changes as above, and reboot.</p>
 
@@ -347,6 +347,8 @@ tar: Failed write to file bsd.mp: No space left on device
 </code></pre>
 
 <p>But the /tmp files will clear out once syspatch(8) stops running. Run syspatch repeatedly until all the patches apply. When it&#8217;s done, change the /tmp back to 10M in size, and reboot.</p>
+
+<p>As some patches reset the kernel to the default GENERIC version, it may be necessary to change the wd(4) attributes again in UKC&gt; mode.</p>
 
 <h3 id="finally">Finally</h3>
 

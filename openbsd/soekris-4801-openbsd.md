@@ -206,7 +206,7 @@ To enter the kernel edit mode with a copy of the current /bsd kernel as /bsd.wd:
 
 	# config -o /bsd.wd -e /bsd
 
-The interface will change to the above view with the ukc> prompt.
+The interface will change to the above view with the UKC> prompt.
 
 Adjust the changes as above, and reboot.
 
@@ -306,6 +306,8 @@ tar: Failed write to file bsd.mp: No space left on device
 ```
 
 But the /tmp files will clear out once syspatch(8) stops running. Run syspatch repeatedly until all the patches apply. When it's done, change the /tmp back to 10M in size, and reboot.
+
+As some patches reset the kernel to the default GENERIC version, it may be necessary to change the wd(4) attributes again in UKC> mode.
 
 ###Finally###
 
