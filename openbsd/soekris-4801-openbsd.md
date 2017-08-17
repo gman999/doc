@@ -270,7 +270,7 @@ Or set to dhcp:
 
 	dhcp
 
-As noted earlier, the /tmp partition will be mounted as a tmpfs device, and not use the CF card. In this case, a small 10Mb /tmp partition should be sufficient.
+As noted earlier, the /tmp partition will be mounted as a tmpfs device, and not use the CF card. In this case, a small 10Mb /tmp partition should be sufficient. Considering that the Soekris only provides 128Mb of RAM, a memory disk larger than 10Mb should be approached cautiously.
 
 	echo "swap /tmp tmpfs rw,-s10m,nodev,nosuid,noexec 0 0" >>/etc/fstab
 
@@ -295,9 +295,17 @@ There's a major caveat to making the /tmp mount only 10M: syspatch(8) requires m
 
 To temporarily work around it, edit /etc/fstab to make it 50M in size.
 
-Even with that size, syspatch(8) will note that the file system is full after one, two or three patches are applied. But the /tmp files will clear out once syspatch(8) stops running.
+Even with that size, syspatch(8) will note that the file system is full after one, two or three patches are applied.
 
-Once it stops, run again and keep running until all the patches apply. When it's done, change the /tmp back to 10M in size, and reboot.
+```
+/tmp: write failed, file system is full
+
+tar: Failed write to file bsd: No space left on device
+
+tar: Failed write to file bsd.mp: No space left on device
+```
+
+But the /tmp files will clear out once syspatch(8) stops running. Run syspatch repeatedly until all the patches apply. When it's done, change the /tmp back to 10M in size, and reboot.
 
 ###Finally###
 
