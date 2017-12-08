@@ -2,11 +2,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 %nodefault
-%center, size 10, fore "white", font "standard"
+%center, size 18, fore "white", font "thick"
 
 P = D + R
 
-%center, size 5, fore "white", font "standard"
+%center, size 8, fore "white", font "standard"
 all you really need to know about security
 
 
@@ -35,10 +35,9 @@ Protection is the sum of Detection and Reaction
 
 Protection is not unlimited, everything ultimately broken
 
-Mitigated by how quickly breach are detected
-
-and how fast there is a reaction to the breach
-
+Limits of protection mitigated by:
+	how quickly breach are detected
+	how fast there is a reaction
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -53,6 +52,10 @@ All cryptography dies with time
 	DES was the standard for everything
 	same thing will happen with AES in the future
 
+%font "italic", center
+How much time does an adversary
+need to compromise the assets?
+
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -65,7 +68,6 @@ protection = bank vault
 detection = alarm system
 
 reaction = police
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -96,7 +98,7 @@ reaction: the alerts to the IT staff
 Into everyday
 
 
-laptop into LE hands: security is only as good as protection
+laptop into an adversary's hands: security is only as good as protection
 
 detection in the past tense
 
@@ -107,78 +109,24 @@ reaction is pointless
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+Operational Conclusions
 
 
+the actual impact in your scenario
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
+	there is no product-line that will magically solve security
+	stop thinking security is an absolute
+	detection and reaction demands enhancing procedures and tweaking infrastructure
+	start modeling scenarios where P,D,R might equal 0
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+%nodefault, left, size 12, font "thick"
 
-Thanks
-
+Win Schwartau
+Time Based Security
+1999
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
