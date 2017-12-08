@@ -1,0 +1,178 @@
+%include "default.mgp"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%%nodefault
+%left, size 8, fore "white", font "thick"
+
+Welcome Aboard: General Plans
+%size 7
+
+
+ face-to-face beats virtual
+
+ bi-monthly
+
+ different topics, audiences
+
+ reflecting NYC uniqueness
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%center, size 8, fore "white", font "standard"
+how networks are weaved
+%nodefault
+%center,valign "center"
+%newimage -xyzoom 100 100 "networks.jpg"
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%center, size 14, fore "white", font "thick"
+
+Why You
+Should Be (or Are)
+Running
+a Tor Relay (or Bridge)
+
+
+%nodefault
+%right, size 5, fore "white"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Who Are You?
+
+
+aren't familiar with Tor?
+
+don't run relay or bridge?
+
+run a relay or bridge?
+
+run a relay or bridge for more than a year?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Tor is a Critical Tool
+
+
+to evade surveillance
+
+to bypass censorship
+
+waves and troughs shaped by events
+	internet censorship, political happenings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Some Understandings
+
+Relays
+    public nodes, ~6500 or so
+
+Bridges
+    private gateways into the Tor network for blocked users
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%center, valign "center"
+
+%newimage -xyzoom 70 70 "tr-relays.png"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%center, valign "center"
+
+%newimage -xyzoom 70 70 "tr-bridges.png"
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Tor Relies on Volunteers
+
+
+development, testing, trainers, documentation
+
+relay and bridge operators
+	critical to the entire operation
+	if you can maintain a server
+	lower barrier of entry
+
+vital to maintain relay diversity
+  mitigating a powerful adversary running a lot of relays
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Enter Tor Hub NYC
+
+
+extensive residential and business connectivity
+
+network of people to share tips and experience
+
+networks of people that extend from NYC
+	remote friends and family as users and providers
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+It's Not Hard
+
+residential cable or Fios
+  at the university, at work
+
+solo or with a trusted group
+	keep it funded, updated, running
+	avoid too many cooks
+
+hardware + internet connectivity + configuration = node
+
+VPS + configuration = node
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Tor Configuration Simplified
+
+
+222 lines
+
+SocksPort 0
+Log notice file /path/to/logfile
+ORPort 9001
+RelayBandwidthRate 4000KB
+RelayBandwidthBurst 5000KB
+PublishServerDescriptor 1
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Envision This
+
+
+communities scale better in the real world
+
+Iran 2009: bridges in Los Angeles
+
+Turkey, Egypt. . . where next?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault, center, valign "center"
+
+%newimage -xyzoom 110 110 "tor-net.jpg"
