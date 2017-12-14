@@ -1,0 +1,425 @@
+%include "default.mgp"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+
+%center, size 16, fore "white", font "standard"
+Please Stop
+Teaching Tools
+
+
+%nodefault
+%right, size 5, fore "white"
+george@queair.net
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Okay, a Little Exaggerated
+
+
+	there are some tried and trusted tools
+
+	and tools always have a role to play
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+But, There's a Problem
+
+	tools became a quick answer to all questions
+		"how do I do $task?"
+
+	users must trust trainers technical prowess, choices
+
+	users don't update with new vulnerabilities
+
+	users don't hear when the tools are deprecated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+The "Information Flow"
+
+%size 4
+someone picks a tool
+
+trainers are convinced to teach the tool
+
+users use the tool
+
+tool is junk or vulnerabilities proliferate, or is deprecated
+
+someone else picks another tool as the alternative
+
+some trainers start preaching the alternative, but unclear why
+
+some users continue to use the old tool, others adopt new tool
+
+%font "italic", center
+but ultimately the user is lost to any reasoning
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Whatever Happened to TrueCrypt?
+
+
+	was in the "Holy Trinity" with Tor, PGP
+
+	died an ugly sudden death
+
+	how long did it take for the word to spread?
+
+	did users migrate to a new tool? which?
+
+	who is still training or using TrueCrypt?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Let's be Honest Here
+
+	a lot of tools are just utter crap
+
+	poorly written, unaudited, not modular, not interoperable
+
+	rely on regularly broken pieces, can you say O-p-e-n-S-S-L?
+
+	complexity: just by using software thousands of lines of code
+		which most likely you won't or can't audit
+
+%center, font "italic"
+so let's drop the "it's better than nothing" attitude
+"more somethings" can often mean worse
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+"But It's Easy"
+
+
+Typical example New York Times November 17 2016
+	"Protecting Your Personal Digital Data in 7 Easy Steps"
+
+a journalist is writing an article for the right reasons,
+and listing tools is the easy way
+
+(stupid CloudFlare)
+https://www.nytimes.com/2016/11/17/technology/personaltech/
+encryption-privacy.html
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+The List, and everyone loves lists. . .
+
+%size 4 
+1.  Download Signal, or Start Using WhatsApp to send text messages
+
+2.  Protect your computer's hard drive with FileVault or BitLocker
+
+3.  The way you handle your passwords is probably wrong and bad
+
+4.  Protect your email and other accounts with two-factor authentication
+
+5.  Use a browser plug-in called HTTPS Everywhere
+
+6.  Remember that incognito mode isn't always private
+
+7.  Do sensitive searches in DuckDuckGo
+
+and the bonus: Cover your webcam with tape.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Off the Bat: What's Good?
+
+3.  yes, passwords are always a weak link, and end-user practices do matter
+
+5.  HTTPS is good when available
+
+6.  warning about "igcognito mode" is good, but not something you can do
+
+and yes, tape over webcams is good
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+But the End Result
+
+You now have a trusting reader who relies on:
+
+	Signal, WhatsApp
+
+	FileVault, BitLocker
+
+	HTTPS Everywhere
+
+	and DuckDuckGo
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+The End Result
+
+
+	the tools are broken on November 12?
+		I hope people read the NYT error corrections
+
+	users now think that a search engine that promises privacy has validity
+		teach users to trust services/products that have a privacy tagline?
+
+	ultimately disempowers the user: rely on tools, you can never remember passwords
+
+	again, "just click that icon and you shall be free"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+An Antecdote about "Security Marketing"
+
+
+	Event in Washington, DC
+
+two panelists debate on "privacy merits" of Yahoo versus Google mail
+
+Yahoo is obviously crap with lack of disclosures, late to the HTTPS world
+
+Google, well, is a data-mining firm that does email and a search engine you may have heard about
+
+%font "italic"
+is that what users need? debates in which self-proclaimed authorities debate on the merits of two providers they know nothing about?
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+So What Should Trainers Do?
+
+
+	training isn't as easy as "hey just click this icon..."
+		". . . instead of that other one"
+
+	stop assuming the users should trust your technical knowledge
+		vast majority of technical people don't really understand privacy tools
+
+	don't look for short-cuts
+		yes, tools are easy, but ultimately can be harmful
+
+	teach methods, not tools
+		let's explore that
+
+%center, font "italic"
+digital tools can be part of the answer, not the full solution unto themselves
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Fundamentals of Computing Services
+
+
+	It's not about software or hardware, but rather about:
+
+What problem are you trying to solve?
+
+	Users should minimize trusting tools unless they can audit them
+		or people they trust audit them
+
+	you can't just train a user to write a random-number generator
+		you can teach them they can't write one though
+
+%font "italic"
+assuming they really need the tools in the first place
+if the users don't start employing the tools, trainings are considered failures
+regardless of how ineffective or even dangerous those tools are
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Other Ideas
+
+
+	"the more you carry in your head the less you carry on your back"
+
+	remembering strong passwords: key to so many applications/systems
+		cracking authentication is often default gateway for adversaries
+		and stop trusting other peoples' password managers
+
+	what do you want to do?
+
+	what are the possible solutions?
+		how would they solve it now?
+		are there analog solutions?
+		are there appropriate digital solutions?
+
+	and the many caveats with digital solutions
+		one-to-one comms now trust transit, end-points, tool developers
+		keep it current and updated
+		can I get an audit?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Arm the Users: Threat-Modeling
+
+
+	everyone is already doing it, help them with a lexicon
+
+	Who are the adversaries and their resources?
+
+	What are the stakes of being compromised?
+
+	How much cost/effort/changes is the user willing to endure?
+
+	How far will the adversaries go to compromise the user data/identity?
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Then Again, "What do you want?"
+
+
+	specify what exactly the user wants/needs to do, in non-technical terms
+
+	"tools" can work in creating solutions, but should not be the starting point
+		coffee shop meeting might trump Signal
+
+	non-digital tools should be considered
+
+	going "multi-modal" mixing up digital and analog tools
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+An Example: Email Encryption
+
+
+	You want to teach or learn about encrypting email
+
+	Either way, it's a good thing(TM)
+
+	But users aren't taught about private/public keys
+		and that public keys are like door locks
+		and private keys are like physical keys
+
+	And then users decide to or are instructed to put their private keys on their phone
+
+%font "italic"
+"but hey, at least I'm encrypting my email"
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Is Technology Always the Answer?
+
+
+	Of course no, but it becomes self-fulfilling when you have trainers teaching tools
+
+	starting with tools as opposed to starting with what problem are you trying to solve
+
+	tools usually means dismissing other mediums and opportuntities
+		face-to-face meetings
+		intermodal-communcations (snail mail, voice, etc. ups the required sophistication of an adversary)
+		reliance on pre-existing trust networks that are likely more robust than a tool
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Activists Usually Understand More
+
+
+	long history of dissidents circumventing, hiding activities
+		surveillance mitigation
+		19th century Russian nihilists
+
+	they are already doing something
+
+	what is new is digitalization, the internet
+		the telephone was equally "disruptive" is tranforming activism
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+But You Still Matter
+
+
+	tools can mitigate, save data and lives
+
+	raising sophistication of threat-modeling huge help
+
+	it won't make or break a movement, but it matters
+		sorry Mr. Kahn, World War II was a continuation of WWI, not slick codebreaking
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Summary
+
+
+	you can't provide an answer to a question you don't know
+
+	there are too many solutions to privacy/anonymity/circumvention problems to give canned answers
+
+	it's easier if you're "one of them"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Thanks
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%center, size 11, fore "white", font "thick"
+
+Comments?  Questions?
+
+
+%right, size 5 

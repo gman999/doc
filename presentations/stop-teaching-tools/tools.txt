@@ -1,0 +1,69 @@
+This talk.
+
+Long-considered attack on what's the norm with training
+
+that technology tools are the missing elements in privacy and anonymity
+
+a number of problems with this:
+
+1. most tools aren't that great: unaudited/bad code, get EOL'd, etc
+
+2. adopting a tool means that extending your trust circle to include an array of others such as developers. "three people can keep a secret if two of them are dead" 
+
+2. tools are posed as answers, when we often don't know the question: what do the particular people need
+
+3. tools aren't always even the answer, and knowing trainees story, experiences and current methods should really be the focus
+
+Caveat: this isn't bashing trainers by any means
+
+i've done many trainings, often focused on tools, and these ideas were actually tossed around with current trainers
+
+there are a lot of new, dedicated people doing trainings. they are the future of this and other communities. they care. but they are carrying the residue passed on by a previous generation that focused on tools for a number of reasons
+
+Why are people teaching tools anyways?
+
+1. it's easy to teach a particular tool
+
+but there aren't really any one-size-fits-all tool. do you think a barber is better at their job if you teach them to use a hammer? what if you made a strong case to a barber about why they needed a hammer, and it was a better alternative to using a comb?
+
+2. who doesn't love checklists?
+
+simplifies solutions and again, even though you don't necessarily get the question.
+
+3. and hate to say it, due to the funding context, some projects focus more on publicity than development
+
+Ultimately, the trainer should help assess the trainees current practices, assist them in understanding strengths and weaknesses, and improve their threat-modeling.
+
+You mean people already threat-model?
+
+Threat-modeling, despite its hyphenation, is something everyone always does, especially if they perceive any level of danger.
+
+"I won't just give my SSN and birthdate to this web site to verify my age"
+
+"I'm not carrying $8000 in Euro through Piazza Garibaldi in Naples with my luggage in an American-style hip pouch wearing a Gap shirt with a US flag"
+
+Those are obvious.
+
+Most trainees in this day and age already practice techniques of some sorts or another. Edward Snowden and Wikileaks are household names.
+
+Trainers can provide a lexicon and a deeper understanding of threat-modeling, with a good starting point being to give it the name "threat-modeling"
+
+Threat-modeling is obvious, and lots of trainings and CryptoParties tend to wrap up with a section on it, but really should start with it. That is after the trainer better understands the trainees, and things like preliminary questionaires matter a lot.
+
+What else should trainers focus on?
+
+There are general skills and understandings that are vital and can be generalized.
+
+sometimes it's giving a useful overview of how the internet works. How does email traverse the globe with MTAs and MX records in a simple manner.
+
+General skills like creating strong passwords, determining the validity of an SSL/TLS certificate, etc also go a long way.
+
+Focus on passwords as an easy example:
+
+saying in backpacking: the more you carry in your head, the less you carry on your back.
+
+often the more you carry in your head or maintain as skills, the less technology you need in the first place
+
+few people are born skilled sysadmins, developers and definitely not cryptographers, and you can't put them there in a training session or twelve. they have other focuses, such as what you're supposed to be assisting them with in the first place.
+
+which means you need to teach them not just what they should, but also what they (and most of us) can't do. Few developers can write their own RNG, and the smartest technical people are the ones that know they can't.
