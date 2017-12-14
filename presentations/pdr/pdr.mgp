@@ -1,0 +1,140 @@
+%include "default.mgp"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%center, size 18, fore "white", font "thick"
+
+P = D + R
+
+%center, size 8, fore "white", font "standard"
+all you really need to know about security
+
+
+%nodefault
+%right, size 5, fore "white"
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Data Security: an old field
+
+
+1990's "information security" born
+
+1999: Schwartau "Time-Based Security"
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+So What is it?
+
+
+Protection is the sum of Detection and Reaction
+
+Protection is not unlimited, everything ultimately broken
+
+Limits of protection mitigated by:
+	how quickly breach are detected
+	how fast there is a reaction
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Protection is all about Time
+
+
+There is no perfect security
+	All bank vaults can ultimately be accessed
+
+All cryptography dies with time
+	DES was the standard for everything
+	same thing will happen with AES in the future
+
+%font "italic", center
+How much time does an adversary
+need to compromise the assets?
+
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+A simple example
+
+
+protection = bank vault
+
+detection = alarm system
+
+reaction = police
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Work it through
+
+
+The longer it takes to crack a bank vault (protection), the more time it can take for the police (reaction) to arrive
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+In the Context of Network Security
+
+
+protection: firewall
+
+detection: intrusion detection system, exceptions in logs
+
+reaction: the alerts to the IT staff
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Into everyday
+
+
+laptop into an adversary's hands: security is only as good as protection
+
+detection in the past tense
+
+reaction is pointless
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Operational Conclusions
+
+
+the actual impact in your scenario
+
+	there is no product-line that will magically solve security
+	stop thinking security is an absolute
+	detection and reaction demands enhancing procedures and tweaking infrastructure
+	start modeling scenarios where P,D,R might equal 0
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault, left, size 12, font "thick"
+
+Win Schwartau
+Time Based Security
+1999
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%center, size 11, fore "white", font "thick"
+
+Comments?  Questions?
+
+
+%right, size 5 
