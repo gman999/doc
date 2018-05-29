@@ -2,46 +2,111 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 %nodefault
-%center, size 10, fore "white", font "standard"
+%center, size 12, fore "white", font "standard"
 
 Tor Bridges
-as an
-Organizing Tool
-for your club|clique|grouplette
+as an Organizing Tool
+for your ${GROUP}
 
 
 %nodefault
 %right, size 5, fore "white"
-gman999@torbsd.org
+gman999@torbsd.org  
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-This Presentation
+Who are you?
 
 
-Get technology tools out of your head and hole and rework them as an organizing tool.
+	know Tor?
 
-Preexisting groups, groups that arose since 2016 election, perfect activity that helps you, others and can be a point of organizing
+	use Tor?
 
-And it makes the Tor network better
+	run a node?
+
+	have some cohorts formally? informally?
+		"my bridge club wants to run a Tor node"
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+$ echo $GROUP
+
+
+some formal organization, many more informal
+
+expansion since 2016 elections
+
+formal: technology, political, whatever
+	but what isn't political today?
+
+informal: group of friends
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Tor Project https://www.torproject.org/
+
+
+	open-source public anonymity network
+
+	critical tool
+		mitigating surveillance
+		circumventing censorship
+
+	large multi-faceted community
+		developers, users, relays admins, bridge admins, trainers
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
+
+Tor Bridges
+
+
+	while Tor relay IPs are public, bridge IPs are not
+
+	counter-measure for when public Tor IPs are blocked
+
+	hard for an adversary to get all ~2000 bridge IPs
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Technology is (usually) a Poor Organizing Point
+
+
+	lots you can't share
+		passwords, digital keys
+
+	mostly an individual experience physically
+
+	abstraction from the infrastructure in the cloud era
+
+	which probably explains propensity of tech startups to implode?
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+Why Bridges as a Organizing Point?
+
+
+	as a provider is obvious
+
+	as a consumer
+
+	as a shared responsibility for a trusted group
+
+	usually 1 admin: >1 nodes, now >1 "admins": 1 node
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
 
-	
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -130,6 +195,15 @@ And it makes the Tor network better
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+
+pts
+https://trac.torproject.org/projects/tor/wiki/doc/PluggableTransports
+
+pt list
+https://trac.torproject.org/projects/tor/wiki/doc/PluggableTransports/list
+
+how pts look on the wire
+https://trac.torproject.org/projects/tor/wiki/doc/AChildsGardenOfPluggableTransports
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
