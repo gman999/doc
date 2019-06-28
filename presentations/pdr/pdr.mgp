@@ -4,7 +4,7 @@
 %nodefault
 %center, size 18, fore "white", font "thick"
 
-P = D + R
+P > D + R
 
 %center, size 8, fore "white", font "standard"
 all you really need to know about security
@@ -12,6 +12,17 @@ all you really need to know about security
 
 %nodefault
 %right, size 5, fore "white"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%center, size 8, fore "white", font "standard"
+
+
+
+Well, maybe not everything.
+
+But certainly a good high-level, birds-eye place to start that everyone can digest and apply.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -24,6 +35,8 @@ Data Security: an old field
 
 1999: Schwartau "Time-Based Security"
 
+A basic framework for threat-modeling
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -31,7 +44,7 @@ Data Security: an old field
 So What is it?
 
 
-Protection is the sum of Detection and Reaction
+Protection needs to last longer than the sum of Detection and Reaction time
 
 Protection is not unlimited, everything ultimately broken
 
@@ -67,7 +80,7 @@ protection = bank vault
 
 detection = alarm system
 
-reaction = police
+reaction = security staff
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -75,8 +88,7 @@ reaction = police
 Work it through
 
 
-The longer it takes to crack a bank vault (protection), the more time it can take for the police (reaction) to arrive
-
+The alarm system needs to notify the security staff faster than it takes for the adversary to breach the bank vault.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -95,7 +107,7 @@ reaction: the alerts to the IT staff
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Into everyday
+Into everyday: simplified
 
 
 laptop into an adversary's hands: security is only as good as protection
@@ -104,7 +116,46 @@ detection in the past tense
 
 reaction is pointless
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%size 6
 
+Protection
+
+
+	trust process and design over people
+	best practices
+	documentation
+	training
+	data validation
+	collaboration with third-party providers
+	relationship between those who build and administer the systems
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%size 6 
+
+Detection
+
+
+	monitoring, centralized and separate
+	baselines and exception reporting
+	relationship with upstream providers
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%size 6 
+
+Reaction
+
+
+	incident response plan: NIST templates
+		Start with the right stuff. You'll need it later.
+	backup communications: XMPP, Signal, PGP
+	offline backups
+	legal go-to for advice and direction
+	again, upstream provider relationship
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -114,19 +165,25 @@ Operational Conclusions
 
 the actual impact in your scenario
 
-	there is no product-line that will magically solve security
 	stop thinking security is an absolute
-	detection and reaction demands enhancing procedures and tweaking infrastructure
-	start modeling scenarios where P,D,R might equal 0
+	stop overfocusing on Protection
+	there is no product-line that will magically solve security
+	Detection and Reaction demands:
+		enhancing procedures
+		tweaking infrastructure
+	start modeling scenarios focused on Detection and Reaction
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
-%nodefault, left, size 12, font "thick"
+%nodefault, left, size 8, font "standard"
 
 Win Schwartau
+
 Time Based Security
-1999
+Practical and Provable Methods to Protect Enterprise and Infrastructure, Networks and Nation
+
+Interpact Press, 1999
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -136,5 +193,7 @@ Time Based Security
 
 Comments?  Questions?
 
+George@ClearOPS.io
+06B5 CEA4 5EF7 6AE9 22BC 970A DB90 9FA1 5598 BC09
 
 %right, size 5 
