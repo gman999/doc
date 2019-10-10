@@ -54,6 +54,7 @@ The Six Things
 
 The Inherent Weaknesses
 
+
 	Often unprotected in storage and transmission
 
 	Too many to remember
@@ -92,9 +93,16 @@ The Three Factors of Authentication
 	What you are
 		biometrics: fingerprints, iris scans
 
-		Don't necessarily compromise identity
-		Not easy to steal or copy like an ID or fingerprint
-		Can't physically lose it if stored in your brain
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+As "What You Know" Advantages
+
+Don't necessarily compromise identity
+
+Not easy to steal or copy like an ID or fingerprint
+
+Can't physically lose it if stored in your brain
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -133,7 +141,7 @@ Length
 
 	Don't dwell on it
 
-	overemphasizing length can be intimidating
+	Overemphasizing length can be intimidating
 
 	If you think of it as a passPHRASE then length is easier
 
@@ -156,7 +164,7 @@ how many possibilities for each digit in a password?
 
 %page
 
-A Bigger Universe: all 95 printable ASCII Characters
+Expanding the Universe
 
 
 	Arabic numbers? just ten possible digits
@@ -167,6 +175,8 @@ A Bigger Universe: all 95 printable ASCII Characters
 
 	Another 33: : ; < = > ? @ { | } ~ [ ] ^ _ ` ! " # $ % & ' ( ) * + , - . / \ and a space
 
+%font "italic", size 6
+consider the whole ASCII universe of 95 characters
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -176,7 +186,7 @@ Diversity
 
 	Use that universe of 95 characters
 
-	Is it guessable by a human, and by a computer
+	Is it guessable by a human, and by a computer?
 
 	Thisisareallylongpassword that will probably be broken quickly
 
@@ -266,7 +276,7 @@ Other Possible Components
 	Hand shift on keyboard?
 		for those who touch-type
 
-	Describe a scene
+	Describe a nonsensical scene
 		"sitting on a box was a orange frog frothing at his lips"
 
 
@@ -297,6 +307,8 @@ Or Maybe Better Yet?
 
 as a counter-measure to "Rubber-Hose cryptanalysis"
 
+%newimage -xyzoom 110 110 "rubberhose-cryptanalysis.png"
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
@@ -318,7 +330,7 @@ When to Change Your Password
 
 
 	Stupid rule of 30, 60, 90 day force changes
-		makes users do stupider things
+		makes users do stupider things: password recycling
 
 	When a password database has been breached
 
@@ -337,6 +349,8 @@ https://www.fourmilab.ch/random/
 %newimage "ent.png"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+notes
 
 what makes a password...
 
@@ -357,8 +371,11 @@ https://nakedsecurity.sophos.com/2016/08/18/nists-new-password-rules-what-you-ne
 NIST SP 800-63-3
 https://pages.nist.gov/800-63-3/
 
-Password Rules Are Bullshit
+Password Rules Are Bullsh*t
 https://blog.codinghorror.com/password-rules-are-bullshit/
 
 What the Most Common Passwords of 2016...
-://blog.keepersecurity.com/2017/01/13/most-common-passwords-of-2016-research-study/hat the Most Common Passwords of 2016..
+https://keepersecurity.com/blog/2017/01/13/most-common-passwords-of-2016-research-study/
+
+Most Common Passwords of 2018
+https://www.manchestereveningnews.co.uk/news/greater-manchester-news/25-most-common-passwords-2018-15554562
