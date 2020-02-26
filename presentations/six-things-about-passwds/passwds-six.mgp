@@ -17,11 +17,10 @@ Passwords
 
 Passwords are Ubiquitous
 
-
 	We need for access all over:
 		ATM Cards
-		Email Accounts: work, personal
 		Online accounts: banking, retirement, etc
+		Email Accounts: work, personal
 
 	A critical element is safeguarding:
 		protecting our communications
@@ -36,7 +35,8 @@ and often our livelihood and safety
 
 The Six Things
 
-%left, size 6, fore "white"
+
+%left, size 5, fore "white"
 1. Passwords are often weak security
 
 2. Passwords, despite the bad aspects, have advantages
@@ -47,7 +47,19 @@ The Six Things
 
 5. Password storage decisions matter
 
-6. You already have the tools to make strong passwords
+6. You already have the ability to make strong passwords
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+It's all about strong, unique and memorable
+
+
+strong: a long time to break it
+
+memorable: type a few times, remember it the fifth time
+
+unique: if you see it in plain text, you can't use it on other systems, or figure out a pattern.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -55,11 +67,11 @@ The Six Things
 The Inherent Weaknesses
 
 
-	Often unprotected in storage and transmission
+	Insecure while in storage and transmission
 
 	Too many to remember
 
-	Foolish password policies
+	Foolish password creation policies
 
 	People are untrained in creating and storing them
 
@@ -74,15 +86,15 @@ Passwords Have Certain Advantages
 
 	You can often control how strong they are
 
-	More people are acquiring better password habits
-
 	Your memory is (still) a relatively safe container
 
+	More people are acquiring better password habits
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
 The Three Factors of Authentication
+
 
 	What you know
 		passwords, mother's maiden name, ATM pin
@@ -98,7 +110,8 @@ The Three Factors of Authentication
 
 As "What You Know" Advantages
 
-Don't necessarily compromise identity
+
+Doesn't necessarily compromise identity
 
 Not easy to steal or copy like an ID or fingerprint
 
@@ -111,8 +124,7 @@ Strong Unique Passwords Matter
 
 
 	Often quickest backdoor into systems
-		for account access
-		privilege escalation
+		for account access, privilege escalation
 
 	All passwords ultimately breakable with enough time, resources
 		if not today or tomorrow, then in ten years
@@ -161,17 +173,15 @@ Universe
 how many possibilities for each digit in a password?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %page
 
 Expanding the Universe
 
-
-	Arabic numbers? just ten possible digits
+	Arabic numbers is just ten possible digits
 
 	UPPER or lower-case letters: 26 characters
 
-	UPPER and lower-case, plus number: 62 characters
+	UPPER and lower-case, plus numbers: 62 characters
 
 	Another 33: : ; < = > ? @ { | } ~ [ ] ^ _ ` ! " # $ % & ' ( ) * + , - . / \ and a space
 
@@ -196,10 +206,23 @@ Diversity
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Common Password-Creation Advice
+So again:
 
+
+Length is clear enough
+
+Universe is the number of possible characters per digit
+
+Diversity pertains to unreability
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+So how do you create strong, unique memorable passwords?
 
 	The typical advice
+		don't this and don't that
 
 	Some other methods
 		Diceware
@@ -212,7 +235,6 @@ results are usually either passwords that are not memorable or weak
 %page
 
 What's Memorable to You: Unique
-
 
 	Familiarity with other languages
 
@@ -300,12 +322,8 @@ Password Storage: worst to best
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Or Maybe Better Yet?
+Rubberhose Cryptanalysis
 
-
-	Rubberhose encryption
-
-as a counter-measure to "Rubber-Hose cryptanalysis"
 
 %newimage -xyzoom 110 110 "rubberhose-cryptanalysis.png"
 
@@ -349,19 +367,11 @@ https://www.fourmilab.ch/random/
 %newimage "ent.png"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
 
-notes
+some references
 
-what makes a password...
-
-strong: a long time to break it
-
-memorable: type a few times, remember it the fifth time
-
-unique: if you see it in plain text, you can't use it on other systems, or figure out a pattern.
-
-references
-
+%size 4, fore "white", font "standard"
 A Somewhat Brief Explanantion of Password Entropy
 https://www.itdojo.com/a-somewhat-brief-explanation-of-password-entropy/
 
